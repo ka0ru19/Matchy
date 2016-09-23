@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TopBranchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onTappedHSButton(sender: UIButton) {
+        performSegueWithIdentifier("toAuthHSUser", sender: nil)
+    }
 
+    @IBAction func onTappedUnivButton(sender: UIButton) {
+        performSegueWithIdentifier("toAuthUnivUser", sender: nil)
+    }
+    
 }
 
