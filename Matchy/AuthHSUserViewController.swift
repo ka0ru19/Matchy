@@ -10,6 +10,8 @@ import UIKit
 
 class AuthHSUserViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var newMailTextField: UITextField!
@@ -22,42 +24,97 @@ class AuthHSUserViewController: UIViewController {
     @IBOutlet weak var userPassTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var range1: NSRange!
+    var range2: NSRange!
     
+    var focusedTextFieldTag: Int!
+//    var lastMoveSize: CGFloat = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initUIParts()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: "keyboardWillBeShown:",
+                                                         name: UIKeyboardWillShowNotification,
+                                                         object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: "keyboardWillBeHidden:",
+                                                         name: UIKeyboardWillHideNotification,
+                                                         object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self,
+                                                            name: UIKeyboardWillShowNotification,
+                                                            object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self,
+                                                            name: UIKeyboardWillHideNotification,
+                                                            object: nil)
+    }
+ 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    var range1: NSRange!
-    var range2: NSRange!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    }
+    
+    @IBAction func onTappedSignUpButton(sender: UIButton) {
+        performSegueWithIdentifier("toSendMail", sender: nil)
+        
+    }
+    
+    @IBAction func onTappedSignInButton(sender: UIButton) {
+        
+    }
+}
+
+// viewの初期化
+extension AuthHSUserViewController {
     
     func initUIParts() {
+        
+        scrollView.delegate = self
+        
         newMailTextField.delegate = self
         newMailTextField.tag = 1
+        newMailTextField.returnKeyType = .Next
         newMailTextField.attributedPlaceholder = NSAttributedString(
             string:"メールアドレス",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         
         newPassTextField.delegate = self
         newPassTextField.tag = 2
+        newPassTextField.returnKeyType = .Next
+        newPassTextField.keyboardType = .ASCIICapable
+        newPassTextField.secureTextEntry = true
         newPassTextField.attributedPlaceholder = NSAttributedString(
             string:"パスワード(6~20字)",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         
         newPass2TextField.delegate = self
         newPass2TextField.tag = 3
+        newPass2TextField.returnKeyType = .Done
+        newPass2TextField.keyboardType = .ASCIICapable
+        newPass2TextField.secureTextEntry = true
         newPass2TextField.attributedPlaceholder = NSAttributedString(
             string:"パスワード(再入力)",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         
         agreementMessageTextView.userInteractionEnabled = true
         agreementMessageTextView.editable = false
-        agreementMessageTextView.selectable = true
+        agreementMessageTextView.selectable = true //
         
         let text = "登録すると利用規約とプライバシーポリシーに同意したとみなします。"
         let linkText1 = "利用規約"
@@ -99,12 +156,18 @@ class AuthHSUserViewController: UIViewController {
         
         userMailTextField.delegate = self
         userMailTextField.tag = 4
+        userMailTextField.returnKeyType = .Next
+        userMailTextField.textColor = UIColor.whiteColor()
         userMailTextField.attributedPlaceholder = NSAttributedString(
             string:"メールアドレス",
             attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         
         userPassTextField.delegate = self
         userPassTextField.tag = 5
+        userPassTextField.returnKeyType = .Done
+        userPassTextField.textColor = UIColor.whiteColor()
+        userPassTextField.keyboardType = .ASCIICapable
+        userPassTextField.secureTextEntry = true
         userPassTextField.attributedPlaceholder = NSAttributedString(
             string:"パスワード",
             attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
@@ -132,12 +195,77 @@ class AuthHSUserViewController: UIViewController {
             performSegueWithIdentifier("toPrivacyPolicy", sender: nil)
         }
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    }
-    
+
 }
 
+extension AuthHSUserViewController: UIScrollViewDelegate {
+    func keyboardWillBeShown(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
+                restoreScrollViewSize()
+                
+                let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
+                let focusedTextField = self.view.viewWithTag(focusedTextFieldTag) as! UITextField
+                let offsetY: CGFloat = CGRectGetMaxY(focusedTextField.frame) - CGRectGetMinY(convertedKeyboardFrame)
+                let margin: CGFloat = 120
+                if offsetY + margin < 0 { return }
+                updateScrollViewSize(offsetY + margin, duration: animationDuration)
+            }
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        restoreScrollViewSize()
+    }
+    
+    func updateScrollViewSize(moveSize: CGFloat, duration: NSTimeInterval) {
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(duration)
+        
+        let contentInsets = UIEdgeInsetsMake(0, 0, moveSize, 0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        scrollView.contentOffset = CGPointMake(0, moveSize)
+        
+        UIView.commitAnimations()
+        
+        //        lastMoveSize = moveSize
+    }
+    
+    func restoreScrollViewSize() {
+        scrollView.contentInset = UIEdgeInsetsZero
+        scrollView.scrollIndicatorInsets = UIEdgeInsetsZero
+    }
+}
+
+// textViewのfocus変更による画面scroll
 extension AuthHSUserViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        focusedTextFieldTag = textField.tag
+        return true
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let nextTextField = nextInputTextField(textField.tag) {
+            textField.resignFirstResponder() // focus解除
+            nextTextField.becomeFirstResponder() // focus
+        } else {
+            textField.resignFirstResponder() // focus解除
+            // 次の画面に行く準備処理
+        }
+        return true
+    }
+    
+    // 次の入力に移動するメソッド
+    func nextInputTextField(tagNum: Int) -> UITextField? {
+        if let nextTextField = self.view.viewWithTag(tagNum + 1) {
+            if tagNum == 3 {
+                return nil
+            } else {
+                return nextTextField as? UITextField
+            }
+        }
+        return nil
+    }
     
 }
