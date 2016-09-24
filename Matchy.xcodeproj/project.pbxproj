@@ -51,6 +51,8 @@
 		63B818741D9589E1001BD1EE /* tray.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B818501D9589E1001BD1EE /* tray.png */; };
 		63B818751D9589E1001BD1EE /* tray_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B818511D9589E1001BD1EE /* tray_large.png */; };
 		63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */; };
+		63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */; };
+		63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		63B818501D9589E1001BD1EE /* tray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tray.png; sourceTree = "<group>"; };
 		63B818511D9589E1001BD1EE /* tray_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tray_large.png; sourceTree = "<group>"; };
 		63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHSUserViewController.swift; sourceTree = "<group>"; };
+		63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermOfServiceViewController.swift; sourceTree = "<group>"; };
+		63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 				63B817FF1D957E93001BD1EE /* AppDelegate.swift */,
 				63B818011D957E93001BD1EE /* TopBranchViewController.swift */,
 				63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */,
+				63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */,
+				63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */,
 				63B818031D957E94001BD1EE /* Top.storyboard */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
 				63B818081D957E94001BD1EE /* LaunchScreen.storyboard */,
@@ -416,7 +422,9 @@
 			files = (
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,
+				63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */,
 				63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */,
+				63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

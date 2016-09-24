@@ -33,6 +33,9 @@ class AuthHSUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var range1: NSRange!
+    var range2: NSRange!
+    
     func initUIParts() {
         newMailTextField.delegate = self
         newMailTextField.tag = 1
@@ -56,18 +59,39 @@ class AuthHSUserViewController: UIViewController {
         agreementMessageTextView.editable = false
         agreementMessageTextView.selectable = true
         
-        let text = "Swiftでテキスト内リンク&テキストタップ検出"
-        let linkText = "リンク"
-        let nsTex = text as NSString
-        let link = text.rangeOfString(linkText)
+        let text = "登録すると利用規約とプライバシーポリシーに同意したとみなします。"
+        let linkText1 = "利用規約"
+        let linkText2 = "プライバシーポリシー"
+        let nsTex = text as NSString // テキスト全体
+        let link1 = text.rangeOfString(linkText1)
+        let link2 = text.rangeOfString(linkText2)
         let attributedString = NSMutableAttributedString(string: text)
+        let start1 = text.startIndex.distanceTo(link1!.startIndex)
+        let length1 = link1!.startIndex.distanceTo(link1!.endIndex)
+        range1 = NSMakeRange(start1, length1) // リンク位置範囲生成
         
-        // 不明2016/09/24 3:04
-//        let start = distance(text.startIndex, link!.startIndex)
-//        let length = distance(link!.startIndex, link!.endIndex)
+        let start2 = text.startIndex.distanceTo(link2!.startIndex)
+        let length2 = link2!.startIndex.distanceTo(link2!.endIndex)
+        range2 = NSMakeRange(start2, length2) // リンク位置範囲生成
         
-        // リンク位置範囲生成
-//        range = NSMakeRange(start, length)
+        // テキスト全体文字色
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: NSMakeRange(0, nsTex.length))
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.systemFontOfSize(11) , range: NSMakeRange(0, nsTex.length))
+        
+        // リンク1: カラー, 下線
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(11), range: range1)
+        attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: range1)
+        
+        // リンク2: カラー, 下線
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(11), range: range2)
+        attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: range2)
+        
+        // 属性を代入
+        agreementMessageTextView.attributedText = attributedString
+        
+        // gesture追加
+        let tap = UITapGestureRecognizer(target: self, action: "tapLinkText:")
+        agreementMessageTextView.addGestureRecognizer(tap)
         
         signUpButton.layer.cornerRadius = signUpButton.bounds.size.height / 2
         signUpButton.layer.borderWidth = 0.5
@@ -90,6 +114,23 @@ class AuthHSUserViewController: UIViewController {
         signInButton.layer.borderColor = UIColor.whiteColor().CGColor
         
         
+    }
+    
+    func tapLinkText(tap: UITapGestureRecognizer) {
+        
+        // タップされた座標をもとに最寄りの文字列の位置を取得
+        let location = tap.locationInView(agreementMessageTextView)
+        let textPosition = agreementMessageTextView.closestPositionToPoint(location)
+        
+        // テキストの先頭とタップした文字の距離をNSIntegerで取得
+        let selectedPosition = agreementMessageTextView.offsetFromPosition(agreementMessageTextView.beginningOfDocument, toPosition: textPosition!)
+        
+        // タップした文字がリンク文字のrangeに含まれるか判定
+        if NSLocationInRange(selectedPosition, range1) { // リンクタップ時の処理
+            performSegueWithIdentifier("toTermOfService", sender: nil)
+        } else if NSLocationInRange(selectedPosition, range2) { // リンクタップ時の処理
+            performSegueWithIdentifier("toPrivacyPolicy", sender: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

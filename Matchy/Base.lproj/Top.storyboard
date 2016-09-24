@@ -147,15 +147,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="登録すると利用規約とプライバイシーポリシーに同意したとみなします。" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-vb-xte">
-                                        <rect key="frame" x="30" y="153" width="260" height="40"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="登録すると利用規約とプライバシーポリシーに同意したとみなします。" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-vb-xte">
+                                        <rect key="frame" x="30" y="153" width="260" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhI-8C-Ccw">
-                                        <rect key="frame" x="30" y="201" width="260" height="30"/>
+                                        <rect key="frame" x="30" y="206" width="260" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.5" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="新規登録">
@@ -180,11 +180,72 @@
                         <outlet property="userMailTextField" destination="rc3-lg-0F4" id="zoM-9Y-fgu"/>
                         <outlet property="userPassTextField" destination="Xdx-8k-KFQ" id="Xtf-6k-VNV"/>
                         <segue destination="h2a-wG-1JZ" kind="push" id="o1Y-IY-waS"/>
+                        <segue destination="cqc-H8-bQc" kind="push" identifier="toTermOfService" id="S7S-Yp-IIt"/>
+                        <segue destination="mkK-cK-fvi" kind="push" identifier="toPrivacyPolicy" id="ly8-Gn-bVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lJ-ih-Yox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="107"/>
+            <point key="canvasLocation" x="1172" y="107"/>
+        </scene>
+        <!--Matchy-->
+        <scene sceneID="tV5-6O-BSd">
+            <objects>
+                <viewController id="cqc-H8-bQc" customClass="TermOfServiceViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mrg-LZ-SwK"/>
+                        <viewControllerLayoutGuide type="bottom" id="i1i-z4-tMp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jAe-SF-ePg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IhR-kF-SVN">
+                                <rect key="frame" x="20" y="0.0" width="280" height="569"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">利用規約Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Matchy" id="58J-0b-pDq"/>
+                    <connections>
+                        <outlet property="textView" destination="IhR-kF-SVN" id="f9X-v5-crs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2w-nM-2sW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="-556"/>
+        </scene>
+        <!--Matchy-->
+        <scene sceneID="UkK-lU-eU8">
+            <objects>
+                <viewController id="mkK-cK-fvi" customClass="PrivacyPolicyViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hrv-wq-Ygo"/>
+                        <viewControllerLayoutGuide type="bottom" id="4xT-e1-HeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QeE-I8-uNo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pQr-6G-5x9">
+                                <rect key="frame" x="20" y="64" width="280" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">プライバシーポリシーLorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Matchy" id="1xQ-M5-Tv5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sld-JO-IZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="-556"/>
         </scene>
         <!--仮登録完了-->
         <scene sceneID="jDS-rH-WLZ">
