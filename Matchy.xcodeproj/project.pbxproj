@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */; };
+		6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */; };
+		6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */; };
+		6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */; };
+		6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */; };
+		638290741D9958D1004BD708 /* hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638290731D9958D1004BD708 /* hoge.swift */; };
 		63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B817FF1D957E93001BD1EE /* AppDelegate.swift */; };
 		63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818011D957E93001BD1EE /* TopBranchViewController.swift */; };
 		63B818051D957E94001BD1EE /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B818031D957E94001BD1EE /* Top.storyboard */; };
@@ -73,6 +79,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegistrationHS.storyboard; sourceTree = "<group>"; };
+		6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationHSViewController.swift; sourceTree = "<group>"; };
+		6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetInfomationOfHSViewController.swift; sourceTree = "<group>"; };
+		6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
+		6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMyPageViewController.swift; sourceTree = "<group>"; };
+		638290731D9958D1004BD708 /* hoge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hoge.swift; sourceTree = "<group>"; };
 		63B817FC1D957E93001BD1EE /* Matchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B817FF1D957E93001BD1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63B818011D957E93001BD1EE /* TopBranchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBranchViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +164,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6359DA931D97D65200A4D106 /* TopBranch */ = {
+			isa = PBXGroup;
+			children = (
+				63B818011D957E93001BD1EE /* TopBranchViewController.swift */,
+				63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */,
+				63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */,
+				63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */,
+				63B818031D957E94001BD1EE /* Top.storyboard */,
+			);
+			name = TopBranch;
+			sourceTree = "<group>";
+		};
+		6359DA981D97E09500A4D106 /* RegistrationHS */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */,
+				6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */,
+				6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */,
+				638290731D9958D1004BD708 /* hoge.swift */,
+				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
+				6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */,
+			);
+			name = RegistrationHS;
+			sourceTree = "<group>";
+		};
 		63B817F31D957E93001BD1EE = {
 			isa = PBXGroup;
 			children = (
@@ -176,11 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				63B817FF1D957E93001BD1EE /* AppDelegate.swift */,
-				63B818011D957E93001BD1EE /* TopBranchViewController.swift */,
-				63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */,
-				63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */,
-				63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */,
-				63B818031D957E94001BD1EE /* Top.storyboard */,
+				6359DA931D97D65200A4D106 /* TopBranch */,
+				6359DA981D97E09500A4D106 /* RegistrationHS */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
 				63B818081D957E94001BD1EE /* LaunchScreen.storyboard */,
 				63B8180B1D957E94001BD1EE /* Info.plist */,
@@ -382,6 +416,7 @@
 				63B8186D1D9589E1001BD1EE /* school_2.png in Resources */,
 				63B818051D957E94001BD1EE /* Top.storyboard in Resources */,
 				63B818601D9589E1001BD1EE /* new_black.png in Resources */,
+				6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */,
 				63B818681D9589E1001BD1EE /* person_plus_white.png in Resources */,
 				63B818541D9589E1001BD1EE /* bell_gray.png in Resources */,
 				63B818751D9589E1001BD1EE /* tray_large.png in Resources */,
@@ -420,11 +455,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */,
+				6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */,
+				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
+				638290741D9958D1004BD708 /* hoge.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,
 				63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */,
 				63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */,
 				63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */,
+				6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +693,7 @@
 				63B818261D957E94001BD1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63B818271D957E94001BD1EE /* Build configuration list for PBXNativeTarget "MatchyTests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +702,7 @@
 				63B818291D957E94001BD1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63B8182A1D957E94001BD1EE /* Build configuration list for PBXNativeTarget "MatchyUITests" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +711,7 @@
 				63B8182C1D957E94001BD1EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
