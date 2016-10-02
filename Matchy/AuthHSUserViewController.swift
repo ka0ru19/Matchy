@@ -27,6 +27,8 @@ class AuthHSUserViewController: UIViewController {
     var range1: NSRange!
     var range2: NSRange!
     
+    var nowOffsetY: CGFloat = 0
+    
     var focusedTextFieldTag: Int!
 //    var lastMoveSize: CGFloat = 0
 
@@ -195,21 +197,34 @@ extension AuthHSUserViewController {
             performSegueWithIdentifier("toPrivacyPolicy", sender: nil)
         }
     }
+    
+//    override func scrollViewDidScroll(scrollView: UIScrollView) {
+//        
+//        contentOffset = scrollView.contentOffset
+//    }
 
 }
 
 extension AuthHSUserViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        nowOffsetY = scrollView.contentOffset.y
+        print("nowOffsetY: \(nowOffsetY)")
+    }
+    
+    
     func keyboardWillBeShown(notification: NSNotification) {
         if let userInfo = notification.userInfo {
             if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
-                restoreScrollViewSize()
+                //restoreScrollViewSize()
                 
                 let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
                 let focusedTextField = self.view.viewWithTag(focusedTextFieldTag) as! UITextField
                 let offsetY: CGFloat = CGRectGetMaxY(focusedTextField.frame) - CGRectGetMinY(convertedKeyboardFrame)
                 let margin: CGFloat = 120
                 if offsetY + margin < 0 { return }
-                updateScrollViewSize(offsetY + margin, duration: animationDuration)
+                updateScrollViewSize(offsetY + margin, duration: 2)//animationDuration)
             }
         }
     }
@@ -222,10 +237,12 @@ extension AuthHSUserViewController: UIScrollViewDelegate {
         UIView.beginAnimations("ResizeForKeyboard", context: nil)
         UIView.setAnimationDuration(duration)
         
-        let contentInsets = UIEdgeInsetsMake(0, 0, moveSize, 0)
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
-        scrollView.contentOffset = CGPointMake(0, moveSize)
+        if nowOffsetY <= 0.1 {
+            let contentInsets = UIEdgeInsetsMake(0, 0, moveSize, 0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
+        }
+        scrollView.contentOffset = CGPointMake(0, moveSize - nowOffsetY)
         
         UIView.commitAnimations()
         
