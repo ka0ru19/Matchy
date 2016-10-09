@@ -1,0 +1,6 @@
+framework module Pods_Matchy {
+  umbrella header "Pods-Matchy-umbrella.h"
+
+  export *
+  module * { export * }
+}

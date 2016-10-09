@@ -21,7 +21,7 @@ class SetMyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initUIParts()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +29,11 @@ class SetMyPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTappedImageButton(sender: UIButton) {
+    @IBAction func onTappedImageButton() {
+        
+    }
+    @IBAction func onTappedTextViewButton() {
+        performSegueWithIdentifier("EditIntroduction", sender: nil)
     }
 
     /*
@@ -63,21 +67,38 @@ class SetMyPageViewController: UIViewController {
             string:"自分を表す一言（18文字以内）",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         commentTextField.text = inputTextArray[1]
-        commentTextField.enabled = false
+        commentTextField.enabled = true
         
         introductionTextView.delegate = self
         introductionTextView.tag = 3
         introductionTextView.returnKeyType = .Done
-//        introductionTextView.attributedPlaceholder = NSAttributedString(
-//            string:"興味のある分野",
-//            attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+        introductionTextView.layer.borderColor = UIColor.blackColor().CGColor
+        introductionTextView.layer.borderWidth = 1.0
         introductionTextView.text = inputTextArray[2]
         introductionTextView.editable = false
         
-        
-        
     }
+}
 
+extension SetMyPageViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // カメラ、アルバムの呼び出しメソッド(カメラorアルバムのソースタイプが引き数)
+    func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.delegate = self
+            self.presentViewController(picker, animated: true, completion: nil)
+        }
+    }
+    
+    // 写真が選択された時に呼び出されるメソッド
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        // 画像を出力
+        imageView.image = image
+    }
+    
 
 }
 

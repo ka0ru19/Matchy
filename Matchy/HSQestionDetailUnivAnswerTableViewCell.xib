@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCell" rowHeight="314" id="KGk-i7-Jjw" customClass="HSQestionDetailUnivAnswerTableViewCell" customModule="Matchy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="313"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RZI-sK-iAv">
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx1-j1-OAf">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="BHl-Uc-eqg">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7GG-BB-3yk"/>
+                                            <constraint firstAttribute="width" constant="40" id="9Ob-o0-aH4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-IW-ikP">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watarun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNr-Fm-plq">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="ObN-z5-dlf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中央大学理工学部" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPs-1h-FC1">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="W3g-7R-t0H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-xz-WcM">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="USB-gd-foT"/>
+                                            <constraint firstAttribute="width" constant="40" id="rjc-DL-MZ1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIE-bM-gOz">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Wzj-gy-Prs"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-0g-wDg">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/09/16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00S-pC-wQk">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="vIz-qh-HbL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="udi-7s-7oV">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Bl4-WS-vVM"/>
+                                            <constraint firstAttribute="height" constant="24" id="JY2-1R-dZL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="NJi-jP-SBg"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中央大学理工学部に通ってるWataruです。やっぱり、課題は多いですね。毎週15枚のレポートを書かないといけなかったり、実験があったりします。なので、授業出て課題やってバイト週2で入ると、それでほとんど時間埋まっちゃますね。こんな感じで大丈夫？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z1-qo-Mr6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sC2-Od-9t3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="gKQ-My-sRQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="sCs-UP-Wnk"/>
+                                </constraints>
+                                <state key="normal" title="評価"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cx1-j1-OAf" firstAttribute="top" secondItem="RZI-sK-iAv" secondAttribute="top" id="51C-P0-Rlp"/>
+                            <constraint firstAttribute="trailing" secondItem="cx1-j1-OAf" secondAttribute="trailing" id="6yg-P7-xdO"/>
+                            <constraint firstItem="3z1-qo-Mr6" firstAttribute="leading" secondItem="RZI-sK-iAv" secondAttribute="leading" id="AKR-x8-LC4"/>
+                            <constraint firstAttribute="trailing" secondItem="lIE-bM-gOz" secondAttribute="trailing" id="G2W-S5-qBC"/>
+                            <constraint firstItem="lIE-bM-gOz" firstAttribute="leading" secondItem="RZI-sK-iAv" secondAttribute="leading" id="QuP-vH-4tm"/>
+                            <constraint firstItem="cx1-j1-OAf" firstAttribute="leading" secondItem="RZI-sK-iAv" secondAttribute="leading" id="WHo-Sv-Wal"/>
+                            <constraint firstAttribute="trailing" secondItem="3z1-qo-Mr6" secondAttribute="trailing" id="XnP-VV-ac8"/>
+                            <constraint firstAttribute="trailing" secondItem="Vwk-0g-wDg" secondAttribute="trailing" id="jDp-sZ-dLQ"/>
+                            <constraint firstItem="Vwk-0g-wDg" firstAttribute="leading" secondItem="RZI-sK-iAv" secondAttribute="leading" id="vkb-9v-Ubv"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="RZI-sK-iAv" secondAttribute="trailing" constant="8" id="MRy-g4-ui7"/>
+                    <constraint firstAttribute="bottom" secondItem="RZI-sK-iAv" secondAttribute="bottom" constant="8" id="StF-Qj-W05"/>
+                    <constraint firstItem="RZI-sK-iAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="aOS-Yh-Yke"/>
+                    <constraint firstItem="RZI-sK-iAv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ntY-5T-s1M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="answerLabel" destination="3z1-qo-Mr6" id="7d1-J9-ORG"/>
+                <outlet property="dateLabel" destination="00S-pC-wQk" id="QQ0-xm-RW3"/>
+                <outlet property="iconImageView" destination="BHl-Uc-eqg" id="23o-db-Vlg"/>
+                <outlet property="nameLabel" destination="aNr-Fm-plq" id="N8q-cI-ora"/>
+                <outlet property="rankButton" destination="sC2-Od-9t3" id="ffq-lb-5Xz"/>
+                <outlet property="rankImageView" destination="udi-7s-7oV" id="97H-VQ-nPS"/>
+                <outlet property="univLabel" destination="PPs-1h-FC1" id="Jqk-PL-T1Y"/>
+                <outlet property="univUserButton" destination="TDW-xz-WcM" id="NVG-jo-NEx"/>
+            </connections>
+            <point key="canvasLocation" x="-1" y="110"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person_blue.png" width="256" height="256"/>
+    </resources>
+</document>

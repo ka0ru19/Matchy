@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022F30CD47E4BF91B4DBE6B7 /* Pods_MatchyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61580B4723C126875E76A38D /* Pods_MatchyUITests.framework */; };
+		6344E7FC1DA51E43002B4A15 /* EditIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344E7FB1DA51E43002B4A15 /* EditIntroductionViewController.swift */; };
+		6344E7FE1DA52202002B4A15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6344E7FD1DA52202002B4A15 /* GoogleService-Info.plist */; };
+		6344E8011DA8D0AD002B4A15 /* HSTopTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8001DA8D0AC002B4A15 /* HSTopTab.storyboard */; };
+		6344E8031DA8F4D5002B4A15 /* HSQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8021DA8F4D4002B4A15 /* HSQuestion.storyboard */; };
+		6344E8051DA8F5A3002B4A15 /* HSSearchUniv.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8041DA8F5A3002B4A15 /* HSSearchUniv.storyboard */; };
+		6344E8071DA8F5B6002B4A15 /* HSPostQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8061DA8F5B6002B4A15 /* HSPostQuestion.storyboard */; };
+		6344E8091DA8F5C3002B4A15 /* HSNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8081DA8F5C3002B4A15 /* HSNotification.storyboard */; };
+		6344E80B1DA8F5D8002B4A15 /* HSMyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6344E80A1DA8F5D8002B4A15 /* HSMyPage.storyboard */; };
+		6344E8151DA93736002B4A15 /* HSQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344E8131DA93736002B4A15 /* HSQuestionTableViewCell.swift */; };
+		6344E8161DA93736002B4A15 /* HSQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6344E8141DA93736002B4A15 /* HSQuestionTableViewCell.xib */; };
+		6344E8181DA948AF002B4A15 /* HSTopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344E8171DA948AF002B4A15 /* HSTopTabBarController.swift */; };
+		6344E81A1DA94A36002B4A15 /* HSQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6344E8191DA94A36002B4A15 /* HSQuestionViewController.swift */; };
 		6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */; };
 		6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */; };
 		6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */; };
@@ -59,6 +72,28 @@
 		63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */; };
 		63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */; };
 		63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */; };
+		63C4404F1DA9D15100EF5F7E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4404E1DA9D15100EF5F7E /* LoginModel.swift */; };
+		63C440511DA9D1B800EF5F7E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440501DA9D1B800EF5F7E /* UserModel.swift */; };
+		63C440531DA9D44800EF5F7E /* Info_HSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440521DA9D44800EF5F7E /* Info_HSModel.swift */; };
+		63C440551DA9D4AD00EF5F7E /* Info_UnivModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440541DA9D4AD00EF5F7E /* Info_UnivModel.swift */; };
+		63C440571DA9D4D600EF5F7E /* MatchyTagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440561DA9D4D600EF5F7E /* MatchyTagModel.swift */; };
+		63C440591DA9D60900EF5F7E /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440581DA9D60900EF5F7E /* QuestionModel.swift */; };
+		63C4405B1DA9D73900EF5F7E /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4405A1DA9D73900EF5F7E /* AnswerModel.swift */; };
+		63C4405E1DA9ED9600EF5F7E /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4405D1DA9ED9600EF5F7E /* Sample.swift */; };
+		63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440601DAA242B00EF5F7E /* HSQuestionDetailViewController.swift */; };
+		63C440641DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440621DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift */; };
+		63C440651DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C440631DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.xib */; };
+		63C440681DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440661DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift */; };
+		63C440691DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C440671DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib */; };
+		63C4406D1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4406B1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift */; };
+		63C4406E1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C4406C1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib */; };
+		63C440701DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4406F1DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift */; };
+		63C440721DAA52AF00EF5F7E /* HSPostQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */; };
+		63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */; };
+		63C440761DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */; };
+		63C440781DAA5A6800EF5F7E /* SetUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */; };
+		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
+		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +114,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		009C29228CB000285DC16C72 /* Pods-MatchyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E25E0954EB0347DEC1B19C0 /* Pods-MatchyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Matchy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61580B4723C126875E76A38D /* Pods_MatchyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6344E7FB1DA51E43002B4A15 /* EditIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIntroductionViewController.swift; sourceTree = "<group>"; };
+		6344E7FD1DA52202002B4A15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6344E8001DA8D0AC002B4A15 /* HSTopTab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSTopTab.storyboard; sourceTree = "<group>"; };
+		6344E8021DA8F4D4002B4A15 /* HSQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSQuestion.storyboard; sourceTree = "<group>"; };
+		6344E8041DA8F5A3002B4A15 /* HSSearchUniv.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSSearchUniv.storyboard; sourceTree = "<group>"; };
+		6344E8061DA8F5B6002B4A15 /* HSPostQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSPostQuestion.storyboard; sourceTree = "<group>"; };
+		6344E8081DA8F5C3002B4A15 /* HSNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSNotification.storyboard; sourceTree = "<group>"; };
+		6344E80A1DA8F5D8002B4A15 /* HSMyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSMyPage.storyboard; sourceTree = "<group>"; };
+		6344E8131DA93736002B4A15 /* HSQuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		6344E8141DA93736002B4A15 /* HSQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		6344E8171DA948AF002B4A15 /* HSTopTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSTopTabBarController.swift; sourceTree = "<group>"; };
+		6344E8191DA94A36002B4A15 /* HSQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionViewController.swift; sourceTree = "<group>"; };
 		6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegistrationHS.storyboard; sourceTree = "<group>"; };
 		6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationHSViewController.swift; sourceTree = "<group>"; };
 		6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetInfomationOfHSViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +189,30 @@
 		63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHSUserViewController.swift; sourceTree = "<group>"; };
 		63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermOfServiceViewController.swift; sourceTree = "<group>"; };
 		63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		63C4404E1DA9D15100EF5F7E /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		63C440501DA9D1B800EF5F7E /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		63C440521DA9D44800EF5F7E /* Info_HSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info_HSModel.swift; sourceTree = "<group>"; };
+		63C440541DA9D4AD00EF5F7E /* Info_UnivModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info_UnivModel.swift; sourceTree = "<group>"; };
+		63C440561DA9D4D600EF5F7E /* MatchyTagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchyTagModel.swift; sourceTree = "<group>"; };
+		63C440581DA9D60900EF5F7E /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		63C4405A1DA9D73900EF5F7E /* AnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		63C4405D1DA9ED9600EF5F7E /* Sample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		63C440601DAA242B00EF5F7E /* HSQuestionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionDetailViewController.swift; sourceTree = "<group>"; };
+		63C440621DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQestionDetailUnivAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		63C440631DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQestionDetailUnivAnswerTableViewCell.xib; sourceTree = "<group>"; };
+		63C440661DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQestionDetailTopTableViewCell.swift; sourceTree = "<group>"; };
+		63C440671DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQestionDetailTopTableViewCell.xib; sourceTree = "<group>"; };
+		63C4406B1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSUnivUserTableViewCell.swift; sourceTree = "<group>"; };
+		63C4406C1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSUnivUserTableViewCell.xib; sourceTree = "<group>"; };
+		63C4406F1DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSSearchUnivUserViewController.swift; sourceTree = "<group>"; };
+		63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSPostQuestionViewController.swift; sourceTree = "<group>"; };
+		63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionInputTableViewCell.swift; sourceTree = "<group>"; };
+		63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQuestionInputTableViewCell.xib; sourceTree = "<group>"; };
+		63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUnivUserViewController.swift; sourceTree = "<group>"; };
+		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
+		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
+		C18F9E90DCEC26A82DDA1DCB /* Pods-Matchy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,12 +236,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022F30CD47E4BF91B4DBE6B7 /* Pods_MatchyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6344E7FF1DA5319B002B4A15 /* HS */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8001DA8D0AC002B4A15 /* HSTopTab.storyboard */,
+				6344E8171DA948AF002B4A15 /* HSTopTabBarController.swift */,
+				6344E80C1DA9024C002B4A15 /* HSQuestion */,
+				6344E80D1DA90268002B4A15 /* HSSearchUniv */,
+				6344E80E1DA90348002B4A15 /* HSPostQuestion */,
+				6344E80F1DA903F0002B4A15 /* HSNotification */,
+				6344E8101DA90417002B4A15 /* HSMyPage */,
+			);
+			name = HS;
+			sourceTree = "<group>";
+		};
+		6344E80C1DA9024C002B4A15 /* HSQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8021DA8F4D4002B4A15 /* HSQuestion.storyboard */,
+				63C4406A1DAA46C800EF5F7E /* QuestionDetail */,
+				63C4405F1DAA228400EF5F7E /* QuestionList */,
+			);
+			name = HSQuestion;
+			sourceTree = "<group>";
+		};
+		6344E80D1DA90268002B4A15 /* HSSearchUniv */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8041DA8F5A3002B4A15 /* HSSearchUniv.storyboard */,
+				63C4406F1DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift */,
+				63C4406B1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift */,
+				63C4406C1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib */,
+			);
+			name = HSSearchUniv;
+			sourceTree = "<group>";
+		};
+		6344E80E1DA90348002B4A15 /* HSPostQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8061DA8F5B6002B4A15 /* HSPostQuestion.storyboard */,
+				63C440791DAA5C7400EF5F7E /* HSPostQuestionInput */,
+			);
+			name = HSPostQuestion;
+			sourceTree = "<group>";
+		};
+		6344E80F1DA903F0002B4A15 /* HSNotification */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8081DA8F5C3002B4A15 /* HSNotification.storyboard */,
+			);
+			name = HSNotification;
+			sourceTree = "<group>";
+		};
+		6344E8101DA90417002B4A15 /* HSMyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6344E80A1DA8F5D8002B4A15 /* HSMyPage.storyboard */,
+			);
+			name = HSMyPage;
+			sourceTree = "<group>";
+		};
 		6359DA931D97D65200A4D106 /* TopBranch */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +323,7 @@
 				6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */,
 				638290731D9958D1004BD708 /* hoge.swift */,
 				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
+				6344E7FB1DA51E43002B4A15 /* EditIntroductionViewController.swift */,
 				6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */,
 			);
 			name = RegistrationHS;
@@ -196,6 +336,8 @@
 				63B818131D957E94001BD1EE /* MatchyTests */,
 				63B8181E1D957E94001BD1EE /* MatchyUITests */,
 				63B817FD1D957E93001BD1EE /* Products */,
+				6ACCB9D1273AF052957D0BD0 /* Pods */,
+				E660EC11AAF907E781996BE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,10 +355,14 @@
 			isa = PBXGroup;
 			children = (
 				63B817FF1D957E93001BD1EE /* AppDelegate.swift */,
+				63C4405D1DA9ED9600EF5F7E /* Sample.swift */,
+				63C4405C1DA9D82600EF5F7E /* Models */,
 				6359DA931D97D65200A4D106 /* TopBranch */,
 				6359DA981D97E09500A4D106 /* RegistrationHS */,
+				6344E7FF1DA5319B002B4A15 /* HS */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
 				63B818081D957E94001BD1EE /* LaunchScreen.storyboard */,
+				6344E7FD1DA52202002B4A15 /* GoogleService-Info.plist */,
 				63B8180B1D957E94001BD1EE /* Info.plist */,
 				63B8182D1D9589E1001BD1EE /* Matchy_icon */,
 			);
@@ -284,6 +430,76 @@
 			path = Matchy_icon;
 			sourceTree = "<group>";
 		};
+		63C4405C1DA9D82600EF5F7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63C4404E1DA9D15100EF5F7E /* LoginModel.swift */,
+				63C440501DA9D1B800EF5F7E /* UserModel.swift */,
+				63C440521DA9D44800EF5F7E /* Info_HSModel.swift */,
+				63C440541DA9D4AD00EF5F7E /* Info_UnivModel.swift */,
+				63C440561DA9D4D600EF5F7E /* MatchyTagModel.swift */,
+				63C440581DA9D60900EF5F7E /* QuestionModel.swift */,
+				63C4405A1DA9D73900EF5F7E /* AnswerModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		63C4405F1DAA228400EF5F7E /* QuestionList */ = {
+			isa = PBXGroup;
+			children = (
+				6344E8191DA94A36002B4A15 /* HSQuestionViewController.swift */,
+				6344E8131DA93736002B4A15 /* HSQuestionTableViewCell.swift */,
+				6344E8141DA93736002B4A15 /* HSQuestionTableViewCell.xib */,
+			);
+			name = QuestionList;
+			sourceTree = "<group>";
+		};
+		63C4406A1DAA46C800EF5F7E /* QuestionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				63C440601DAA242B00EF5F7E /* HSQuestionDetailViewController.swift */,
+				63C440661DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift */,
+				63C440671DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib */,
+				63C440621DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift */,
+				63C440631DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.xib */,
+			);
+			name = QuestionDetail;
+			sourceTree = "<group>";
+		};
+		63C440791DAA5C7400EF5F7E /* HSPostQuestionInput */ = {
+			isa = PBXGroup;
+			children = (
+				63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */,
+				63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */,
+				63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */,
+				63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */,
+			);
+			name = HSPostQuestionInput;
+			sourceTree = "<group>";
+		};
+		6ACCB9D1273AF052957D0BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */,
+				C18F9E90DCEC26A82DDA1DCB /* Pods-Matchy.release.xcconfig */,
+				009C29228CB000285DC16C72 /* Pods-MatchyTests.debug.xcconfig */,
+				8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */,
+				656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */,
+				2E25E0954EB0347DEC1B19C0 /* Pods-MatchyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E660EC11AAF907E781996BE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */,
+				06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */,
+				61580B4723C126875E76A38D /* Pods_MatchyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,9 +507,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63B818241D957E94001BD1EE /* Build configuration list for PBXNativeTarget "Matchy" */;
 			buildPhases = (
+				FE5BA4F089DE5A2139490C39 /* [CP] Check Pods Manifest.lock */,
 				63B817F81D957E93001BD1EE /* Sources */,
 				63B817F91D957E93001BD1EE /* Frameworks */,
 				63B817FA1D957E93001BD1EE /* Resources */,
+				C68A94A076EA450BD57B557E /* [CP] Embed Pods Frameworks */,
+				78BE72EF1A213A229DEE8F38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,9 +527,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63B818271D957E94001BD1EE /* Build configuration list for PBXNativeTarget "MatchyTests" */;
 			buildPhases = (
+				0812D90D71F1E40D694A9EB7 /* [CP] Check Pods Manifest.lock */,
 				63B8180C1D957E94001BD1EE /* Sources */,
 				63B8180D1D957E94001BD1EE /* Frameworks */,
 				63B8180E1D957E94001BD1EE /* Resources */,
+				9E7448EFCBE0B8346C8075F0 /* [CP] Embed Pods Frameworks */,
+				92D0CC1928D7768242416287 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,9 +548,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63B8182A1D957E94001BD1EE /* Build configuration list for PBXNativeTarget "MatchyUITests" */;
 			buildPhases = (
+				1853A42B89C49A78225B1B52 /* [CP] Check Pods Manifest.lock */,
 				63B818171D957E94001BD1EE /* Sources */,
 				63B818181D957E94001BD1EE /* Frameworks */,
 				63B818191D957E94001BD1EE /* Resources */,
+				F278DB0F7BA6F434831AA82B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,7 +571,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Wataru Inoue";
 				TargetAttributes = {
 					63B817FB1D957E93001BD1EE = {
@@ -392,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B8185C1D9589E1001BD1EE /* mail.png in Resources */,
+				63C440691DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib in Resources */,
 				63B818731D9589E1001BD1EE /* star_pink.png in Resources */,
 				63B818631D9589E1001BD1EE /* new_white.png in Resources */,
 				63B818551D9589E1001BD1EE /* books_blue.png in Resources */,
@@ -401,6 +626,7 @@
 				63B8185D1D9589E1001BD1EE /* mail_1message.png in Resources */,
 				63B818591D9589E1001BD1EE /* enquete_gray.png in Resources */,
 				63B818561D9589E1001BD1EE /* books_gray.png in Resources */,
+				6344E80B1DA8F5D8002B4A15 /* HSMyPage.storyboard in Resources */,
 				63B818651D9589E1001BD1EE /* person_blue.png in Resources */,
 				63B818611D9589E1001BD1EE /* new_blue.png in Resources */,
 				63B818701D9589E1001BD1EE /* search_person_gray.png in Resources */,
@@ -409,6 +635,7 @@
 				63B8185B1D9589E1001BD1EE /* good_white.png in Resources */,
 				63B818621D9589E1001BD1EE /* new_glay.png in Resources */,
 				63B818571D9589E1001BD1EE /* enquete_blue.png in Resources */,
+				63C4406E1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib in Resources */,
 				63B818691D9589E1001BD1EE /* person_silhouette.png in Resources */,
 				63B8186A1D9589E1001BD1EE /* pointing.png in Resources */,
 				63B8185A1D9589E1001BD1EE /* gift.png in Resources */,
@@ -416,21 +643,30 @@
 				63B8186D1D9589E1001BD1EE /* school_2.png in Resources */,
 				63B818051D957E94001BD1EE /* Top.storyboard in Resources */,
 				63B818601D9589E1001BD1EE /* new_black.png in Resources */,
+				6344E8071DA8F5B6002B4A15 /* HSPostQuestion.storyboard in Resources */,
 				6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */,
+				63C440651DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.xib in Resources */,
 				63B818681D9589E1001BD1EE /* person_plus_white.png in Resources */,
 				63B818541D9589E1001BD1EE /* bell_gray.png in Resources */,
 				63B818751D9589E1001BD1EE /* tray_large.png in Resources */,
 				63B818711D9589E1001BD1EE /* search_person_white.png in Resources */,
 				63B8186F1D9589E1001BD1EE /* search_gray.png in Resources */,
 				63B818671D9589E1001BD1EE /* person_plus_black.png in Resources */,
+				6344E8161DA93736002B4A15 /* HSQuestionTableViewCell.xib in Resources */,
 				63B818531D9589E1001BD1EE /* bell_blue.png in Resources */,
 				63B818741D9589E1001BD1EE /* tray.png in Resources */,
 				63B818521D9589E1001BD1EE /* add.png in Resources */,
+				6344E8031DA8F4D5002B4A15 /* HSQuestion.storyboard in Resources */,
 				63B818581D9589E1001BD1EE /* enquete_checked.png in Resources */,
 				63B8185E1D9589E1001BD1EE /* medal.png in Resources */,
 				63B8186B1D9589E1001BD1EE /* rail.jpg in Resources */,
+				6344E8091DA8F5C3002B4A15 /* HSNotification.storyboard in Resources */,
 				63B818641D9589E1001BD1EE /* people_sns.png in Resources */,
+				6344E7FE1DA52202002B4A15 /* GoogleService-Info.plist in Resources */,
+				6344E8051DA8F5A3002B4A15 /* HSSearchUniv.storyboard in Resources */,
 				63B8186E1D9589E1001BD1EE /* search_blue.png in Resources */,
+				63C440761DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib in Resources */,
+				6344E8011DA8D0AD002B4A15 /* HSTopTab.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,21 +686,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0812D90D71F1E40D694A9EB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1853A42B89C49A78225B1B52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78BE72EF1A213A229DEE8F38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Matchy/Pods-Matchy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92D0CC1928D7768242416287 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E7448EFCBE0B8346C8075F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68A94A076EA450BD57B557E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Matchy/Pods-Matchy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F278DB0F7BA6F434831AA82B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5BA4F089DE5A2139490C39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63B817F81D957E93001BD1EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */,
+				63C440681DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift in Sources */,
 				6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */,
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
+				63C440531DA9D44800EF5F7E /* Info_HSModel.swift in Sources */,
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
+				63C440781DAA5A6800EF5F7E /* SetUnivUserViewController.swift in Sources */,
+				63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */,
+				63C440551DA9D4AD00EF5F7E /* Info_UnivModel.swift in Sources */,
 				638290741D9958D1004BD708 /* hoge.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,
+				63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */,
+				63C440701DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift in Sources */,
+				6344E7FC1DA51E43002B4A15 /* EditIntroductionViewController.swift in Sources */,
+				63C4405E1DA9ED9600EF5F7E /* Sample.swift in Sources */,
+				63C440721DAA52AF00EF5F7E /* HSPostQuestionViewController.swift in Sources */,
+				63C4405B1DA9D73900EF5F7E /* AnswerModel.swift in Sources */,
+				63C4406D1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift in Sources */,
 				63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */,
 				63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */,
+				63C440571DA9D4D600EF5F7E /* MatchyTagModel.swift in Sources */,
 				63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */,
+				63C440511DA9D1B800EF5F7E /* UserModel.swift in Sources */,
+				63C4404F1DA9D15100EF5F7E /* LoginModel.swift in Sources */,
 				6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */,
+				6344E8181DA948AF002B4A15 /* HSTopTabBarController.swift in Sources */,
+				6344E8151DA93736002B4A15 /* HSQuestionTableViewCell.swift in Sources */,
+				63C440641DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift in Sources */,
+				6344E81A1DA94A36002B4A15 /* HSQuestionViewController.swift in Sources */,
+				63C440591DA9D60900EF5F7E /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,8 +912,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -556,11 +937,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -578,8 +960,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,41 +979,50 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		63B818251D957E94001BD1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 44KX7M22LP;
 				INFOPLIST_FILE = Matchy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wataru.Matchy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TASKEYA.Matchy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		63B818261D957E94001BD1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18F9E90DCEC26A82DDA1DCB /* Pods-Matchy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 44KX7M22LP;
 				INFOPLIST_FILE = Matchy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wataru.Matchy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TASKEYA.Matchy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
 		63B818281D957E94001BD1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009C29228CB000285DC16C72 /* Pods-MatchyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MatchyTests/Info.plist;
@@ -642,6 +1035,7 @@
 		};
 		63B818291D957E94001BD1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MatchyTests/Info.plist;
@@ -654,6 +1048,7 @@
 		};
 		63B8182B1D957E94001BD1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MatchyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -665,6 +1060,7 @@
 		};
 		63B8182C1D957E94001BD1EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E25E0954EB0347DEC1B19C0 /* Pods-MatchyUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MatchyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

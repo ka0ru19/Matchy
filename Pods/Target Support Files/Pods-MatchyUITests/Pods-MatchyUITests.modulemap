@@ -1,0 +1,6 @@
+framework module Pods_MatchyUITests {
+  umbrella header "Pods-MatchyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
