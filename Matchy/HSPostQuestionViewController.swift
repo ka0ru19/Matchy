@@ -25,8 +25,8 @@ class HSPostQuestionViewController: UIViewController {
         postTableView.delegate = self
         postTableView.dataSource = self
         postTableView.registerNib(UINib(nibName: "HSQuestionInputTableViewCell", bundle: nil), forCellReuseIdentifier: "HSQuestionInputCell")
-        postTableView.estimatedRowHeight = 2000 //CGFloat.max
-        postTableView.rowHeight = UITableViewAutomaticDimension
+//        postTableView.estimatedRowHeight = 2000 //CGFloat.max
+//        postTableView.rowHeight = UITableViewAutomaticDimension
         
         
     }
@@ -65,6 +65,16 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
     // セクションの高さを指定
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
+    }
+    
+    // セルの高さを返す
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0: return 50
+        case 1: return 250
+        case 2: return 50
+        default: return 0
+        }
     }
     
     // Cellが選択された際に呼び出される.

@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notification View Controller-->
         <scene sceneID="zAL-BF-uJq">
             <objects>
-                <viewController id="3Ey-cP-W8Q" sceneMemberID="viewController">
+                <viewController id="3Ey-cP-W8Q" customClass="HSNotificationViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oEZ-nV-HBt"/>
                         <viewControllerLayoutGuide type="bottom" id="tIi-ds-xET"/>
@@ -17,9 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="ryR-WO-bjE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="taa-JC-zOU">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xdN-Fx-OQB"/>
+                    <connections>
+                        <outlet property="notificationTableView" destination="taa-JC-zOU" id="mRc-lH-Idl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4g-LP-wuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

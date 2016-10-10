@@ -38,6 +38,7 @@
                     <connections>
                         <outlet property="postTableView" destination="RRd-xx-whf" id="rCX-Oq-8OU"/>
                         <segue destination="6RQ-sF-rDs" kind="push" identifier="toInput" id="mrq-aq-N1z"/>
+                        <segue destination="gIP-fX-j5U" kind="push" identifier="toSetUnivUser" id="9dR-KK-aGc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1y-EN-NZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,6 +83,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgR-Jq-f3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-389.05547226386807"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JNh-NQ-vSE">
+            <objects>
+                <viewController id="gIP-fX-j5U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lSh-07-ln6"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctm-Ey-68J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xlI-vl-5eB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="64T-bo-GAm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psT-WK-w2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2398" y="287"/>
         </scene>
         <!--質問する-->
         <scene sceneID="AGs-de-ngu">

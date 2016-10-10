@@ -38,6 +38,9 @@
                     <constraint firstAttribute="trailing" secondItem="d9I-6r-dOX" secondAttribute="trailing" constant="20" id="qqr-Gf-NQj"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="d9I-6r-dOX" id="N2d-86-84E"/>
+            </connections>
             <point key="canvasLocation" x="34" y="85"/>
         </tableViewCell>
     </objects>
