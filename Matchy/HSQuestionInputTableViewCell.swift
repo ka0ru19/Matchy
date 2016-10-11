@@ -23,7 +23,7 @@ class HSQuestionInputTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell() {
-        
+    func setCell(labelText text: String) {
+        label.text = text
     }
 }

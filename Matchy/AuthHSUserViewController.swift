@@ -70,12 +70,12 @@ class AuthHSUserViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
-    @IBAction func onTappedSignUpButton(sender: UIButton) {
+    @IBAction func onTappedSignUpButton() {
         performSegueWithIdentifier("toSendMail", sender: nil)
         
     }
     
-    @IBAction func onTappedSignInButton(sender: UIButton) {
+    @IBAction func onTappedSignInButton() {
         
     }
 }

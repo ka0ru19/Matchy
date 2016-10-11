@@ -3,16 +3,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCell" rowHeight="314" id="KGk-i7-Jjw" customClass="HSQestionDetailUnivAnswerTableViewCell" customModule="Matchy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCell" rowHeight="959" id="KGk-i7-Jjw" customClass="HSQestionDetailUnivAnswerTableViewCell" customModule="Matchy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="959"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="313"/>
+                <frame key="frameInset" width="320" height="959"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RZI-sK-iAv">
@@ -45,15 +46,6 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-xz-WcM">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="USB-gd-foT"/>
-                                            <constraint firstAttribute="width" constant="40" id="rjc-DL-MZ1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIE-bM-gOz">
@@ -83,7 +75,8 @@
                                     <constraint firstAttribute="height" constant="24" id="NJi-jP-SBg"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中央大学理工学部に通ってるWataruです。やっぱり、課題は多いですね。毎週15枚のレポートを書かないといけなかったり、実験があったりします。なので、授業出て課題やってバイト週2で入ると、それでほとんど時間埋まっちゃますね。こんな感じで大丈夫？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z1-qo-Mr6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z1-qo-Mr6">
+                                <mutableString key="text">中央大学理工学部に通ってるWataruです。やっぱり、課題は多いですね。毎週15枚のレポートを書かないといけなかったり、実験があったりします。なので、授業出て課題やってバイト週2で入ると、それでほとんど時間埋まっちゃますね。こんな感じで大丈夫？大学の理系の学科は課題が多いっていうのは本当ですか？中央大学理工学部に通ってるWataruです。やっぱり、課題は多いですね。毎週15枚のレポートを書かないといけなかったり、実験があったりします。なので、授業出て課題やってバイト週2で入ると、それでほとんど時間埋まっちゃますね。こんな感じで大丈夫？大学の理系の学科は課題が多いっていうのは本当ですか？</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,12 +101,20 @@
                             <constraint firstItem="Vwk-0g-wDg" firstAttribute="leading" secondItem="RZI-sK-iAv" secondAttribute="leading" id="vkb-9v-Ubv"/>
                         </constraints>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfq-NP-WkF">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="XFh-Rw-jVI"/>
+                        </constraints>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="zfq-NP-WkF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="FOE-Nb-HK8"/>
                     <constraint firstAttribute="trailing" secondItem="RZI-sK-iAv" secondAttribute="trailing" constant="8" id="MRy-g4-ui7"/>
                     <constraint firstAttribute="bottom" secondItem="RZI-sK-iAv" secondAttribute="bottom" constant="8" id="StF-Qj-W05"/>
                     <constraint firstItem="RZI-sK-iAv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="aOS-Yh-Yke"/>
+                    <constraint firstItem="zfq-NP-WkF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bWG-tb-Oci"/>
                     <constraint firstItem="RZI-sK-iAv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ntY-5T-s1M"/>
+                    <constraint firstItem="zfq-NP-WkF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qcP-uY-WPA"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -124,9 +125,9 @@
                 <outlet property="rankButton" destination="sC2-Od-9t3" id="ffq-lb-5Xz"/>
                 <outlet property="rankImageView" destination="udi-7s-7oV" id="97H-VQ-nPS"/>
                 <outlet property="univLabel" destination="PPs-1h-FC1" id="Jqk-PL-T1Y"/>
-                <outlet property="univUserButton" destination="TDW-xz-WcM" id="NVG-jo-NEx"/>
+                <outlet property="univUserButton" destination="zfq-NP-WkF" id="Gcf-YC-B31"/>
             </connections>
-            <point key="canvasLocation" x="-1" y="110"/>
+            <point key="canvasLocation" x="-1" y="432.5"/>
         </tableViewCell>
     </objects>
     <resources>

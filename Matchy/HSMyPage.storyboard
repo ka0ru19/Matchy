@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DPV-Uz-Dak">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="DPV-Uz-Dak">
                                 <frame key="frameInset" minX="147" minY="72" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -68,6 +68,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jnV-9o-iDI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="マイページ" id="jpC-4C-uKA"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sPD-jV-ue5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,4 +83,7 @@
             <point key="canvasLocation" x="672.79999999999995" y="1231.9340329835084"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person_blue.png" width="256" height="256"/>
+    </resources>
 </document>

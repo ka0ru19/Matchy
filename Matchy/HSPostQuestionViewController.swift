@@ -15,9 +15,9 @@ class HSPostQuestionViewController: UIViewController {
     let sectionTitleArray = ["質問のタイトル（全角28文字以内）",
                              "質問の内容（全角200文字以内）",
                              "関連するタグ（先頭に＃をつける）"]
-    let inputTextArray = ["","",""]
+    var inputTextArray = ["","",""]
     
-    var selectedIndex: Int!
+    var selectedSection: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +25,15 @@ class HSPostQuestionViewController: UIViewController {
         postTableView.delegate = self
         postTableView.dataSource = self
         postTableView.registerNib(UINib(nibName: "HSQuestionInputTableViewCell", bundle: nil), forCellReuseIdentifier: "HSQuestionInputCell")
-//        postTableView.estimatedRowHeight = 2000 //CGFloat.max
-//        postTableView.rowHeight = UITableViewAutomaticDimension
+        //        postTableView.estimatedRowHeight = 2000 //CGFloat.max
+        //        postTableView.rowHeight = UITableViewAutomaticDimension
         
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        postTableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,8 +44,13 @@ class HSPostQuestionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toInput" {
-            let nextVC = segue.destinationViewController as! SetUnivUserViewController
-            nextVC.inputText = inputTextArray[selectedIndex]
+            let nextVC = segue.destinationViewController as! HSQuestionInputViewController
+            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
+            nextVC.inputPostTextDelegate = self
+            nextVC.selectedSection = self.selectedSection
+            nextVC.inputText = inputTextArray[selectedSection]
+        } else if segue.identifier == "toSetUnivUser" {
+            let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
         }
     }
     
@@ -79,7 +89,7 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
     
     // Cellが選択された際に呼び出される.
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedIndex = indexPath.row
+        selectedSection = indexPath.section
         performSegueWithIdentifier("toInput", sender: nil)
         
     }
@@ -94,10 +104,18 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCellWithIdentifier("HSQuestionInputCell") as! HSQuestionInputTableViewCell
         
-        cell.setCell()
+        cell.setCell(labelText: inputTextArray[indexPath.section])
         
         return cell
     }
     
     
 }
+
+// 2/2-2/2.任意のquestionをtableviewから削除するのに使う
+extension HSPostQuestionViewController: InputPostTextDelegate {
+    func inputPostText(index index: Int, inputText: String){
+        inputTextArray[index] = inputText
+    }
+}
+

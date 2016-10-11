@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post Question View Controller-->
+        <!--質問を入力-->
         <scene sceneID="ogp-VL-PKy">
             <objects>
                 <viewController id="ryI-fz-HTM" customClass="HSPostQuestionViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Esz-eC-fBJ"/>
+                    <navigationItem key="navigationItem" title="質問を入力" id="Esz-eC-fBJ"/>
                     <connections>
                         <outlet property="postTableView" destination="RRd-xx-whf" id="rCX-Oq-8OU"/>
                         <segue destination="6RQ-sF-rDs" kind="push" identifier="toInput" id="mrq-aq-N1z"/>
@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1612" y="-232.53373313343329"/>
         </scene>
-        <!--Set Univ User View Controller-->
+        <!--Question Input View Controller-->
         <scene sceneID="u0H-rc-gfg">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6RQ-sF-rDs" customClass="SetUnivUserViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6RQ-sF-rDs" customClass="HSQuestionInputViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GYa-Gn-Saf"/>
                         <viewControllerLayoutGuide type="bottom" id="QZS-Qc-bgv"/>
@@ -58,20 +58,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0OZ-Cu-F9b">
-                                <frame key="frameInset" minX="16" minY="101" width="343" height="211"/>
+                                <frame key="frameInset" minX="16" minY="72" width="343" height="211"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R31-E1-7l9">
-                                <frame key="frameInset" minX="166" minY="72" width="35" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -84,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-389.05547226386807"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Univ User View Controller-->
         <scene sceneID="JNh-NQ-vSE">
             <objects>
-                <viewController id="gIP-fX-j5U" sceneMemberID="viewController">
+                <viewController id="gIP-fX-j5U" customClass="HSSetUnivUserViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lSh-07-ln6"/>
                         <viewControllerLayoutGuide type="bottom" id="ctm-Ey-68J"/>

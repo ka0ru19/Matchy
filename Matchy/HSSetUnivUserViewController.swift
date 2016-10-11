@@ -1,5 +1,5 @@
 //
-//  SetUnivUserViewController.swift
+//  HSSetUnivUserViewController.swift
 //  Matchy
 //
 //  Created by 井上航 on 2016/10/09.
@@ -8,10 +8,7 @@
 
 import UIKit
 
-class SetUnivUserViewController: UIViewController {
-
-    @IBOutlet weak var inputTextView: UITextView!
-    var inputText: String!
+class HSSetUnivUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

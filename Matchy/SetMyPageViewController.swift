@@ -35,6 +35,9 @@ class SetMyPageViewController: UIViewController {
     @IBAction func onTappedTextViewButton() {
         performSegueWithIdentifier("EditIntroduction", sender: nil)
     }
+    @IBAction func onTappedNextButton() {
+        performSegueWithIdentifier("toNext", sender: nil)
+    }
 
     /*
     // MARK: - Navigation

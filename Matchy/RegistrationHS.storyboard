@@ -252,6 +252,9 @@
                                 <frame key="frameInset" minX="113" minY="498" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="タグ付けへ👉"/>
+                                <connections>
+                                    <action selector="onTappedNextButton" destination="fAu-HE-YKq" eventType="touchUpInside" id="B0J-4f-XZy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0v-7c-fat">
                                 <frame key="frameInset" minX="30" minY="306" width="260" height="140"/>
@@ -270,7 +273,7 @@
                         <outlet property="introductionTextView" destination="71r-Nd-URe" id="GP5-wV-FDh"/>
                         <outlet property="nameTextField" destination="KQr-ux-JW0" id="pCJ-eM-vMS"/>
                         <segue destination="5OK-Lb-njc" kind="push" identifier="EditIntroduction" id="xqD-jE-ZgL"/>
-                        <segue destination="67E-yG-ri4" kind="push" id="jgS-1H-GMX"/>
+                        <segue destination="67E-yG-ri4" kind="push" identifier="toNext" id="jgS-1H-GMX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqR-lY-4Il" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,15 +404,13 @@
                                 </state>
                                 <connections>
                                     <action selector="onTappedNextButton:" destination="Up2-Yp-98K" eventType="touchUpInside" id="7rY-aW-ntv"/>
+                                    <segue destination="8gh-fO-s3C" kind="push" id="shF-yn-DBL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nvk-gK-iBy"/>
-                    <connections>
-                        <segue destination="8gh-fO-s3C" kind="push" id="5qa-DL-PRQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUu-w9-rkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

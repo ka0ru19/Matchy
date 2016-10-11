@@ -91,11 +91,12 @@
 		63C440721DAA52AF00EF5F7E /* HSPostQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */; };
 		63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */; };
 		63C440761DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */; };
-		63C440781DAA5A6800EF5F7E /* SetUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */; };
+		63C440781DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */; };
 		63C4407B1DAB705200EF5F7E /* HSNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4407A1DAB705200EF5F7E /* HSNotificationViewController.swift */; };
 		63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4407C1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift */; };
 		63C4407F1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */; };
 		63C440811DABB7FF00EF5F7E /* HSMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */; };
+		63C440831DAC6C4000EF5F7E /* HSQuestionInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440821DAC6C4000EF5F7E /* HSQuestionInputViewController.swift */; };
 		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
 		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
@@ -212,11 +213,12 @@
 		63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSPostQuestionViewController.swift; sourceTree = "<group>"; };
 		63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionInputTableViewCell.swift; sourceTree = "<group>"; };
 		63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQuestionInputTableViewCell.xib; sourceTree = "<group>"; };
-		63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUnivUserViewController.swift; sourceTree = "<group>"; };
+		63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSSetUnivUserViewController.swift; sourceTree = "<group>"; };
 		63C4407A1DAB705200EF5F7E /* HSNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNotificationViewController.swift; sourceTree = "<group>"; };
 		63C4407C1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSNotificationTableViewCell.xib; sourceTree = "<group>"; };
 		63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMyPageViewController.swift; sourceTree = "<group>"; };
+		63C440821DAC6C4000EF5F7E /* HSQuestionInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionInputViewController.swift; sourceTree = "<group>"; };
 		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,8 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				6344E8021DA8F4D4002B4A15 /* HSQuestion.storyboard */,
-				63C4406A1DAA46C800EF5F7E /* QuestionDetail */,
 				63C4405F1DAA228400EF5F7E /* QuestionList */,
+				63C4406A1DAA46C800EF5F7E /* QuestionDetail */,
 			);
 			name = HSQuestion;
 			sourceTree = "<group>";
@@ -484,7 +486,8 @@
 				63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */,
 				63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */,
 				63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */,
-				63C440771DAA5A6800EF5F7E /* SetUnivUserViewController.swift */,
+				63C440821DAC6C4000EF5F7E /* HSQuestionInputViewController.swift */,
+				63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */,
 			);
 			name = HSPostQuestionInput;
 			sourceTree = "<group>";
@@ -834,7 +837,7 @@
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
 				63C440531DA9D44800EF5F7E /* Info_HSModel.swift in Sources */,
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
-				63C440781DAA5A6800EF5F7E /* SetUnivUserViewController.swift in Sources */,
+				63C440781DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift in Sources */,
 				63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */,
 				63C440551DA9D4AD00EF5F7E /* Info_UnivModel.swift in Sources */,
 				638290741D9958D1004BD708 /* hoge.swift in Sources */,
@@ -847,6 +850,7 @@
 				63C440811DABB7FF00EF5F7E /* HSMyPageViewController.swift in Sources */,
 				63C4405B1DA9D73900EF5F7E /* AnswerModel.swift in Sources */,
 				63C4406D1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift in Sources */,
+				63C440831DAC6C4000EF5F7E /* HSQuestionInputViewController.swift in Sources */,
 				63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */,
 				63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */,
 				63C440571DA9D4D600EF5F7E /* MatchyTagModel.swift in Sources */,

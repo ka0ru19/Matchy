@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HSQuestionCell" rowHeight="217" id="KGk-i7-Jjw" customClass="HSQuestionTableViewCell" customModule="Matchy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HSQuestionCell" rowHeight="318" id="KGk-i7-Jjw" customClass="HSQuestionTableViewCell" customModule="Matchy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="97"/>
+                <frame key="frameInset" width="320" height="198"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UgS-7a-IJW">
@@ -21,11 +21,11 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOi-E6-sio">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-O4-NOG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnivUserName 他2人への質問" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-O4-NOG">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="c6n-Hb-lRe"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -34,7 +34,7 @@
                                                     <constraint firstAttribute="height" constant="16" id="4lL-tt-30D"/>
                                                     <constraint firstAttribute="width" constant="100" id="gmK-Dl-Ltl"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -45,14 +45,14 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9jR-ce-swE">
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="大学の理系の学科は課題が多いっていうのは本当ですか？" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="scb-A2-s49">
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大学の理系の学科は課題が多いっていうのは本当ですか？大学の理系の学科は課題が多いっていうのは本当ですか？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fI-UB-iVZ">
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="XUX-Rf-xYD"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DnE-g8-idA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-lX-ozs">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Bd6-LS-rZq"/>
@@ -62,8 +62,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="scb-A2-s49" secondAttribute="bottom" id="8gc-An-RQH"/>
-                                            <constraint firstItem="scb-A2-s49" firstAttribute="top" secondItem="9jR-ce-swE" secondAttribute="top" id="bre-be-0Ym"/>
+                                            <constraint firstAttribute="bottom" secondItem="9fI-UB-iVZ" secondAttribute="bottom" id="VdM-Yc-1yo"/>
+                                            <constraint firstItem="9fI-UB-iVZ" firstAttribute="top" secondItem="9jR-ce-swE" secondAttribute="top" id="t9l-LF-7xr"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -88,10 +88,9 @@
             <connections>
                 <outlet property="nextButton" destination="H6B-lX-ozs" id="Gkf-w3-5g0"/>
                 <outlet property="postDateLabel" destination="rhC-aj-m2k" id="e6f-Bb-feq"/>
-                <outlet property="questionTitleTextView" destination="scb-A2-s49" id="T2Y-tq-CDb"/>
                 <outlet property="univUserLabel" destination="zxd-O4-NOG" id="kPn-0V-PWJ"/>
             </connections>
-            <point key="canvasLocation" x="105" y="-96.5"/>
+            <point key="canvasLocation" x="105" y="-46"/>
         </tableViewCell>
     </objects>
 </document>

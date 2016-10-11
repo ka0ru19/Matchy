@@ -18,7 +18,7 @@
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7p6-q5-SQ5">
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6qi-K3-Ngg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="6qi-K3-Ngg">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VfI-Ei-Zhi"/>
                                     <constraint firstAttribute="width" constant="40" id="cM3-uK-XQ4"/>
@@ -28,7 +28,7 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wiy-wR-ubo">
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-nv-roa">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnivUserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-nv-roa">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="RlC-92-ARU"/>
                                                 </constraints>
@@ -36,7 +36,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZv-dg-zlm">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大学名学部名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZv-dg-zlm">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="WGd-bG-cM8"/>
                                                     <constraint firstAttribute="height" constant="14" id="zyE-bP-CFg"/>
@@ -47,7 +47,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-Ak-OE3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnivName(&gt;=20 char)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSM-Ak-OE3">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Y3P-ss-gVr"/>
                                         </constraints>
@@ -80,4 +80,7 @@
             <point key="canvasLocation" x="34" y="97"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="person_blue.png" width="256" height="256"/>
+    </resources>
 </document>

@@ -178,6 +178,9 @@
                                                 <state key="normal" title="新規登録">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onTappedSignUpButton" destination="4sj-us-Ctf" eventType="touchUpInside" id="Lid-81-lQO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37G-Kw-cH7">
                                                 <frame key="frameInset" minX="30" minY="460" width="260" height="32"/>
@@ -188,8 +191,7 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onTappedSignInButton:" destination="4sj-us-Ctf" eventType="touchUpInside" id="1dO-0P-Rsf"/>
-                                                    <action selector="onTappedSignUpButton:" destination="4sj-us-Ctf" eventType="touchUpInside" id="4IJ-Sc-zaB"/>
+                                                    <action selector="onTappedSignInButton" destination="4sj-us-Ctf" eventType="touchUpInside" id="j7m-cL-kWH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -212,7 +214,7 @@
                         <outlet property="signUpButton" destination="mhI-8C-Ccw" id="v2W-vS-SWZ"/>
                         <outlet property="userMailTextField" destination="rc3-lg-0F4" id="zoM-9Y-fgu"/>
                         <outlet property="userPassTextField" destination="Xdx-8k-KFQ" id="Xtf-6k-VNV"/>
-                        <segue destination="h2a-wG-1JZ" kind="push" id="o1Y-IY-waS"/>
+                        <segue destination="h2a-wG-1JZ" kind="push" identifier="toSendMail" id="o1Y-IY-waS"/>
                         <segue destination="cqc-H8-bQc" kind="push" identifier="toTermOfService" id="S7S-Yp-IIt"/>
                         <segue destination="mkK-cK-fvi" kind="push" identifier="toPrivacyPolicy" id="ly8-Gn-bVP"/>
                     </connections>

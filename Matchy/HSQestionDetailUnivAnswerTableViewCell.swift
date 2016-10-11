@@ -13,7 +13,7 @@ class HSQestionDetailUnivAnswerTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var univLabel: UILabel!
-    @IBOutlet weak var univUserButton: UILabel!
+    @IBOutlet weak var univUserButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var rankImageView: UIImageView!
     @IBOutlet weak var answerLabel: UILabel!
