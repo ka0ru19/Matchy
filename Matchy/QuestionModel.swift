@@ -11,7 +11,7 @@ import Foundation
 class QuestionModel {
     var id: String!
     var from: UserModel! // HS
-    var to: [UserModel] = []
+    var to: [UserModel] = [] // 通知したい大学生userIdArray
     var title: String!
     var detail: String!
     var date: String! // 2016/11/03 04:43

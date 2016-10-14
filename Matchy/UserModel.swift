@@ -18,7 +18,7 @@ class UserModel {
     var icon_url: String!
     var intro: String?
     var tagArray: [MatchyTagModel] = []
-    var questionArray: [String] = [] // question_id for HS and Univ
-    var answerArray: [String] = [] // answer_id for Univ Only
+    var questionIdArray: [String] = [] // question_id for HS and Univ
+    var answerIdArray: [String] = [] // answer_id for Univ Only
     var taskca: Int = 0
 }

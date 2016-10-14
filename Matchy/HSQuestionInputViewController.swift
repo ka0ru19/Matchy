@@ -15,8 +15,10 @@ protocol InputPostTextDelegate: class {
 
 class HSQuestionInputViewController: UIViewController {
     
+    @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var inputTextView: UITextView!
     var selectedSection: Int!
+    var sectionLabelText: String!
     var inputText: String!
     // 1/2-2/3. delegateの設定
     var inputPostTextDelegate: InputPostTextDelegate?
@@ -24,8 +26,10 @@ class HSQuestionInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sectionLabel.text = sectionLabelText
         inputTextView.text = inputText
-        
+        inputTextView.delegate = self
+        inputTextView.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,3 +60,11 @@ class HSQuestionInputViewController: UIViewController {
      */
     
 }
+
+extension HSQuestionInputViewController : UITextViewDelegate {
+    
+//    func textViewDidChange(textView: UITextView) {
+//        textView.resolveHashTags()
+//    }
+}
+

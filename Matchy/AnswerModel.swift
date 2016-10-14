@@ -15,5 +15,7 @@ class AnswerModel {
     var date: String!
     var message: String!
     var is_read: Bool = false
-    var rank: Int = 0 // 0 or 1~5
+    var rank: Int = 0 // 0 or 1~3
+    var goodUserIdArray = [UserModel]() // いいねした人リスト
+    var is_bestAnswer = false
 }

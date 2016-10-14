@@ -97,6 +97,7 @@
 		63C4407F1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */; };
 		63C440811DABB7FF00EF5F7E /* HSMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */; };
 		63C440831DAC6C4000EF5F7E /* HSQuestionInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440821DAC6C4000EF5F7E /* HSQuestionInputViewController.swift */; };
+		63C440861DB077AB00EF5F7E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */; };
 		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
 		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
@@ -219,6 +220,7 @@
 		63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSNotificationTableViewCell.xib; sourceTree = "<group>"; };
 		63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMyPageViewController.swift; sourceTree = "<group>"; };
 		63C440821DAC6C4000EF5F7E /* HSQuestionInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionInputViewController.swift; sourceTree = "<group>"; };
+		63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				63B817FF1D957E93001BD1EE /* AppDelegate.swift */,
 				63C4405D1DA9ED9600EF5F7E /* Sample.swift */,
+				63C440841DB0776D00EF5F7E /* Extensions */,
 				63C4405C1DA9D82600EF5F7E /* Models */,
 				6359DA931D97D65200A4D106 /* TopBranch */,
 				6359DA981D97E09500A4D106 /* RegistrationHS */,
@@ -490,6 +493,14 @@
 				63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */,
 			);
 			name = HSPostQuestionInput;
+			sourceTree = "<group>";
+		};
+		63C440841DB0776D00EF5F7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		6ACCB9D1273AF052957D0BD0 /* Pods */ = {
@@ -833,6 +844,7 @@
 				6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */,
 				63C440681DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift in Sources */,
 				6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */,
+				63C440861DB077AB00EF5F7E /* UITextViewExtension.swift in Sources */,
 				63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */,
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
 				63C440531DA9D44800EF5F7E /* Info_HSModel.swift in Sources */,

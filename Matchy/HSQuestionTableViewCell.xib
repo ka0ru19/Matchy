@@ -53,13 +53,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-lX-ozs">
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Bd6-LS-rZq"/>
-                                                    <constraint firstAttribute="height" constant="30" id="LQg-oc-NGJ"/>
-                                                </constraints>
-                                                <state key="normal" title="👉"/>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="9fI-UB-iVZ" secondAttribute="bottom" id="VdM-Yc-1yo"/>
@@ -86,7 +79,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="nextButton" destination="H6B-lX-ozs" id="Gkf-w3-5g0"/>
                 <outlet property="postDateLabel" destination="rhC-aj-m2k" id="e6f-Bb-feq"/>
                 <outlet property="univUserLabel" destination="zxd-O4-NOG" id="kPn-0V-PWJ"/>
             </connections>

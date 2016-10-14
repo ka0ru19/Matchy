@@ -26,6 +26,6 @@ class HSQuestionTableViewCell: UITableViewCell {
     }
     
     func setCell() {
-        
+        self.accessoryType = .DisclosureIndicator
     }
 }

@@ -12,10 +12,14 @@ class HSPostQuestionViewController: UIViewController {
     
     @IBOutlet weak var postTableView: UITableView!
     
-    let sectionTitleArray = ["質問のタイトル（全角28文字以内）",
+    let sectionTitleArray = ["質問のタイトル（全角20文字以内）",
                              "質問の内容（全角200文字以内）",
-                             "関連するタグ（先頭に＃をつける）"]
-    var inputTextArray = ["","",""]
+                             "関連するタグ（先頭に＃をつける）",
+                             "回答文字数の目安を設定(Default:80文字)",
+                             "質問を通知したい大学生を選択(10人以内)",
+                             "ベストアンサーへの報酬を設定(3助貨=¥110以上)",
+                             "回答期限を設定(3h~72h)"]
+    var inputTextArray = ["","","","","","",""]
     
     var selectedSection: Int!
     
@@ -43,11 +47,12 @@ class HSPostQuestionViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toInput" {
+        if segue.identifier == "toInputText" {
             let nextVC = segue.destinationViewController as! HSQuestionInputViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
             nextVC.inputPostTextDelegate = self
             nextVC.selectedSection = self.selectedSection
+            nextVC.sectionLabelText = self.sectionTitleArray[selectedSection]
             nextVC.inputText = inputTextArray[selectedSection]
         } else if segue.identifier == "toSetUnivUser" {
             let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
@@ -80,17 +85,27 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
     // セルの高さを返す
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0: return 50
-        case 1: return 250
-        case 2: return 50
-        default: return 0
+        case 0: return 40
+        case 1: return 120
+        case 2: return 40
+        default: return 40
         }
     }
     
     // Cellが選択された際に呼び出される.
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedSection = indexPath.section
-        performSegueWithIdentifier("toInput", sender: nil)
+        switch selectedSection {
+        case 0: performSegueWithIdentifier("toInputText", sender: nil)
+        case 1: performSegueWithIdentifier("toInputText", sender: nil)
+        case 2: performSegueWithIdentifier("toInputText", sender: nil)
+        case 3: performSegueWithIdentifier("toInputText", sender: nil)
+        case 4: performSegueWithIdentifier("toInputText", sender: nil)
+        case 5: performSegueWithIdentifier("toInputText", sender: nil)
+        case 6: performSegueWithIdentifier("toInputText", sender: nil)
+        default: fatalError()
+        }
+//        performSegueWithIdentifier("toInput", sender: nil)
         
     }
     

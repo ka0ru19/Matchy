@@ -25,5 +25,6 @@ class HSQuestionInputTableViewCell: UITableViewCell {
     
     func setCell(labelText text: String) {
         label.text = text
+        self.accessoryType = .DisclosureIndicator
     }
 }
