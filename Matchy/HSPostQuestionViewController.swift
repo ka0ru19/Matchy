@@ -8,6 +8,11 @@
 
 import UIKit
 
+// 1/2-1/3.任意の選択肢を元画面のtextfieldにinputするのに使う
+protocol InputPostTextDelegate: class {
+    func inputPostText(index index: Int, inputText: String)
+}
+
 class HSPostQuestionViewController: UIViewController {
     
     @IBOutlet weak var postTableView: UITableView!
@@ -54,8 +59,25 @@ class HSPostQuestionViewController: UIViewController {
             nextVC.selectedSection = self.selectedSection
             nextVC.sectionLabelText = self.sectionTitleArray[selectedSection]
             nextVC.inputText = inputTextArray[selectedSection]
-        } else if segue.identifier == "toSetUnivUser" {
+        }
+        else if segue.identifier == "toInputTags" {
+            let nextVC = segue.destinationViewController as! HSQuestionInputTagViewController
+            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
+            nextVC.inputPostTextDelegate = self
+            nextVC.selectedSection = self.selectedSection
+            nextVC.inputText = inputTextArray[selectedSection]
+        }else if segue.identifier == "toSelectUnivUser" {
+            let nextVC = segue.destinationViewController as! HSQuestionSelectUnivUserViewController
+            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
+            nextVC.inputPostTextDelegate = self
+            nextVC.selectedSection = self.selectedSection
+            nextVC.inputText = inputTextArray[selectedSection]
+        }
+        else if segue.identifier == "toSetUnivUser" {
             let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
+            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
+            // nextVC.inputPostTextDelegate = self
+            
         }
     }
     
@@ -85,9 +107,7 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
     // セルの高さを返す
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0: return 40
-        case 1: return 120
-        case 2: return 40
+        case 1: return 120 // 質問の内容のcellだけ多めのheight
         default: return 40
         }
     }
@@ -98,9 +118,9 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
         switch selectedSection {
         case 0: performSegueWithIdentifier("toInputText", sender: nil)
         case 1: performSegueWithIdentifier("toInputText", sender: nil)
-        case 2: performSegueWithIdentifier("toInputText", sender: nil)
+        case 2: performSegueWithIdentifier("toInputTags", sender: nil)
         case 3: performSegueWithIdentifier("toInputText", sender: nil)
-        case 4: performSegueWithIdentifier("toInputText", sender: nil)
+        case 4: performSegueWithIdentifier("toSelectUnivUser", sender: nil)
         case 5: performSegueWithIdentifier("toInputText", sender: nil)
         case 6: performSegueWithIdentifier("toInputText", sender: nil)
         default: fatalError()

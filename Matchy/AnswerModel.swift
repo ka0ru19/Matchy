@@ -11,11 +11,11 @@ import Foundation
 class AnswerModel {
     var id: String!
     var question_id: String!
-    var user: UserModel!
+    var user: String! // uid
     var date: String!
     var message: String!
     var is_read: Bool = false
     var rank: Int = 0 // 0 or 1~3
-    var goodUserIdArray = [UserModel]() // いいねした人リスト
+    var goodUserIdArray = [String]() // いいねした人uidリスト
     var is_bestAnswer = false
 }

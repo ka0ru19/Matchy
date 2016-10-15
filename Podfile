@@ -8,6 +8,7 @@ target 'Matchy' do
   # Pods for Matchy
 
   pod 'Firebase'
+  pod 'Firebase/Auth'
 
   target 'MatchyTests' do
     inherit! :search_paths

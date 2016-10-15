@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AuthHSUserViewController: UIViewController {
     
@@ -30,8 +31,12 @@ class AuthHSUserViewController: UIViewController {
     var focusedTextFieldTag: Int!
     //    var lastMoveSize: CGFloat = 0
     
+    // 「user」というインスタンスをつくる。
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         initUIParts()
     }
@@ -76,7 +81,32 @@ class AuthHSUserViewController: UIViewController {
     }
     
     @IBAction func onTappedSignInButton() {
+        guard let signInEmail = userMailTextField.text else {
+            print("no email")
+            return
+        }
+        guard let signInPass = userPassTextField.text else {
+            print("no pass")
+            return
+        }
         
+        FIRAuth.auth()?.signInWithEmail(signInEmail, password: signInPass, completion: {(user:FIRUser?, error:NSError?) in
+            if let error = error {
+                print("login failed! \(error)")
+                return
+            }
+            
+            if let user = user {
+                print(user.uid)
+                print(user.email)
+                print("user : \(user.email) -> \(user.uid) has been signed in successfully.")
+                
+                // キーidに「taro」という値を格納。（idは任意の文字列でok）
+                self.ud.setObject(user.uid, forKey: "uid")
+                
+                self.performSegueWithIdentifier("toHSTop", sender: nil)
+            }
+        })
     }
 }
 

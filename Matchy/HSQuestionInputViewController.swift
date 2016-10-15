@@ -8,10 +8,10 @@
 
 import UIKit
 
-// 1/2-1/3.任意の選択肢を元画面のtextfieldにinputするのに使う
-protocol InputPostTextDelegate: class {
-    func inputPostText(index index: Int, inputText: String)
-}
+//// 1/2-1/3.任意の選択肢を元画面のtextfieldにinputするのに使う
+//protocol InputPostTextDelegate: class {
+//    func inputPostText(index index: Int, inputText: String)
+//}
 
 class HSQuestionInputViewController: UIViewController {
     
@@ -26,10 +26,8 @@ class HSQuestionInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sectionLabel.text = sectionLabelText
-        inputTextView.text = inputText
-        inputTextView.delegate = self
-        inputTextView.becomeFirstResponder()
+        initView()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,23 +46,27 @@ class HSQuestionInputViewController: UIViewController {
         }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    func initView() {
+        sectionLabel.text = sectionLabelText
+        inputTextView.text = inputText
+        inputTextView.delegate = self
+        
+        if selectedSection == 3 {
+            inputTextView.keyboardType = .NumberPad
+        } else if selectedSection == 5 {
+            inputTextView.keyboardType = .NumberPad
+        }
+        
+        
+        inputTextView.becomeFirstResponder()
+        
+    }
 }
 
 extension HSQuestionInputViewController : UITextViewDelegate {
     
-//    func textViewDidChange(textView: UITextView) {
-//        textView.resolveHashTags()
-//    }
+    //    func textViewDidChange(textView: UITextView) {
+    //        textView.resolveHashTags()
+    //    }
 }
 

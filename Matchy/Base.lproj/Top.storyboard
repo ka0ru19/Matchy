@@ -217,6 +217,7 @@
                         <segue destination="h2a-wG-1JZ" kind="push" identifier="toSendMail" id="o1Y-IY-waS"/>
                         <segue destination="cqc-H8-bQc" kind="push" identifier="toTermOfService" id="S7S-Yp-IIt"/>
                         <segue destination="mkK-cK-fvi" kind="push" identifier="toPrivacyPolicy" id="ly8-Gn-bVP"/>
+                        <segue destination="YGm-IT-gHY" kind="modal" identifier="toHSTop" animates="NO" id="3fd-SY-Pqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lJ-ih-Yox" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -348,6 +349,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3B-q9-LBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1157" y="888"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="EWp-pt-c2N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="YGm-IT-gHY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Td3-eu-ccu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="559"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="foh-Pm-0dD">

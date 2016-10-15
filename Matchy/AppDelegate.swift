@@ -14,10 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var user_uid: String?
+    
+    let ud = NSUserDefaults.standardUserDefaults()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         FIRApp.configure()
+        
+        let topStoryboard: UIStoryboard =  UIStoryboard(name: "Top",bundle:nil)
+        let HSStoryboard: UIStoryboard =  UIStoryboard(name: "HSTopTab",bundle:nil)
+        
+        var viewController: UIViewController
+        
+        user_uid = ud.objectForKey("uid") as? String
+        
+        //表示するビューコントローラーを指定
+        print("AppDelegate -> user_uid = \(user_uid);")
+        if let uid = user_uid { // uidあり->HS
+            viewController = HSStoryboard.instantiateInitialViewController()! as! UITabBarController
+        } else {
+            viewController = topStoryboard.instantiateInitialViewController()! as! UINavigationController
+        }
+        
+        window?.rootViewController = viewController
+        
         return true
     }
 
