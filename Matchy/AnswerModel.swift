@@ -8,14 +8,15 @@
 
 import Foundation
 
+// key: "answerList"
 class AnswerModel {
     var id: String!
-    var question_id: String!
+    var questionId: String!
     var user: String! // uid
     var date: String!
     var message: String!
-    var is_read: Bool = false
+//    var is_read: Bool = false
     var rank: Int = 0 // 0 or 1~3
-    var goodUserIdArray = [String]() // いいねした人uidリスト
-    var is_bestAnswer = false
+    var goodUserIdArray: [String] = [] // いいねした人uidリスト
+    var isBestAnswer = false
 }

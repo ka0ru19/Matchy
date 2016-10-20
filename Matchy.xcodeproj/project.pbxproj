@@ -24,11 +24,20 @@
 		6348D0681DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D0661DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift */; };
 		6348D0691DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6348D0671DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.xib */; };
 		6348D06B1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D06A1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift */; };
+		6348D06D1DB3105500F52516 /* SendEmailVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */; };
+		6348D06F1DB36D8100F52516 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D06E1DB36D8000F52516 /* StringExtension.swift */; };
+		6348D0721DB3821B00F52516 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D0711DB3821B00F52516 /* NSDateExtension.swift */; };
+		6348D0761DB4C47700F52516 /* SetTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D0751DB4C47700F52516 /* SetTagsViewController.swift */; };
+		6348D0781DB4C5B800F52516 /* VerifyRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */; };
 		6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */; };
 		6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */; };
 		6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */; };
 		6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */; };
 		6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */; };
+		6361853F1DB8BD450064CCBA /* InputTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6361853E1DB8BD450064CCBA /* InputTag.storyboard */; };
+		636185411DB8BD610064CCBA /* InputTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636185401DB8BD610064CCBA /* InputTagViewController.swift */; };
+		636185461DB8C5CB0064CCBA /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636185451DB8C5CB0064CCBA /* InputTextViewController.swift */; };
+		636185481DB8C5D30064CCBA /* InputText.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636185471DB8C5D30064CCBA /* InputText.storyboard */; };
 		638290741D9958D1004BD708 /* hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638290731D9958D1004BD708 /* hoge.swift */; };
 		63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B817FF1D957E93001BD1EE /* AppDelegate.swift */; };
 		63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818011D957E93001BD1EE /* TopBranchViewController.swift */; };
@@ -91,7 +100,7 @@
 		63C440721DAA52AF00EF5F7E /* HSPostQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */; };
 		63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */; };
 		63C440761DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */; };
-		63C440781DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */; };
+		63C440781DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440771DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift */; };
 		63C4407B1DAB705200EF5F7E /* HSNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4407A1DAB705200EF5F7E /* HSNotificationViewController.swift */; };
 		63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C4407C1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift */; };
 		63C4407F1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */; };
@@ -141,11 +150,21 @@
 		6348D0661DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionSelectUnivUserTableViewCell.swift; sourceTree = "<group>"; };
 		6348D0671DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQuestionSelectUnivUserTableViewCell.xib; sourceTree = "<group>"; };
 		6348D06A1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionSelectUnivUserViewController.swift; sourceTree = "<group>"; };
+		6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailVerifyViewController.swift; sourceTree = "<group>"; };
+		6348D06E1DB36D8000F52516 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		6348D0701DB37A2000F52516 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		6348D0711DB3821B00F52516 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		6348D0751DB4C47700F52516 /* SetTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTagsViewController.swift; sourceTree = "<group>"; };
+		6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyRegistrationViewController.swift; sourceTree = "<group>"; };
 		6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegistrationHS.storyboard; sourceTree = "<group>"; };
 		6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationHSViewController.swift; sourceTree = "<group>"; };
 		6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetInfomationOfHSViewController.swift; sourceTree = "<group>"; };
 		6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
 		6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMyPageViewController.swift; sourceTree = "<group>"; };
+		6361853E1DB8BD450064CCBA /* InputTag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputTag.storyboard; sourceTree = "<group>"; };
+		636185401DB8BD610064CCBA /* InputTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTagViewController.swift; sourceTree = "<group>"; };
+		636185451DB8C5CB0064CCBA /* InputTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
+		636185471DB8C5D30064CCBA /* InputText.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputText.storyboard; sourceTree = "<group>"; };
 		638290731D9958D1004BD708 /* hoge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hoge.swift; sourceTree = "<group>"; };
 		63B817FC1D957E93001BD1EE /* Matchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B817FF1D957E93001BD1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,7 +233,7 @@
 		63C440711DAA52AF00EF5F7E /* HSPostQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSPostQuestionViewController.swift; sourceTree = "<group>"; };
 		63C440731DAA547400EF5F7E /* HSQuestionInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionInputTableViewCell.swift; sourceTree = "<group>"; };
 		63C440741DAA547500EF5F7E /* HSQuestionInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSQuestionInputTableViewCell.xib; sourceTree = "<group>"; };
-		63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSSetUnivUserViewController.swift; sourceTree = "<group>"; };
+		63C440771DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSQuestionFinishViewController.swift; sourceTree = "<group>"; };
 		63C4407A1DAB705200EF5F7E /* HSNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNotificationViewController.swift; sourceTree = "<group>"; };
 		63C4407C1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		63C4407D1DAB8A8100EF5F7E /* HSNotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSNotificationTableViewCell.xib; sourceTree = "<group>"; };
@@ -326,6 +345,7 @@
 				63B818781D9595C3001BD1EE /* AuthHSUserViewController.swift */,
 				63B8187A1D9639EB001BD1EE /* TermOfServiceViewController.swift */,
 				63B8187C1D9639FD001BD1EE /* PrivacyPolicyViewController.swift */,
+				6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */,
 				63B818031D957E94001BD1EE /* Top.storyboard */,
 			);
 			name = TopBranch;
@@ -340,14 +360,44 @@
 				638290731D9958D1004BD708 /* hoge.swift */,
 				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
 				6344E7FB1DA51E43002B4A15 /* EditIntroductionViewController.swift */,
+				6348D0751DB4C47700F52516 /* SetTagsViewController.swift */,
+				6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */,
 				6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */,
 			);
 			name = RegistrationHS;
 			sourceTree = "<group>";
 		};
+		636185421DB8BE6B0064CCBA /* ExtraStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				636185441DB8C58A0064CCBA /* InputText */,
+				636185431DB8BE970064CCBA /* InputTag */,
+			);
+			name = ExtraStoryBoard;
+			sourceTree = "<group>";
+		};
+		636185431DB8BE970064CCBA /* InputTag */ = {
+			isa = PBXGroup;
+			children = (
+				6361853E1DB8BD450064CCBA /* InputTag.storyboard */,
+				636185401DB8BD610064CCBA /* InputTagViewController.swift */,
+			);
+			name = InputTag;
+			sourceTree = "<group>";
+		};
+		636185441DB8C58A0064CCBA /* InputText */ = {
+			isa = PBXGroup;
+			children = (
+				636185471DB8C5D30064CCBA /* InputText.storyboard */,
+				636185451DB8C5CB0064CCBA /* InputTextViewController.swift */,
+			);
+			name = InputText;
+			sourceTree = "<group>";
+		};
 		63B817F31D957E93001BD1EE = {
 			isa = PBXGroup;
 			children = (
+				6348D0701DB37A2000F52516 /* Bridging-Header.h */,
 				63B817FE1D957E93001BD1EE /* Matchy */,
 				63B818131D957E94001BD1EE /* MatchyTests */,
 				63B8181E1D957E94001BD1EE /* MatchyUITests */,
@@ -378,6 +428,7 @@
 				6359DA981D97E09500A4D106 /* RegistrationHS */,
 				6344E7FF1DA5319B002B4A15 /* HS */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
+				636185421DB8BE6B0064CCBA /* ExtraStoryBoard */,
 				63B818081D957E94001BD1EE /* LaunchScreen.storyboard */,
 				6344E7FD1DA52202002B4A15 /* GoogleService-Info.plist */,
 				63B8180B1D957E94001BD1EE /* Info.plist */,
@@ -490,7 +541,7 @@
 				6348D06A1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift */,
 				6348D0661DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift */,
 				6348D0671DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.xib */,
-				63C440771DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift */,
+				63C440771DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift */,
 			);
 			name = HSPostQuestionInput;
 			sourceTree = "<group>";
@@ -499,6 +550,8 @@
 			isa = PBXGroup;
 			children = (
 				63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */,
+				6348D06E1DB36D8000F52516 /* StringExtension.swift */,
+				6348D0711DB3821B00F52516 /* NSDateExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -641,6 +694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636185481DB8C5D30064CCBA /* InputText.storyboard in Resources */,
 				63B8185C1D9589E1001BD1EE /* mail.png in Resources */,
 				63C440691DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib in Resources */,
 				63B818731D9589E1001BD1EE /* star_pink.png in Resources */,
@@ -654,6 +708,7 @@
 				63B818561D9589E1001BD1EE /* books_gray.png in Resources */,
 				6344E80B1DA8F5D8002B4A15 /* HSMyPage.storyboard in Resources */,
 				63B818651D9589E1001BD1EE /* person_blue.png in Resources */,
+				6361853F1DB8BD450064CCBA /* InputTag.storyboard in Resources */,
 				63B818611D9589E1001BD1EE /* new_blue.png in Resources */,
 				63B818701D9589E1001BD1EE /* search_person_gray.png in Resources */,
 				63B818721D9589E1001BD1EE /* star_gray.png in Resources */,
@@ -842,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6348D0761DB4C47700F52516 /* SetTagsViewController.swift in Sources */,
 				6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */,
 				63C440681DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift in Sources */,
 				6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */,
@@ -849,30 +905,36 @@
 				63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */,
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
-				63C440781DAA5A6800EF5F7E /* HSSetUnivUserViewController.swift in Sources */,
+				63C440781DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift in Sources */,
 				63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */,
 				638290741D9958D1004BD708 /* hoge.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,
 				63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */,
+				636185461DB8C5CB0064CCBA /* InputTextViewController.swift in Sources */,
+				6348D0781DB4C5B800F52516 /* VerifyRegistrationViewController.swift in Sources */,
 				63C440701DAA4B2100EF5F7E /* HSSearchUnivUserViewController.swift in Sources */,
 				6344E7FC1DA51E43002B4A15 /* EditIntroductionViewController.swift in Sources */,
 				63C4405E1DA9ED9600EF5F7E /* Sample.swift in Sources */,
 				63C440721DAA52AF00EF5F7E /* HSPostQuestionViewController.swift in Sources */,
+				636185411DB8BD610064CCBA /* InputTagViewController.swift in Sources */,
 				63C440811DABB7FF00EF5F7E /* HSMyPageViewController.swift in Sources */,
 				63C4405B1DA9D73900EF5F7E /* AnswerModel.swift in Sources */,
 				63C4406D1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.swift in Sources */,
 				63C440831DAC6C4000EF5F7E /* HSQuestionInputViewController.swift in Sources */,
 				63B8187D1D9639FD001BD1EE /* PrivacyPolicyViewController.swift in Sources */,
 				63B818791D9595C3001BD1EE /* AuthHSUserViewController.swift in Sources */,
+				6348D0721DB3821B00F52516 /* NSDateExtension.swift in Sources */,
 				63C4407B1DAB705200EF5F7E /* HSNotificationViewController.swift in Sources */,
 				63B8187B1D9639EC001BD1EE /* TermOfServiceViewController.swift in Sources */,
 				63C440511DA9D1B800EF5F7E /* UserModel.swift in Sources */,
 				6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */,
 				6348D0681DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift in Sources */,
 				6344E8181DA948AF002B4A15 /* HSTopTabBarController.swift in Sources */,
+				6348D06D1DB3105500F52516 /* SendEmailVerifyViewController.swift in Sources */,
 				6348D0651DB1DAAC00F52516 /* HSQuestionInputTagViewController.swift in Sources */,
 				6344E8151DA93736002B4A15 /* HSQuestionTableViewCell.swift in Sources */,
 				6348D06B1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift in Sources */,
+				6348D06F1DB36D8100F52516 /* StringExtension.swift in Sources */,
 				63C440641DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift in Sources */,
 				6344E81A1DA94A36002B4A15 /* HSQuestionViewController.swift in Sources */,
 				63C440591DA9D60900EF5F7E /* QuestionModel.swift in Sources */,
@@ -1032,6 +1094,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TASKEYA.Matchy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
@@ -1048,6 +1111,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TASKEYA.Matchy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;

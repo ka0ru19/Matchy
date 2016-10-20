@@ -37,10 +37,10 @@
                     <navigationItem key="navigationItem" title="質問を入力" id="Esz-eC-fBJ"/>
                     <connections>
                         <outlet property="postTableView" destination="RRd-xx-whf" id="rCX-Oq-8OU"/>
-                        <segue destination="6RQ-sF-rDs" kind="push" identifier="toInputText" id="mrq-aq-N1z"/>
-                        <segue destination="gIP-fX-j5U" kind="push" identifier="toSetUnivUser" id="9dR-KK-aGc"/>
-                        <segue destination="Ngl-9F-lYE" kind="push" identifier="toInputTags" id="Gr7-yo-DT5"/>
+                        <segue destination="gIP-fX-j5U" kind="modal" identifier="toQuestionFinish" id="9dR-KK-aGc"/>
                         <segue destination="YwT-ev-uA6" kind="push" identifier="toSelectUnivUser" id="PJh-8r-S4r"/>
+                        <segue destination="Vpu-67-UEL" kind="push" id="snl-gA-vlp"/>
+                        <segue destination="PUg-Uo-hOG" kind="push" id="IA2-lL-KFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1y-EN-NZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,6 +86,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgR-Jq-f3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2215" y="-1177"/>
+        </scene>
+        <!--InputTag-->
+        <scene sceneID="u1a-mi-msf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InputTag" id="Vpu-67-UEL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bxh-3v-epb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32O-82-dHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="-706"/>
+        </scene>
+        <!--InputText-->
+        <scene sceneID="HDP-vG-UYE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InputText" id="PUg-Uo-hOG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hxy-XV-VM3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-t1-MWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="-640"/>
         </scene>
         <!--Question Input Tag View Controller-->
         <scene sceneID="CBF-OF-LPS">
@@ -190,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCw-CD-jbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2580" y="-211.84407796101951"/>
+            <point key="canvasLocation" x="2732" y="-187"/>
         </scene>
         <!--Set Univ User View Controller-->
         <scene sceneID="JNh-NQ-vSE">
@@ -203,6 +223,27 @@
                     <view key="view" contentMode="scaleToFill" id="xlI-vl-5eB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tray.png" translatesAutoresizingMaskIntoConstraints="NO" id="HcY-Vl-CHz">
+                                <frame key="frameInset" minX="59" minY="205" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問完了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24Z-ZO-FAz">
+                                <frame key="frameInset" minX="152" minY="164" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cam-iS-rOq">
+                                <frame key="frameInset" minX="156" minY="538" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ホームへ"/>
+                                <connections>
+                                    <segue destination="Sfe-dx-D2b" kind="modal" id="G1i-HN-4S7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="64T-bo-GAm"/>
@@ -210,6 +251,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psT-WK-w2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2732" y="803"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="NUj-dx-8ef">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="Sfe-dx-D2b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAv-Ir-acZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3178" y="1048"/>
         </scene>
         <!--質問する-->
         <scene sceneID="AGs-de-ngu">
@@ -232,4 +281,7 @@
             <point key="canvasLocation" x="672.79999999999995" y="-232.53373313343329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tray.png" width="256" height="256"/>
+    </resources>
 </document>

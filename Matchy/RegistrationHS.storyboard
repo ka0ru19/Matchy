@@ -268,10 +268,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="X66-5z-J4c"/>
                     <connections>
-                        <outlet property="commentTextField" destination="FcX-pr-cyB" id="mxD-Um-QcB"/>
+                        <outlet property="idTextField" destination="KQr-ux-JW0" id="Qji-NE-yfm"/>
                         <outlet property="imageView" destination="bLe-vI-Gys" id="BOq-zG-RGD"/>
                         <outlet property="introductionTextView" destination="71r-Nd-URe" id="GP5-wV-FDh"/>
-                        <outlet property="nameTextField" destination="KQr-ux-JW0" id="pCJ-eM-vMS"/>
+                        <outlet property="nameTextField" destination="FcX-pr-cyB" id="zuP-IU-okX"/>
                         <segue destination="5OK-Lb-njc" kind="push" identifier="EditIntroduction" id="xqD-jE-ZgL"/>
                         <segue destination="67E-yG-ri4" kind="push" identifier="toNext" id="jgS-1H-GMX"/>
                     </connections>
@@ -280,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="1641" y="768"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Tags View Controller-->
         <scene sceneID="SPi-r9-0UD">
             <objects>
-                <viewController id="67E-yG-ri4" sceneMemberID="viewController">
+                <viewController id="67E-yG-ri4" customClass="SetTagsViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hmp-4w-P2y"/>
                         <viewControllerLayoutGuide type="bottom" id="uhb-1Z-DYd"/>
@@ -403,23 +403,67 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="onTappedNextButton" destination="67E-yG-ri4" eventType="touchUpInside" id="F78-BO-rcn"/>
                                     <action selector="onTappedNextButton:" destination="Up2-Yp-98K" eventType="touchUpInside" id="7rY-aW-ntv"/>
-                                    <segue destination="8gh-fO-s3C" kind="push" id="shF-yn-DBL"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLZ-y7-Ud9">
+                                <frame key="frameInset" minX="116" minY="196" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-fc-QcB">
+                                <frame key="frameInset" minX="116" minY="231" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEA-xA-Iay">
+                                <frame key="frameInset" minX="116" minY="266" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-M8-zst">
+                                <frame key="frameInset" minX="116" minY="301" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBR-NE-OVM">
+                                <frame key="frameInset" minX="116" minY="336" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-TL-bC0">
+                                <frame key="frameInset" minX="116" minY="371" width="201" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nvk-gK-iBy"/>
+                    <connections>
+                        <outlet property="button0" destination="dLZ-y7-Ud9" id="GON-lY-g3F"/>
+                        <outlet property="button1" destination="Z2A-fc-QcB" id="NfF-GO-dgY"/>
+                        <outlet property="button2" destination="xEA-xA-Iay" id="j04-X6-BF3"/>
+                        <outlet property="button3" destination="aZf-M8-zst" id="1mn-IP-jV3"/>
+                        <outlet property="button4" destination="bBR-NE-OVM" id="nJd-lL-bTy"/>
+                        <outlet property="button5" destination="uh8-TL-bC0" id="rug-E4-svW"/>
+                        <segue destination="8gh-fO-s3C" kind="push" identifier="toVerify" id="Snp-Vz-Qk6"/>
+                        <segue destination="YsH-K6-x22" kind="push" identifier="toInputTag" id="ezw-qQ-1H0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUu-w9-rkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2132.5" y="1185.5"/>
         </scene>
-        <!--View Controller-->
+        <!--InputTag-->
+        <scene sceneID="GEc-hW-fb1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InputTag" id="YsH-K6-x22" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sCx-2B-ete"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMU-P9-UKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2409" y="1323"/>
+        </scene>
+        <!--Verify Registration View Controller-->
         <scene sceneID="DIN-41-BNd">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8gh-fO-s3C" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8gh-fO-s3C" customClass="VerifyRegistrationViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N5y-Vh-mEU"/>
                         <viewControllerLayoutGuide type="bottom" id="QRT-PS-Euz"/>
@@ -467,12 +511,12 @@
                                         </constraints>
                                         <state key="normal" title="編集"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-Ep-SSn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userIdLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-Ep-SSn">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LongTitileLabel--------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkG-YZ-CbN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userNameLongTitileLabel--------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkG-YZ-CbN">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -480,7 +524,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJU-RE-1DN">
                                         <state key="normal" title="完了"/>
                                         <connections>
-                                            <segue destination="3An-Bc-9Nk" kind="push" id="6Ar-Ak-zTx"/>
+                                            <action selector="onTappedFinishButton" destination="8gh-fO-s3C" eventType="touchUpInside" id="pJb-Xj-5D7"/>
+                                            <segue destination="3An-Bc-9Nk" kind="modal" id="6Ar-Ak-zTx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -519,6 +564,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pfx-qD-yiH"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="L2L-p6-N7E" id="IGN-ar-XqS"/>
+                        <outlet property="idLabel" destination="cb6-Ep-SSn" id="4tU-6X-bD6"/>
+                        <outlet property="introTextView" destination="LCe-bn-ted" id="OZ8-W9-Kzk"/>
+                        <outlet property="nameLabel" destination="WkG-YZ-CbN" id="zko-10-h2C"/>
+                        <outlet property="tagsTextView" destination="sUV-pV-Umn" id="jml-HD-OS8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8i-W8-YHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -542,6 +594,9 @@
                                 <state key="normal" title="Matchyを始める">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BhI-di-xLc" kind="modal" animates="NO" id="uwB-2C-XmU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Matchy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-7D-A68">
                                 <constraints>
@@ -570,6 +625,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3M-TT-f4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3257.5" y="1067.5"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="hV5-mi-FYD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="BhI-di-xLc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DqC-GU-S4o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3574" y="1172"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yce-13-U01">

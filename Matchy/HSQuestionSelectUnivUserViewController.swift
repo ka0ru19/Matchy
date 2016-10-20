@@ -20,7 +20,7 @@ class HSQuestionSelectUnivUserViewController: UIViewController {
     var selectedSection: Int!
     var inputText: String!
     // 1/2-2/3. delegateの設定
-    var inputPostTextDelegate: InputPostTextDelegate?
+    var inputTextDelegate: InputTextDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +45,13 @@ class HSQuestionSelectUnivUserViewController: UIViewController {
         var inputText = ""
         for i in 0 ..< isCheckedUserArray.count {
             if isCheckedUserArray[i] == true {
-                inputText += "@" + userIdArray[i] + " "
+                inputText += userIdArray[i] + " "
             }
         }
         
         if inputText != "" {
             // 1/2-3/3. 元画面にこの質問を選択肢を再登録
-            self.inputPostTextDelegate?.inputPostText(index: selectedSection,
+            self.inputTextDelegate?.inputText(index: selectedSection,
                                                       inputText: inputText)
         } else {
             print("未入力")

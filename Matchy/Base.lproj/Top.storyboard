@@ -214,7 +214,7 @@
                         <outlet property="signUpButton" destination="mhI-8C-Ccw" id="v2W-vS-SWZ"/>
                         <outlet property="userMailTextField" destination="rc3-lg-0F4" id="zoM-9Y-fgu"/>
                         <outlet property="userPassTextField" destination="Xdx-8k-KFQ" id="Xtf-6k-VNV"/>
-                        <segue destination="h2a-wG-1JZ" kind="push" identifier="toSendMail" id="o1Y-IY-waS"/>
+                        <segue destination="h2a-wG-1JZ" kind="modal" identifier="toSendMail" id="o1Y-IY-waS"/>
                         <segue destination="cqc-H8-bQc" kind="push" identifier="toTermOfService" id="S7S-Yp-IIt"/>
                         <segue destination="mkK-cK-fvi" kind="push" identifier="toPrivacyPolicy" id="ly8-Gn-bVP"/>
                         <segue destination="YGm-IT-gHY" kind="modal" identifier="toHSTop" animates="NO" id="3fd-SY-Pqs"/>
@@ -291,7 +291,7 @@
         <!--仮登録完了-->
         <scene sceneID="jDS-rH-WLZ">
             <objects>
-                <viewController id="h2a-wG-1JZ" sceneMemberID="viewController">
+                <viewController id="h2a-wG-1JZ" customClass="SendEmailVerifyViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xt6-xE-dOI"/>
                         <viewControllerLayoutGuide type="bottom" id="Trc-yJ-KkR"/>
@@ -311,14 +311,40 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-r4-HOc">
+                                <frame key="frameInset" minX="84" minY="518" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="メールを確認しました"/>
+                                <connections>
+                                    <action selector="onTappedVerifyButton" destination="h2a-wG-1JZ" eventType="touchUpInside" id="k0X-jV-hfS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メールが届くまで1分〜3分ほどかかります。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-Wf-Gha">
+                                <frame key="frameInset" minX="35" minY="489" width="251" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="仮登録完了" id="rJC-XJ-GUg"/>
+                    <connections>
+                        <segue destination="XPd-fF-dE4" kind="modal" identifier="toHSRegistration" animates="NO" id="NnC-lk-Q5m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Iz-LM-Wfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="159"/>
+            <point key="canvasLocation" x="1847.5" y="159.5"/>
+        </scene>
+        <!--RegistrationHS-->
+        <scene sceneID="afL-12-aDZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegistrationHS" id="XPd-fF-dE4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpe-Xv-0Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198" y="308"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e3E-Fx-oxM">

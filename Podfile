@@ -9,6 +9,8 @@ target 'Matchy' do
 
   pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'MatchyTests' do
     inherit! :search_paths

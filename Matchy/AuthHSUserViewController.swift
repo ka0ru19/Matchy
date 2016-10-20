@@ -73,11 +73,60 @@ class AuthHSUserViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toSendMail" {
+            let nextVC = segue.destinationViewController as! SendEmailVerifyViewController
+            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
+            nextVC.email = newMailTextField.text
+            nextVC.password = newPassTextField.text
+        }
     }
     
     @IBAction func onTappedSignUpButton() {
-        performSegueWithIdentifier("toSendMail", sender: nil)
-        
+        guard let signUpEmail = newMailTextField.text else {
+            print("no email")
+            return
+        }
+        guard let signUpPass = newPassTextField.text else {
+            print("no pass")
+            return
+        }
+        guard let pass2 = newPass2TextField.text else {
+            print("no pass2")
+            return
+        }
+        if signUpPass != pass2 {
+            print("２つのパスワードが一致しません")
+            newPassTextField.text = ""
+            newPass2TextField.text = ""
+            return
+        }
+        FIRAuth.auth()?.createUserWithEmail(signUpEmail, password: signUpPass, completion: { (user, error) in
+            
+            //エラーなしなら、認証完了
+            if let error = error {
+                print("\(error.localizedDescription)")
+                return
+            }
+            
+            // メールのバリデーションを行う
+            user?.sendEmailVerificationWithCompletion({ (mailError) in
+                if mailError == nil {
+                    // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
+                    guard let user = user else { return }
+                    
+                    print(user.uid)
+                    print(user.email)
+                    print("user has been signed in successfully.")
+                    
+                    self.performSegueWithIdentifier("toSendMail", sender: nil)
+                    
+                }else {
+                    print("\(mailError?.localizedDescription)")
+                }
+            })
+            
+            
+        })
     }
     
     @IBAction func onTappedSignInButton() {
@@ -96,17 +145,35 @@ class AuthHSUserViewController: UIViewController {
                 return
             }
             
-            if let user = user {
-                print(user.uid)
-                print(user.email)
-                print("user : \(user.email) -> \(user.uid) has been signed in successfully.")
+            if let signInUser = user {
                 
-                // キーidに「taro」という値を格納。（idは任意の文字列でok）
-                self.ud.setObject(user.uid, forKey: "uid")
-                
-                self.performSegueWithIdentifier("toHSTop", sender: nil)
+                // Emailのバリデーションが完了しているか確認する。完了ならそのままログイン
+                if signInUser.emailVerified {
+                    // 完了済みなら、ListViewControllerに遷移
+                    print(FIRAuth.auth()?.currentUser)
+                    print(signInUser.uid)
+                    print(signInUser.email)
+                    print("user has been signed in successfully.")
+                    
+                    // キーidに「taro」という値を格納。（idは任意の文字列でok）
+                    self.ud.setObject(signInUser.uid, forKey: "uid")
+                    
+                    self.performSegueWithIdentifier("toHSTop", sender: nil)
+                    
+                } else {
+                    // 完了していない場合は、アラートを表示
+                    self.presentValidateAlert()
+                }
             }
         })
+        
+    }
+    
+    // メールのバリデーションが完了していない場合のアラートを表示
+    func presentValidateAlert() {
+        let alert = UIAlertController(title: "メール認証", message: "メール認証を行ってください", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 

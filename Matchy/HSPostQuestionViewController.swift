@@ -9,9 +9,9 @@
 import UIKit
 
 // 1/2-1/3.任意の選択肢を元画面のtextfieldにinputするのに使う
-protocol InputPostTextDelegate: class {
-    func inputPostText(index index: Int, inputText: String)
-}
+//protocol InputPostTextDelegate: class {
+//    func inputPostText(index index: Int, inputText: String)
+//}
 
 class HSPostQuestionViewController: UIViewController {
     
@@ -22,8 +22,8 @@ class HSPostQuestionViewController: UIViewController {
                              "関連するタグ（先頭に＃をつける）",
                              "回答文字数の目安を設定(Default:80文字)",
                              "質問を通知したい大学生を選択(10人以内)",
-                             "ベストアンサーへの報酬を設定(3助貨=¥110以上)",
-                             "回答期限を設定(3h~72h)"]
+                             "ベストアンサーへの報酬を設定(30助貨=¥110以上)",
+                             "回答期限を設定(format: 2016/11/02 03:10 3h~72h)"]
     var inputTextArray = ["","","","","","",""]
     
     var selectedSection: Int!
@@ -53,28 +53,28 @@ class HSPostQuestionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toInputText" {
-            let nextVC = segue.destinationViewController as! HSQuestionInputViewController
+            let nextVC = segue.destinationViewController as! InputTextViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
-            nextVC.inputPostTextDelegate = self
+            nextVC.inputTextDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.sectionLabelText = self.sectionTitleArray[selectedSection]
             nextVC.inputText = inputTextArray[selectedSection]
-        }
-        else if segue.identifier == "toInputTags" {
-            let nextVC = segue.destinationViewController as! HSQuestionInputTagViewController
+        }else if segue.identifier == "toInputTags" {
+            let nextVC = segue.destinationViewController as! InputTagViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
-            nextVC.inputPostTextDelegate = self
+            nextVC.inputTagDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.inputText = inputTextArray[selectedSection]
         }else if segue.identifier == "toSelectUnivUser" {
             let nextVC = segue.destinationViewController as! HSQuestionSelectUnivUserViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
-            nextVC.inputPostTextDelegate = self
+            nextVC.inputTextDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.inputText = inputTextArray[selectedSection]
         }
-        else if segue.identifier == "toSetUnivUser" {
-            let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
+        else if segue.identifier == "toQuestionFinish" {
+            print("質問完了: segue == toQuestionFinish ")
+            //            let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
             // nextVC.inputPostTextDelegate = self
             
@@ -82,11 +82,50 @@ class HSPostQuestionViewController: UIViewController {
     }
     
     @IBAction func onDoneButtonTapped(sender: UIButton) {
-        performSegueWithIdentifier("toSetUnivUser", sender: nil)
+        
+        if checkAndPostQuestion() {
+            performSegueWithIdentifier("toQuestionFinish", sender: nil)
+        } else {
+            print("post失敗")
+        }
+    }
+    
+    func checkAndPostQuestion() -> Bool {
+        
+        for text in inputTextArray {
+            if text.removeAnySpace == "" {
+                print("未入力な項目があります")
+                return false
+            }
+        }
+        
+        let question = QuestionModel()
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        let uid = ud.objectForKey("uid") as! String
+
+        question.fromUid = uid
+        question.toUids = inputTextArray[4].makeArrayBySpace
+        question.title = inputTextArray[0]
+        question.detail = inputTextArray[1]
+        question.date = NSDate().getNowDateString
+        question.deadline = inputTextArray[6]
+        question.tagArray = inputTextArray[2].makeArrayBySpace
+        question.answerArray = []
+        question.isFinish = false
+        question.taskca = inputTextArray[5]
+        
+        let sourceText = question.fromUid + question.date
+        question.id = sourceText.getSha1
+        print(sourceText)
+        print(question.id)
+        
+        question.post()
+        
+        return true
     }
     
 }
-
 extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSource {
     
     // セクションの数を返す.
@@ -125,7 +164,7 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
         case 6: performSegueWithIdentifier("toInputText", sender: nil)
         default: fatalError()
         }
-//        performSegueWithIdentifier("toInput", sender: nil)
+        //        performSegueWithIdentifier("toInput", sender: nil)
         
     }
     
@@ -148,9 +187,15 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 // 2/2-2/2.任意のquestionをtableviewから削除するのに使う
-extension HSPostQuestionViewController: InputPostTextDelegate {
-    func inputPostText(index index: Int, inputText: String){
+extension HSPostQuestionViewController: InputTextDelegate {
+    func inputText(index index: Int, inputText: String){
         inputTextArray[index] = inputText
     }
 }
 
+// 2/2-2/2.任意のquestionをtableviewから削除するのに使う
+extension HSPostQuestionViewController: InputTagDelegate {
+    func inputTag(index index: Int, inputTagText: String){
+        inputTextArray[index] = inputTagText
+    }
+}

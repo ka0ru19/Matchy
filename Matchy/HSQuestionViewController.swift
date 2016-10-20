@@ -14,8 +14,12 @@ class HSQuestionViewController: UIViewController {
     
     var selectedQuestion: QuestionModel!
     
+    var questionArray = [QuestionModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initQuestionArray()
         
         hsQuestionTableView.delegate = self
         hsQuestionTableView.dataSource = self
@@ -36,6 +40,10 @@ class HSQuestionViewController: UIViewController {
         if segue.identifier == "toDetail" {
             
         }
+    }
+    
+    func initQuestionArray() {
+        
     }
     
 }

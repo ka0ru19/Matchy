@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
-        let topStoryboard: UIStoryboard =  UIStoryboard(name: "Top",bundle:nil)
-        let HSStoryboard: UIStoryboard =  UIStoryboard(name: "HSTopTab",bundle:nil)
+        let topStoryboard: UIStoryboard = UIStoryboard(name: "Top",bundle:nil)
+        let HSStoryboard:  UIStoryboard = UIStoryboard(name: "HSTopTab",bundle:nil)
         
         var viewController: UIViewController
         
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //表示するビューコントローラーを指定
         print("AppDelegate -> user_uid = \(user_uid);")
         if let uid = user_uid { // uidあり->HS
-            viewController = HSStoryboard.instantiateInitialViewController()! as! UITabBarController
+            viewController = HSStoryboard.instantiateInitialViewController()!  as! UITabBarController
         } else {
             viewController = topStoryboard.instantiateInitialViewController()! as! UINavigationController
         }

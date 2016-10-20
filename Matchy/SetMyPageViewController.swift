@@ -7,23 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 class SetMyPageViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var introductionTextView: UITextView!
+    
+    
     
     var inputTextArray = ["","",""]
     
+    var user: UserModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initUIParts()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,46 +36,72 @@ class SetMyPageViewController: UIViewController {
     
     @IBAction func onTappedImageButton() {
         
+        let alert: UIAlertController = UIAlertController(title: "プロフィール写真", message: "写真は必須です", preferredStyle:  UIAlertControllerStyle.Alert)
+        
+        let cameraAction: UIAlertAction = UIAlertAction(title: "カメラ", style: UIAlertActionStyle.Default, handler:{(action: UIAlertAction!) -> Void in
+            self.precentPickerController(.Camera)
+        })
+        let photoLibraryAction: UIAlertAction = UIAlertAction(title: "フォトライブラリ", style: UIAlertActionStyle.Default, handler:{(action: UIAlertAction!) -> Void in
+            self.precentPickerController(.PhotoLibrary)
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.Cancel, handler:{(action: UIAlertAction!) -> Void in
+            print("cancelAction")
+        })
+        alert.addAction(cameraAction)
+        alert.addAction(photoLibraryAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
     @IBAction func onTappedTextViewButton() {
         performSegueWithIdentifier("EditIntroduction", sender: nil)
     }
     @IBAction func onTappedNextButton() {
+        
+        guard let inputImage = imageView.image else { return }
+        guard let inputId = idTextField.text else { return }
+        guard let inputName = nameTextField.text else { return }
+        guard let inputIntroduction = introductionTextView.text else { return }
+        
+        user.icon = inputImage
+        user.id = inputId
+        user.name = inputName
+        user.intro = inputIntroduction
+        
         performSegueWithIdentifier("toNext", sender: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toNext" {
+            let nextVC = segue.destinationViewController as! SetTagsViewController
+            nextVC.user = self.user
+        }
     }
-    */
+    
     
     func initUIParts() {
         
         imageView.layer.cornerRadius = imageView.bounds.height / 2
         imageView.layer.borderColor = UIColor.whiteColor().CGColor
         
-        nameTextField.delegate = self
-        nameTextField.tag = 1
-        nameTextField.returnKeyType = .Done
-        nameTextField.attributedPlaceholder = NSAttributedString(
+        idTextField.delegate = self
+        idTextField.tag = 1
+        idTextField.returnKeyType = .Done
+        idTextField.attributedPlaceholder = NSAttributedString(
             string:"ユーザーネーム（半角16文字以内）",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
-        nameTextField.text = inputTextArray[0]
-        nameTextField.enabled = true
+        idTextField.text = inputTextArray[0]
+        idTextField.enabled = true
         
-        commentTextField.delegate = self
-        commentTextField.tag = 2
-        commentTextField.returnKeyType = .Done
-        commentTextField.attributedPlaceholder = NSAttributedString(
+        nameTextField.delegate = self
+        nameTextField.tag = 2
+        nameTextField.returnKeyType = .Done
+        nameTextField.attributedPlaceholder = NSAttributedString(
             string:"自分を表す一言（18文字以内）",
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
-        commentTextField.text = inputTextArray[1]
-        commentTextField.enabled = true
+        nameTextField.text = inputTextArray[1]
+        nameTextField.enabled = true
         
         introductionTextView.delegate = self
         introductionTextView.tag = 3
@@ -94,17 +125,19 @@ extension SetMyPageViewController: UINavigationControllerDelegate, UIImagePicker
         }
     }
     
-    // 写真が選択された時に呼び出されるメソッド
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.dismissViewControllerAnimated(true, completion: nil)
-        
         // 画像を出力
-        imageView.image = image
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
     }
     
-
 }
 
 extension SetMyPageViewController: UITextFieldDelegate , UITextViewDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }

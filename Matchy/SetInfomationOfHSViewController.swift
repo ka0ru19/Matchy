@@ -19,11 +19,13 @@ class SetInfomationOfHSViewController: UIViewController {
     let schoolName = []
     let schoolGradeArray = ["中学1年生","中学2年生","中学3年生","高校1年生","高校2年生","高校3年生","その他(入力)"]
     let interestArray = ["自然科学・数学・法則","文学・国語・歴史","コンピュータ・プログラミング","デザイン・建築・都市","政治・社会・報道","生活・スポーツ・健康・美容","機械・工学・宇宙","コミュニティ・SNS・地域","音楽・芸術・文科","金融・経済・ビジネス","教育・子育て・介護","国際・海外支援・開発援助"]
-    let courseArray = ["中学卒業後 就職","高校卒業御 就職","高校卒業後 専門学校に進学","高校卒業後 私立大学に進学","高校卒業後 国公立大学に進学","その他(入力)"]
+    let courseArray = ["中学卒業後 就職","高校卒業後 就職","高校卒業後 専門学校に進学","高校卒業後 私立大学に進学","高校卒業後 国公立大学に進学","その他(入力)"]
     let clueArray = ["所属していない","陸上部","サッカー部","野球部","軟式野球部","バスケ部","バレー部","テニス部","水泳部","ハンドボール部","ラグビー部","アメフト部","卓球部","ソフトテニス部","バドミントン部","ソフトボール部","剣道部","柔道部","弓道部","空手部","ダンス部","バレエ部","体操部","新体操部","チアリーディング部","応援団","水球部","ｼﾝｸﾛﾅｲｽﾞﾄﾞｽｲﾐﾝｸﾞ部","吹奏楽部","軽音楽部","合唱部","茶道部","書道部","美術部","料理部","英語部","写真部","演劇部","その他(入力)"]
     
     var selectedTextFieldTag: Int!
     var inputTextArray = ["","","","",""]
+    
+    let user = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +52,7 @@ class SetInfomationOfHSViewController: UIViewController {
             
             switch selectedTextFieldTag {
             case 0:
-                print("error: ありえない")
+                print("error: selectedTextFieldTag = 0 ありえない")
             case 1:
                 nextVC.displayArray = schoolGradeArray
             case 2:
@@ -63,6 +65,10 @@ class SetInfomationOfHSViewController: UIViewController {
                 print("error: ありえない")
                 
             }
+        }
+        else if segue.identifier == "toMyPage" {
+            let nextVC = segue.destinationViewController as! SetMyPageViewController
+            nextVC.user = self.user
         }
     }
     
@@ -84,6 +90,24 @@ class SetInfomationOfHSViewController: UIViewController {
     }
     
     @IBAction func onTappedNextButton(sender: UIButton) {
+        
+        print("未入力項目があると次に進めません")
+        guard let inputSchoolName     = schoolNameTextField.text else { return }
+        guard let inputSchoolGrade    = schoolGradeTextField.text else { return }
+        guard let inputSchoolInterest = interestTextField.text else { return }
+        guard let inputSchoolCourse   = courseTextField.text else { return }
+        guard let inputSchoolClub     = clubTextField.text else { return }
+        print("すべての項目で入力が確認されました")
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        user.uid = ud.objectForKey("uid") as! String
+        
+        user.schoolType = "HS"
+        user.schoolName = inputSchoolName
+        user.schoolGrade = inputSchoolGrade
+        user.schoolInterest = inputSchoolInterest
+        user.schoolClub = inputSchoolClub
+        
         performSegueWithIdentifier("toMyPage", sender: nil)
     }
     
@@ -132,8 +156,6 @@ class SetInfomationOfHSViewController: UIViewController {
             attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
         clubTextField.text = inputTextArray[4]
         clubTextField.enabled = false
-        
-        
     }
     
 }
