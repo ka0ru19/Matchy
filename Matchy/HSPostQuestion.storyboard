@@ -39,8 +39,8 @@
                         <outlet property="postTableView" destination="RRd-xx-whf" id="rCX-Oq-8OU"/>
                         <segue destination="gIP-fX-j5U" kind="modal" identifier="toQuestionFinish" id="9dR-KK-aGc"/>
                         <segue destination="YwT-ev-uA6" kind="push" identifier="toSelectUnivUser" id="PJh-8r-S4r"/>
-                        <segue destination="Vpu-67-UEL" kind="push" id="snl-gA-vlp"/>
-                        <segue destination="PUg-Uo-hOG" kind="push" id="IA2-lL-KFR"/>
+                        <segue destination="Vpu-67-UEL" kind="push" identifier="toInputTags" id="snl-gA-vlp"/>
+                        <segue destination="PUg-Uo-hOG" kind="push" identifier="toInputText" id="IA2-lL-KFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1y-EN-NZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
