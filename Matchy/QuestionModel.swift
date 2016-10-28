@@ -53,14 +53,14 @@ class QuestionModel {
         
         let userRef = FIRDatabase.database().reference().child("users").child(self.fromUid)
         
-        userRef.child("questionIdArray").observeEventType(.Value, withBlock: { snapshot in
-            guard let question = snapshot.value else {
-                print("no snapshot.value")
-                return
-            }
-            
+//        userRef.child("questionIdArray").observeEventType(.Value, withBlock: { snapshot in
+//            guard let question = snapshot.value else {
+//                print("no snapshot.value")
+//                return
+//            }
+//            
             userRef.child("questionIdArray").child(String(user.questionIdCount)).setValue(newPostRef.key)
-        })
+//        })
         
     }
     

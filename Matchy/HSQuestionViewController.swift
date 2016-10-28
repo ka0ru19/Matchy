@@ -18,6 +18,8 @@ class HSQuestionViewController: UIViewController {
     
     var questionArray = [QuestionModel]()
     
+    var isFirstReadView = true
+    
     let ud = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -25,7 +27,7 @@ class HSQuestionViewController: UIViewController {
         
         user.firReadUserFinishDelegate = self
         
-//        initUserAndQuestionArray()
+        initUser()
         
         hsQuestionTableView.delegate = self
         hsQuestionTableView.dataSource = self
@@ -34,8 +36,12 @@ class HSQuestionViewController: UIViewController {
         hsQuestionTableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    override func viewWillAppear(animated: Bool) {
-        initUserAndQuestionArray()
+    override func viewDidAppear(animated: Bool) {
+        if isFirstReadView {
+            isFirstReadView = false
+            return
+        }
+        initQuestionArray(user.uid)
         hsQuestionTableView.reloadData()
     }
     
@@ -48,10 +54,15 @@ class HSQuestionViewController: UIViewController {
             
         }
     }
-    func initUserAndQuestionArray() {
+    func initUser() {
         let uid = ud.objectForKey("uid") as! String
-        questionArray = []
         user.getHSUserFromUid(uid)
+    }
+    
+    func initQuestionArray(uid:String){
+        questionArray = []
+        user.getQuestionsWithUid(uid, vc: self)
+
     }
     
 }
@@ -83,7 +94,8 @@ extension HSQuestionViewController: UITableViewDelegate, UITableViewDataSource {
 extension HSQuestionViewController: FirReadUserFinishDelegate {
     func readUserFinish(user: UserModel) {
         UserDelegate.user = user
-        user.getQuestionsWithUid(user.uid, vc: self)
+        self.user = user
+        initQuestionArray(user.uid)
     }
 }
 
