@@ -16,6 +16,11 @@ protocol InputTagDelegate: class {
 
 class InputTagViewController: UIViewController {
     
+    // 1/2-2/3. delegateの設定
+    var inputTagDelegate: InputTagDelegate?
+    var selectedSection: Int!
+    var inputText: String! // viewDidLoadでスペース埋めして配列に格納してくれる
+    
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var tagTableView: UITableView!
     @IBOutlet weak var inputBarView: UIView!
@@ -23,12 +28,7 @@ class InputTagViewController: UIViewController {
     @IBOutlet weak var inputTagTextField: UITextField!
     @IBOutlet weak var addTagButton: UIButton!
     
-    var tagsArray = [String]()
-    
-    var selectedSection: Int!
-    var inputText: String!
-    // 1/2-2/3. delegateの設定
-    var inputTagDelegate: InputTagDelegate?
+    var tagsArray = [String]() // ["タグ名1","タグ名2","タグ名3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +118,7 @@ class InputTagViewController: UIViewController {
         checkAndAddTagToArray()
     }
     
+    // 前のviewから引き継いだtextを操作して配列に格納
     func initTagArrayFromInputText() {
         
         // 空白を埋めて、#で区切って配列に格納
@@ -135,10 +136,16 @@ class InputTagViewController: UIViewController {
     }
     
     func checkAndAddTagToArray() {
+        
         guard let text = inputTagTextField.text else {
-            print("no text")
+            if tagsArray.count > 0 {
+                self.navigationController?.popViewControllerAnimated(true)
+            } else {
+                print("１つ以上のタグを入力してください")
+            }
             return
         }
+        
         // スペースを埋める処理をここに書く
         let hashText = text.stringByReplacingOccurrencesOfString(" ", withString: "")
         // #があったら除去
@@ -158,8 +165,9 @@ extension InputTagViewController: UITextFieldDelegate {
         checkAndAddTagToArray()
         return true
     }
-    
 }
+
+
 
 extension InputTagViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

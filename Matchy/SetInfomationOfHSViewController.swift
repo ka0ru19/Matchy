@@ -73,18 +73,22 @@ class SetInfomationOfHSViewController: UIViewController {
     }
     
     @IBAction func onTappedSchoolButton(sender: UIButton) {
+        schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 1
         performSegueWithIdentifier("toSelect", sender: nil)
     }
     @IBAction func onTappedInterestButton(sender: UIButton) {
+        schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 2
         performSegueWithIdentifier("toSelect", sender: nil)
     }
     @IBAction func onTappedCourseButton(sender: UIButton) {
+        schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 3
         performSegueWithIdentifier("toSelect", sender: nil)
     }
     @IBAction func onTappedClubButton(sender: UIButton) {
+        schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 4
         performSegueWithIdentifier("toSelect", sender: nil)
     }

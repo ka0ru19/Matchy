@@ -7,11 +7,7 @@
 //
 
 import UIKit
-
-// 1/2-1/3.任意の選択肢を元画面のtextfieldにinputするのに使う
-//protocol InputPostTextDelegate: class {
-//    func inputPostText(index index: Int, inputText: String)
-//}
+import Firebase
 
 class HSPostQuestionViewController: UIViewController {
     
@@ -28,14 +24,16 @@ class HSPostQuestionViewController: UIViewController {
     
     var selectedSection: Int!
     
+    var user = UserModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.user = UserDelegate.user!
         
         postTableView.delegate = self
         postTableView.dataSource = self
         postTableView.registerNib(UINib(nibName: "HSQuestionInputTableViewCell", bundle: nil), forCellReuseIdentifier: "HSQuestionInputCell")
-        //        postTableView.estimatedRowHeight = 2000 //CGFloat.max
-        //        postTableView.rowHeight = UITableViewAutomaticDimension
         
         
     }
@@ -74,9 +72,6 @@ class HSPostQuestionViewController: UIViewController {
         }
         else if segue.identifier == "toQuestionFinish" {
             print("質問完了: segue == toQuestionFinish ")
-            //            let nextVC = segue.destinationViewController as! HSSetUnivUserViewController
-            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
-            // nextVC.inputPostTextDelegate = self
             
         }
     }
@@ -100,12 +95,9 @@ class HSPostQuestionViewController: UIViewController {
         }
         
         let question = QuestionModel()
-        
-        let ud = NSUserDefaults.standardUserDefaults()
-        let uid = ud.objectForKey("uid") as! String
 
-        question.fromUid = uid
-        question.toUids = inputTextArray[4].makeArrayBySpace
+        question.fromUid = user.uid
+        question.toUidArray = inputTextArray[4].makeArrayBySpace
         question.title = inputTextArray[0]
         question.detail = inputTextArray[1]
         question.date = NSDate().getNowDateString
@@ -115,12 +107,7 @@ class HSPostQuestionViewController: UIViewController {
         question.isFinish = false
         question.taskca = inputTextArray[5]
         
-        let sourceText = question.fromUid + question.date
-        question.id = sourceText.getSha1
-        print(sourceText)
-        print(question.id)
-        
-        question.post()
+        question.post(self.user)
         
         return true
     }
@@ -186,14 +173,14 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
     
 }
 
-// 2/2-2/2.任意のquestionをtableviewから削除するのに使う
+// 2/2-2/2.textをnextVCから編集するのに使う
 extension HSPostQuestionViewController: InputTextDelegate {
     func inputText(index index: Int, inputText: String){
         inputTextArray[index] = inputText
     }
 }
 
-// 2/2-2/2.任意のquestionをtableviewから削除するのに使う
+// 2/2-2/2.tagをnextVCから編集するのに使う
 extension HSPostQuestionViewController: InputTagDelegate {
     func inputTag(index index: Int, inputTagText: String){
         inputTextArray[index] = inputTagText

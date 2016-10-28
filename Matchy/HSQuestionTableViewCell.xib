@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="198"/>
+                <frame key="frameInset" width="320" height="197"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UgS-7a-IJW">
@@ -80,6 +80,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="postDateLabel" destination="rhC-aj-m2k" id="e6f-Bb-feq"/>
+                <outlet property="questionTitleLabel" destination="9fI-UB-iVZ" id="zr7-p2-5Ii"/>
                 <outlet property="univUserLabel" destination="zxd-O4-NOG" id="kPn-0V-PWJ"/>
             </connections>
             <point key="canvasLocation" x="105" y="-46"/>

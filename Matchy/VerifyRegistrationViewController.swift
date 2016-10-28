@@ -36,7 +36,10 @@ class VerifyRegistrationViewController: UIViewController {
     
     @IBAction func onTappedFinishButton() {
         user.registerHS()
-
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject("true", forKey: "isDoneRegistHS")
+        
     }
     
 

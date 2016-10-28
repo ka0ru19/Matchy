@@ -156,7 +156,7 @@ class AuthHSUserViewController: UIViewController {
                     
                     // キーidに「taro」という値を格納。（idは任意の文字列でok）
                     self.ud.setObject(signInUser.uid, forKey: "uid")
-                    
+                    self.ud.setObject("true", forKey:"isDoneRegistHS")
                     self.performSegueWithIdentifier("toHSTop", sender: nil)
                     
                 } else {

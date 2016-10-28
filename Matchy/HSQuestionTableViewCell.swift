@@ -12,8 +12,8 @@ class HSQuestionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var univUserLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
-    @IBOutlet weak var questionTitleTextView: UITextView!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var questionTitleLabel: UILabel!
+//    @IBOutlet weak var nextButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,22 @@ class HSQuestionTableViewCell: UITableViewCell {
         
     }
     
-    func setCell() {
+    func setCell(question: QuestionModel) {
+        
+        univUserLabel.text = makeOpponentsText(question.toUidArray)
+        postDateLabel.text = question.date
+        questionTitleLabel.text = question.title
         self.accessoryType = .DisclosureIndicator
+    }
+    
+    
+    func setCellTest() {
+        self.accessoryType = .DisclosureIndicator
+    }
+    
+    func makeOpponentsText(opponentsArray: [String]) -> String{
+
+        return opponentsArray.joinWithSeparator(",")
+        // 後日、要編集
     }
 }

@@ -7,13 +7,19 @@
 //
 
 import Foundation
+import UIKit
 import Firebase
+
+// 1/2-1/3. 読み込みが完了したときのトリガー
+protocol FirReadQuestionFinishDelegate: class {
+    func readQuestionFinish(question: QuestionModel)
+}
 
 // key: "questionList"
 class QuestionModel {
     var id: String!
     var fromUid: String! // HS
-    var toUids: [String] = [] // 通知したい大学生userIdArray
+    var toUidArray: [String] = [] // 通知したい大学生userIdArray
     var title: String!
     var detail: String!
     var date: String! // 2016/11/03 04:43
@@ -22,53 +28,77 @@ class QuestionModel {
     var answerArray: [String] = [] // AnswerID array
     var isFinish = false
     var taskca: String!
+    var timestamp: String!
     
+    var firReadQuestionFinishDelegate: FirReadQuestionFinishDelegate?
     
     let questionRef = FIRDatabase.database().reference().child("testquestionList")
     
-    func post(){
+    func post(user: UserModel){
+        let newPostRef = questionRef.childByAutoId()
         
-        questionRef.child(self.id).setValue([
-            "id": self.id,
+        newPostRef.setValue([
+            "id": newPostRef.key,
             "fromUid":self.fromUid,
-            "toUids":self.toUids,
+            "toUidArray":self.toUidArray,
             "title":self.title,
             "detail":self.detail,
             "date":self.date,
             "deadline":self.deadline,
             "tagArray":self.tagArray,
             "isFinish":self.isFinish,
-            "taskca":self.taskca
+            "taskca":self.taskca,
+            "timestamp": FIRServerValue.timestamp()
             ])
-    }
-    
-    func getWithId(questionId: String) {
         
-        questionRef.observeEventType(.Value, withBlock: { snapshot in
-            
+        let userRef = FIRDatabase.database().reference().child("users").child(self.fromUid)
+        
+        userRef.child("questionIdArray").observeEventType(.Value, withBlock: { snapshot in
             guard let question = snapshot.value else {
                 print("no snapshot.value")
                 return
             }
             
-            self.detail = question[questionId]!!["detail"] as! String
-            
+            userRef.child("questionIdArray").child(String(user.questionIdCount)).setValue(newPostRef.key)
         })
-        //            print("---1")
-        //            print(snapshot.value!.count)
-        //            count = snapshot.value!.count
-        //            if isYet {
-        //                isYet = false
-        //                targetRef.child(String(count)).setValue(["name":"zore","initial":"ichi","canvas":[["name":"cn","initial":"cinit"]]])
-        //            } else {
-        //                return
-        //            }
-        //            
-        //        })
-        //        
-        //        print(count)
+        
     }
     
+    // 質問単体をread
+    func getWithId(questionId: String) {
+        
+        questionRef.child(questionId).observeEventType(.Value, withBlock: { snapshot in
+            
+            guard let questionValue = snapshot.value else {
+                print("no snapshot.value")
+                return
+            }
+            
+            let question = QuestionModel().parseQuestionFromSnapshot(questionValue)
+            
+            self.firReadQuestionFinishDelegate?.readQuestionFinish(question)
+            
+        })
+    }
+    
+    func parseQuestionFromSnapshot(value: AnyObject) -> QuestionModel {
+        
+        let question = QuestionModel()
+        let snapshotValue = value
+        
+        question.id = snapshotValue["id"] as! String
+        question.fromUid = snapshotValue["fromUid"] as! String
+        question.toUidArray = snapshotValue["toUidArray"] as! [String]
+        question.title = snapshotValue["title"] as! String
+        question.detail = snapshotValue["detail"] as! String
+        question.date = snapshotValue["date"] as! String
+        question.deadline = snapshotValue["deadline"] as! String
+        question.tagArray = snapshotValue["tagArray"] as! [String]
+        question.isFinish = snapshotValue["isFinish"] as! Bool
+        question.taskca = snapshotValue["taskca"] as! String
+        
+        return question
+    }
 }
 
 

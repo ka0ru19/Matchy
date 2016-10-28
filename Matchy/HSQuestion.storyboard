@@ -28,7 +28,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="今までの質問一覧" id="HIC-nE-nnH"/>
                     <connections>
-                        <outlet property="hsQuestionTableView" destination="K7s-H3-Z6y" id="SX3-yS-3l2"/>
+                        <outlet property="hsQuestionTableView" destination="K7s-H3-Z6y" id="gRC-gb-eWr"/>
                         <segue destination="A8m-n1-V2W" kind="push" identifier="toDetail" id="vsb-29-8or"/>
                     </connections>
                 </viewController>

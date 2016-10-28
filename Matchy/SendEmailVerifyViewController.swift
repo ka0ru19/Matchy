@@ -41,7 +41,8 @@ class SendEmailVerifyViewController: UIViewController {
                     print(FIRAuth.auth()?.currentUser)
                     
                     let ud = NSUserDefaults.standardUserDefaults()
-                    ud.setObject(loginUser.uid, forKey: "uid")
+                    ud.setObject(FIRAuth.auth()?.currentUser?.uid, forKey: "uid")
+                    ud.setObject("false", forKey: "isDoneRegistHS")
                     
                     self.performSegueWithIdentifier("toHSRegistration", sender: nil)
                 } else {

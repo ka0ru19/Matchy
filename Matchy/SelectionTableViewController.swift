@@ -118,7 +118,8 @@ class SelectionTableViewController: UITableViewController {
         inputTextArray[selectedArrayNumber] = displayArray[selectedItemsIndexArray[0]]
         print(inputTextArray)
         
-        
+        //前画面に戻る。
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     /*

@@ -12,14 +12,20 @@ class HSQuestionViewController: UIViewController {
     
     @IBOutlet var hsQuestionTableView: UITableView!
     
+    var user = UserModel()
+    
     var selectedQuestion: QuestionModel!
     
     var questionArray = [QuestionModel]()
     
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initQuestionArray()
+        user.firReadUserFinishDelegate = self
+        
+//        initUserAndQuestionArray()
         
         hsQuestionTableView.delegate = self
         hsQuestionTableView.dataSource = self
@@ -29,6 +35,7 @@ class HSQuestionViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        initUserAndQuestionArray()
         hsQuestionTableView.reloadData()
     }
     
@@ -41,26 +48,28 @@ class HSQuestionViewController: UIViewController {
             
         }
     }
-    
-    func initQuestionArray() {
-        
+    func initUserAndQuestionArray() {
+        let uid = ud.objectForKey("uid") as! String
+        questionArray = []
+        user.getHSUserFromUid(uid)
     }
     
 }
 
 extension HSQuestionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3 //てきとー、あとで直す
+        print("numberOfRowsInSection")
+        print(questionArray.count ?? 0)
+        return questionArray.count ?? 0
     }
     
     // セルに値を設定するデータソースメソッド（必須）
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        // セルを取得
         let cell = tableView.dequeueReusableCellWithIdentifier("HSQuestionCell") as! HSQuestionTableViewCell
         
-        // セルに値を設定
-        cell.setCell()
+        cell.setCell(questionArray[indexPath.row])
+//        cell.setCellTest()
         
         return cell
     }
@@ -69,3 +78,27 @@ extension HSQuestionViewController: UITableViewDelegate, UITableViewDataSource {
         performSegueWithIdentifier("toDetail", sender: nil)
     }
 }
+
+
+extension HSQuestionViewController: FirReadUserFinishDelegate {
+    func readUserFinish(user: UserModel) {
+        UserDelegate.user = user
+        user.getQuestionsWithUid(user.uid, vc: self)
+    }
+}
+
+
+// 2/2-2/2. 読み込み完了したら
+extension HSQuestionViewController: FirReadQuestionFinishDelegate {
+    func readQuestionFinish(question: QuestionModel) {
+        questionArray.append(question)
+        print(questionArray.count)
+        for item in questionArray {
+            print(item.fromUid)
+        }
+        hsQuestionTableView.reloadData()
+    }
+}
+
+
+

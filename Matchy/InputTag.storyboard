@@ -68,6 +68,7 @@
                         <outlet property="addTagButton" destination="Yhs-38-Gey" id="pOx-kz-A2c"/>
                         <outlet property="inputBarView" destination="LSn-Y9-WGN" id="MlS-yg-Ae2"/>
                         <outlet property="inputTagTextField" destination="0aM-FA-mVA" id="5ei-4Z-fyW"/>
+                        <outlet property="sectionLabel" destination="y6C-XD-CQa" id="jx6-yM-bgM"/>
                         <outlet property="sharpLabel" destination="BQk-Ut-F9B" id="DW2-4v-Kc8"/>
                         <outlet property="tagTableView" destination="MB9-mr-KvW" id="Aef-WJ-TOb"/>
                     </connections>
