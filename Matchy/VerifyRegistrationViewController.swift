@@ -25,7 +25,7 @@ class VerifyRegistrationViewController: UIViewController {
         idLabel.text = user.id
         nameLabel.text = user.name
         introTextView.text = user.intro
-        tagsTextView.text = "#" + user.tagArray.joinWithSeparator(" #")
+        tagsTextView.text = user.tagArray.joinWithSeparator(" ")
         
     }
 

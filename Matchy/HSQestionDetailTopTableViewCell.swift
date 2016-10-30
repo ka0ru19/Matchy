@@ -23,8 +23,9 @@ class HSQestionDetailTopTableViewCell: UITableViewCell {
         
     }
     
-    func setCell() {
-        
+    func setCell(question: QuestionModel) {
+        titleLabel.text = question.title
+        questionLabel.text = question.detail
     }
     
 }

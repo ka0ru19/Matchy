@@ -51,7 +51,8 @@ class HSQuestionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toDetail" {
-            
+            let nextVC = segue.destinationViewController as! HSQuestionDetailViewController
+            nextVC.question = self.selectedQuestion
         }
     }
     func initUser() {
@@ -80,12 +81,12 @@ extension HSQuestionViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("HSQuestionCell") as! HSQuestionTableViewCell
         
         cell.setCell(questionArray[indexPath.row])
-//        cell.setCellTest()
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedQuestion = questionArray[indexPath.row]
         performSegueWithIdentifier("toDetail", sender: nil)
     }
 }

@@ -17,6 +17,7 @@ protocol FirReadUserFinishDelegate: class {
     func readUserFinish(user: UserModel)
 }
 
+
 class UserModel {
     var uid: String! // login uid
     var id: String! // ~18
@@ -117,11 +118,13 @@ class UserModel {
             
             print(snapshot.value)
             
-            guard let questionValue = snapshot.value else{
+            guard let questionValue = snapshot.value as? [String] else{
                 print("no user value")
                 return
             }
-            let questionKeyArray = questionValue as! [String]
+            
+            print(questionValue)
+            let questionKeyArray = questionValue
             
             for questionKey in questionKeyArray {
                 let question = QuestionModel()

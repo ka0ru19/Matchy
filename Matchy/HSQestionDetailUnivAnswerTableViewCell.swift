@@ -30,11 +30,19 @@ class HSQestionDetailUnivAnswerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell() {
+    func setCell(answer: AnswerModel) {
         let fixedWidth = answerLabel.frame.size.width
         let newSize = answerLabel.sizeThatFits(CGSizeMake(fixedWidth, CGFloat.max))
         var newFrame = answerLabel.frame
         newFrame.size = CGSizeMake(max(newSize.width, fixedWidth), newSize.height)
         answerLabel.frame = newFrame
+        
+//        iconImageView.image = 
+        nameLabel.text = answer.userName
+//        univLabel.text = 
+        dateLabel.text = answer.date
+//        rankImageView.image = 
+        answerLabel.text = answer.message
+        
     }
 }

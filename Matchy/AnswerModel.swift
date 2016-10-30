@@ -10,9 +10,10 @@ import Foundation
 
 // key: "answerList"
 class AnswerModel {
-    var id: String!
+    var id: String! // answer id
     var questionId: String!
-    var user: String! // uid
+    var userUid: String! // uid
+    var userName: String!
     var date: String!
     var message: String!
 //    var is_read: Bool = false

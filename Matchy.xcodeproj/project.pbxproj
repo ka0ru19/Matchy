@@ -36,6 +36,8 @@
 		636185461DB8C5CB0064CCBA /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636185451DB8C5CB0064CCBA /* InputTextViewController.swift */; };
 		636185481DB8C5D30064CCBA /* InputText.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636185471DB8C5D30064CCBA /* InputText.storyboard */; };
 		638290741D9958D1004BD708 /* hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638290731D9958D1004BD708 /* hoge.swift */; };
+		6398EC231DC61293000C5433 /* InputDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398EC221DC61293000C5433 /* InputDateViewController.swift */; };
+		6398EC251DC612A1000C5433 /* InputDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398EC241DC612A1000C5433 /* InputDate.storyboard */; };
 		639B892F1DBD172B00DEC956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 639B892E1DBD172B00DEC956 /* GoogleService-Info.plist */; };
 		639B89AB1DC27C0700DEC956 /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B89AA1DC27C0700DEC956 /* UserDelegate.swift */; };
 		63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B817FF1D957E93001BD1EE /* AppDelegate.swift */; };
@@ -161,6 +163,8 @@
 		636185451DB8C5CB0064CCBA /* InputTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
 		636185471DB8C5D30064CCBA /* InputText.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputText.storyboard; sourceTree = "<group>"; };
 		638290731D9958D1004BD708 /* hoge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hoge.swift; sourceTree = "<group>"; };
+		6398EC221DC61293000C5433 /* InputDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputDateViewController.swift; sourceTree = "<group>"; };
+		6398EC241DC612A1000C5433 /* InputDate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputDate.storyboard; sourceTree = "<group>"; };
 		639B892E1DBD172B00DEC956 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		639B89AA1DC27C0700DEC956 /* UserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		63B817FC1D957E93001BD1EE /* Matchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +369,7 @@
 		636185421DB8BE6B0064CCBA /* ExtraStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				6398EC211DC61266000C5433 /* InputDate */,
 				636185441DB8C58A0064CCBA /* InputText */,
 				636185431DB8BE970064CCBA /* InputTag */,
 			);
@@ -387,6 +392,15 @@
 				636185451DB8C5CB0064CCBA /* InputTextViewController.swift */,
 			);
 			name = InputText;
+			sourceTree = "<group>";
+		};
+		6398EC211DC61266000C5433 /* InputDate */ = {
+			isa = PBXGroup;
+			children = (
+				6398EC241DC612A1000C5433 /* InputDate.storyboard */,
+				6398EC221DC61293000C5433 /* InputDateViewController.swift */,
+			);
+			name = InputDate;
 			sourceTree = "<group>";
 		};
 		63B817F31D957E93001BD1EE = {
@@ -731,6 +745,7 @@
 				6344E8161DA93736002B4A15 /* HSQuestionTableViewCell.xib in Resources */,
 				639B892F1DBD172B00DEC956 /* GoogleService-Info.plist in Resources */,
 				63B818531D9589E1001BD1EE /* bell_blue.png in Resources */,
+				6398EC251DC612A1000C5433 /* InputDate.storyboard in Resources */,
 				63B818741D9589E1001BD1EE /* tray.png in Resources */,
 				63B818521D9589E1001BD1EE /* add.png in Resources */,
 				6344E8031DA8F4D5002B4A15 /* HSQuestion.storyboard in Resources */,
@@ -928,6 +943,7 @@
 				6348D06B1DB20C2500F52516 /* HSQuestionSelectUnivUserViewController.swift in Sources */,
 				6348D06F1DB36D8100F52516 /* StringExtension.swift in Sources */,
 				63C440641DAA276B00EF5F7E /* HSQestionDetailUnivAnswerTableViewCell.swift in Sources */,
+				6398EC231DC61293000C5433 /* InputDateViewController.swift in Sources */,
 				6344E81A1DA94A36002B4A15 /* HSQuestionViewController.swift in Sources */,
 				63C440591DA9D60900EF5F7E /* QuestionModel.swift in Sources */,
 			);

@@ -12,6 +12,9 @@ class HSQuestionDetailViewController: UIViewController {
     
     @IBOutlet var hsQuestionDetailTableView: UITableView!
     
+    var question: QuestionModel!
+    var answerArray: [AnswerModel] = []
+    
     let answerText = "中央大学理工学部に通ってるWataruです。やっぱり、課題は多いですね。毎週15枚のレポートを書かないといけなかったり、実験があったりします。なので、授業出て課題やってバイト週2で入ると、それでほとんど時間埋まっちゃますね。こんな感じで大丈夫？"
     
     override func viewDidLoad() {
@@ -19,10 +22,14 @@ class HSQuestionDetailViewController: UIViewController {
         
         hsQuestionDetailTableView.delegate = self
         hsQuestionDetailTableView.dataSource = self
-        hsQuestionDetailTableView.registerNib(UINib(nibName: "HSQestionDetailUnivAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "AnswerCell")
-        hsQuestionDetailTableView.registerNib(UINib(nibName: "HSQestionDetailTopTableViewCell", bundle: nil), forCellReuseIdentifier: "HSQestionDetailTopCell")
+        hsQuestionDetailTableView.registerNib(UINib(nibName: "HSQestionDetailUnivAnswerTableViewCell", bundle: nil),
+                                              forCellReuseIdentifier: "AnswerCell")
+        hsQuestionDetailTableView.registerNib(UINib(nibName: "HSQestionDetailTopTableViewCell", bundle: nil),
+                                              forCellReuseIdentifier: "HSQestionDetailTopCell")
         hsQuestionDetailTableView.estimatedRowHeight = 2000 //CGFloat.max
         hsQuestionDetailTableView.rowHeight = UITableViewAutomaticDimension
+        
+        hsQuestionDetailTableView.allowsSelection = false
         
     }
     
@@ -53,7 +60,7 @@ class HSQuestionDetailViewController: UIViewController {
 extension HSQuestionDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3 + 1 // てきとう
+        return 1 + answerArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -62,12 +69,12 @@ extension HSQuestionDetailViewController: UITableViewDelegate, UITableViewDataSo
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("HSQestionDetailTopCell") as! HSQestionDetailTopTableViewCell
             // セルに値を設定
-            cell.setCell()
+            cell.setCell(question)
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("AnswerCell") as! HSQestionDetailUnivAnswerTableViewCell
             // セルに値を設定
-            cell.setCell()
+            cell.setCell(answerArray[indexPath.row - 1])
             return cell
         }
     }

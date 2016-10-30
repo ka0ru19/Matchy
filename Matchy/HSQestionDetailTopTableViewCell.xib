@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HSQestionDetailTopCell" rowHeight="215" id="KGk-i7-Jjw" customClass="HSQestionDetailTopTableViewCell" customModule="Matchy" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HSQestionDetailTopCell" rowHeight="323" id="KGk-i7-Jjw" customClass="HSQestionDetailTopTableViewCell" customModule="Matchy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="215"/>
+                <frame key="frameInset" width="320" height="323"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4fX-Ph-bXj">
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今高校1年生で、理系にしようか文系にしようか迷ってるところです。理系がいいかなと思っていますが、大学の課題が多くて大変と聞きました。大学でも宿題に悩まされるのは正直嫌です。実際、どうなんですか？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-DP-VDp">
-                                <frame key="frameInset" minY="54" width="304" height="145"/>
+                                <frame key="frameInset" minY="54" width="304" height="253"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kmU-h1-IUD"/>
                                 </constraints>
@@ -50,7 +50,7 @@
                 <outlet property="questionLabel" destination="Cqs-DP-VDp" id="OkR-ix-CpH"/>
                 <outlet property="titleLabel" destination="BQP-4D-Zu9" id="LUM-k9-ZjH"/>
             </connections>
-            <point key="canvasLocation" x="-3478" y="-105.5"/>
+            <point key="canvasLocation" x="-3718" y="-12.5"/>
         </tableViewCell>
     </objects>
 </document>

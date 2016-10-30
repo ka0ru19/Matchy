@@ -41,11 +41,22 @@
                         <segue destination="YwT-ev-uA6" kind="push" identifier="toSelectUnivUser" id="PJh-8r-S4r"/>
                         <segue destination="Vpu-67-UEL" kind="push" identifier="toInputTags" id="snl-gA-vlp"/>
                         <segue destination="PUg-Uo-hOG" kind="push" identifier="toInputText" id="IA2-lL-KFR"/>
+                        <segue destination="xQC-Ie-Cie" kind="push" identifier="toInputDate" id="zA5-aS-hK7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1y-EN-NZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-232.53373313343329"/>
+        </scene>
+        <!--InputDate-->
+        <scene sceneID="t8W-ai-G1E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InputDate" id="xQC-Ie-Cie" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Mh-Up-ixL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v87-0O-5DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="-311"/>
         </scene>
         <!--Question Input View Controller-->
         <scene sceneID="u0H-rc-gfg">
@@ -250,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psT-WK-w2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2732" y="803"/>
+            <point key="canvasLocation" x="1612" y="549"/>
         </scene>
         <!--HSTopTab-->
         <scene sceneID="NUj-dx-8ef">
@@ -258,7 +269,7 @@
                 <viewControllerPlaceholder storyboardName="HSTopTab" id="Sfe-dx-D2b" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAv-Ir-acZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3178" y="1048"/>
+            <point key="canvasLocation" x="2058" y="794"/>
         </scene>
         <!--質問する-->
         <scene sceneID="AGs-de-ngu">

@@ -51,26 +51,37 @@ class HSPostQuestionViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toInputText" {
+            
             let nextVC = segue.destinationViewController as! InputTextViewController
             // 2/2-1/2. インスタンス化するタイミングでdelegateをset
             nextVC.inputTextDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.sectionLabelText = self.sectionTitleArray[selectedSection]
             nextVC.inputText = inputTextArray[selectedSection]
+            
         }else if segue.identifier == "toInputTags" {
+            
             let nextVC = segue.destinationViewController as! InputTagViewController
-            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
             nextVC.inputTagDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.inputText = inputTextArray[selectedSection]
+            
         }else if segue.identifier == "toSelectUnivUser" {
+            
             let nextVC = segue.destinationViewController as! HSQuestionSelectUnivUserViewController
-            // 2/2-1/2. インスタンス化するタイミングでdelegateをset
             nextVC.inputTextDelegate = self
             nextVC.selectedSection = self.selectedSection
             nextVC.inputText = inputTextArray[selectedSection]
-        }
-        else if segue.identifier == "toQuestionFinish" {
+            
+        }else if segue.identifier == "toInputDate" {
+            
+            let nextVC = segue.destinationViewController as! InputDateViewController
+            nextVC.inputDateDelegate = self
+            nextVC.selectedSection = self.selectedSection
+            nextVC.inputDateString = inputTextArray[selectedSection]
+            
+        }else if segue.identifier == "toQuestionFinish" {
+            
             print("質問完了: segue == toQuestionFinish ")
             
         }
@@ -148,7 +159,7 @@ extension HSPostQuestionViewController: UITableViewDelegate, UITableViewDataSour
         case 3: performSegueWithIdentifier("toInputText", sender: nil)
         case 4: performSegueWithIdentifier("toSelectUnivUser", sender: nil)
         case 5: performSegueWithIdentifier("toInputText", sender: nil)
-        case 6: performSegueWithIdentifier("toInputText", sender: nil)
+        case 6: performSegueWithIdentifier("toInputDate", sender: nil)
         default: fatalError()
         }
         //        performSegueWithIdentifier("toInput", sender: nil)
@@ -184,5 +195,11 @@ extension HSPostQuestionViewController: InputTextDelegate {
 extension HSPostQuestionViewController: InputTagDelegate {
     func inputTag(index index: Int, inputTagText: String){
         inputTextArray[index] = inputTagText
+    }
+}
+
+extension HSPostQuestionViewController: InputDateDelegate {
+    func inputDate(index index: Int, inputDateString: String) {
+        inputTextArray[index] = inputDateString
     }
 }
