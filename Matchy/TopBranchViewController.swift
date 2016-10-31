@@ -20,13 +20,19 @@ class TopBranchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onTappedHSButton(sender: UIButton) {
-        performSegueWithIdentifier("toAuthHSUser", sender: nil)
+    @IBAction func onTappedHSButton() {
+        performSegueWithIdentifier("toNewHSRegister", sender: nil)
     }
 
-    @IBAction func onTappedUnivButton(sender: UIButton) {
+    @IBAction func onTappedUnivButton() {
         performSegueWithIdentifier("toAuthUnivUser", sender: nil)
     }
+    
+    @IBAction func onTappedLoginButton() {
+        performSegueWithIdentifier("toLogin", sender: nil)
+    }
+    
+    
     
 }
 

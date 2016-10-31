@@ -19,75 +19,91 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Matchy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMU-iP-DfH">
-                                <frame key="frameInset" minX="20" minY="104" width="280" height="30"/>
+                                <frame key="frameInset" minX="47" minY="114" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="中高生が大学生メンターを作れる場所です" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMj-ab-knP">
-                                <frame key="frameInset" minX="20" minY="133" width="280" height="21"/>
+                                <frame key="frameInset" minX="47" minY="143" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規アカウント登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGX-09-hH6">
+                                <frame key="frameInset" minX="47" minY="236" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="school_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="W9Y-Sa-nHh">
-                                <frame key="frameInset" minX="90" minY="199" width="140" height="100"/>
+                                <frame key="frameInset" minX="43" minY="274" width="140" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="中高生はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW6-2X-qgj">
-                                <frame key="frameInset" minX="110" minY="298" width="100" height="20"/>
+                                <frame key="frameInset" minX="63" minY="373" width="100" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="school_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-qf-i90">
-                                <frame key="frameInset" minX="90" minY="366" width="140" height="100"/>
+                                <frame key="frameInset" minX="191" minY="274" width="140" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大学生はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-fv-ZAf">
-                                <frame key="frameInset" minX="110" minY="465" width="100" height="20"/>
+                                <frame key="frameInset" minX="211" minY="373" width="100" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giz-dA-Kdc">
-                                <frame key="frameInset" minX="90" minY="199" width="140" height="119"/>
+                                <frame key="frameInset" minX="43" minY="274" width="140" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onTappedHSButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="faO-iY-Qeq"/>
+                                    <action selector="onTappedHSButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYq-vw-bJa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-J9-kMK">
-                                <frame key="frameInset" minX="90" minY="366" width="140" height="119"/>
+                                <frame key="frameInset" minX="191" minY="274" width="140" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onTappedUnivButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sd-jg-Wu0"/>
+                                    <action selector="onTappedUnivButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mK-JB-B4v"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©TASKEYA Inc. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-PE-541">
-                                <frame key="frameInset" minY="550" width="320" height="18"/>
+                                <frame key="frameInset" minY="649" width="375" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaA-AE-AGw">
+                                <frame key="frameInset" minX="111" minY="517" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="登録済みの方はこちら"/>
+                                <connections>
+                                    <action selector="onTappedLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqW-dT-W74"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matchy" id="jF7-49-u6k"/>
                     <connections>
                         <segue destination="4sj-us-Ctf" kind="push" identifier="toAuthHSUser" id="kSv-Bh-rFh"/>
-                        <segue destination="cfY-wn-ER5" kind="push" identifier="toAuthUnivUser" id="DFW-YO-zUr"/>
+                        <segue destination="cfY-wn-ER5" kind="push" identifier="toNewHSRegister" id="DFW-YO-zUr"/>
+                        <segue destination="o5N-DL-oij" kind="push" identifier="toLogin" id="1vn-NO-YrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="368"/>
+            <point key="canvasLocation" x="660" y="107"/>
         </scene>
         <!--Account-->
         <scene sceneID="qAn-uQ-Qeu">
@@ -214,7 +230,6 @@
                         <outlet property="signUpButton" destination="mhI-8C-Ccw" id="v2W-vS-SWZ"/>
                         <outlet property="userMailTextField" destination="rc3-lg-0F4" id="zoM-9Y-fgu"/>
                         <outlet property="userPassTextField" destination="Xdx-8k-KFQ" id="Xtf-6k-VNV"/>
-                        <segue destination="h2a-wG-1JZ" kind="modal" identifier="toSendMail" id="o1Y-IY-waS"/>
                         <segue destination="cqc-H8-bQc" kind="push" identifier="toTermOfService" id="S7S-Yp-IIt"/>
                         <segue destination="mkK-cK-fvi" kind="push" identifier="toPrivacyPolicy" id="ly8-Gn-bVP"/>
                         <segue destination="YGm-IT-gHY" kind="modal" identifier="toHSTop" animates="NO" id="3fd-SY-Pqs"/>
@@ -227,7 +242,7 @@
         <!--Matchy-->
         <scene sceneID="tV5-6O-BSd">
             <objects>
-                <viewController id="cqc-H8-bQc" customClass="TermOfServiceViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cqc-H8-bQc" customClass="TermOfServiceViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EBu-Sm-poV"/>
                         <viewControllerLayoutGuide type="bottom" id="YIb-gi-3jE"/>
@@ -237,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IhR-kF-SVN">
-                                <frame key="frameInset" minX="20" width="280" height="569"/>
+                                <frame key="frameInset" minX="20" minY="72" width="280" height="497"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">利用規約Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -254,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2w-nM-2sW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="-556"/>
+            <point key="canvasLocation" x="1188" y="-671"/>
         </scene>
         <!--Matchy-->
         <scene sceneID="UkK-lU-eU8">
@@ -286,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sld-JO-IZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-556"/>
+            <point key="canvasLocation" x="1726" y="-672"/>
         </scene>
         <!--仮登録完了-->
         <scene sceneID="jDS-rH-WLZ">
@@ -336,7 +351,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Iz-LM-Wfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.5" y="159.5"/>
+            <point key="canvasLocation" x="1714" y="1509"/>
+        </scene>
+        <!--Agreement View Controller-->
+        <scene sceneID="HqZ-qU-Sgl">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cJu-Sr-Zoj" customClass="AgreementViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JVJ-9N-EKH"/>
+                        <viewControllerLayoutGuide type="bottom" id="hl2-Th-cUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SmN-Jm-o49">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QWL-OX-ben">
+                                <frame key="frameInset" minX="16" minY="72" width="343" height="587"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="013-WP-Z61"/>
+                    <connections>
+                        <outlet property="textView" destination="QWL-OX-ben" id="UJL-aP-6ob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZd-Yj-uTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953" y="605"/>
         </scene>
         <!--RegistrationHS-->
         <scene sceneID="afL-12-aDZ">
@@ -344,12 +391,12 @@
                 <viewControllerPlaceholder storyboardName="RegistrationHS" id="XPd-fF-dE4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpe-Xv-0Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2198" y="308"/>
+            <point key="canvasLocation" x="2087" y="1508"/>
         </scene>
-        <!--View Controller-->
+        <!--NewHS Register View Controller-->
         <scene sceneID="e3E-Fx-oxM">
             <objects>
-                <viewController id="cfY-wn-ER5" sceneMemberID="viewController">
+                <viewController id="cfY-wn-ER5" customClass="NewHSRegisterViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Axf-nu-JIC"/>
                         <viewControllerLayoutGuide type="bottom" id="AJb-es-5A5"/>
@@ -359,22 +406,148 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nD3-9g-jU0">
-                                <frame key="frameInset" minY="64" width="320" height="504"/>
+                                <frame key="frameInset" minY="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-2Z-lki">
-                                <frame key="frameInset" minY="64" width="320" height="504"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規アカウント登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-ub-IRf">
+                                <frame key="frameInset" minX="109" minY="167" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-RO-f11">
+                                <frame key="frameInset" minX="57" minY="196" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-Wn-muW">
+                                <frame key="frameInset" minX="57" minY="231" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48k-N4-GKI">
+                                <frame key="frameInset" minX="57" minY="266" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="登録すると利用規約とプライバシーポリシーに同意したとみなします。" translatesAutoresizingMaskIntoConstraints="NO" id="Vxj-3d-dfc">
+                                <frame key="frameInset" minX="57" minY="310" width="260" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsG-q2-QSe">
+                                <frame key="frameInset" minX="57" minY="363" width="260" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="新規登録">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedSignUpButton" destination="4sj-us-Ctf" eventType="touchUpInside" id="Sw1-DC-fXr"/>
+                                    <action selector="onTappedSignUpButton" destination="cfY-wn-ER5" eventType="touchUpInside" id="jez-y8-VBk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Flv-Z9-uZa"/>
+                    <connections>
+                        <outlet property="agreementMessageTextView" destination="Vxj-3d-dfc" id="kMR-di-0Tm"/>
+                        <outlet property="backgroundImageView" destination="nD3-9g-jU0" id="yZh-0A-AIk"/>
+                        <outlet property="newMailTextField" destination="M0L-RO-f11" id="XdG-fi-NDF"/>
+                        <outlet property="newPass2TextField" destination="48k-N4-GKI" id="iVh-X5-45l"/>
+                        <outlet property="newPassTextField" destination="QO9-Wn-muW" id="2K2-3P-1My"/>
+                        <outlet property="signUpButton" destination="MsG-q2-QSe" id="Df8-fb-u3w"/>
+                        <segue destination="h2a-wG-1JZ" kind="push" identifier="toVerifyMail" id="chy-kB-Ag6"/>
+                        <segue destination="cJu-Sr-Zoj" kind="push" identifier="toAgreement" id="cEi-79-txP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3B-q9-LBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1157" y="888"/>
+            <point key="canvasLocation" x="1125" y="1353"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="F5y-FH-JJR">
+            <objects>
+                <viewController id="o5N-DL-oij" customClass="LoginViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OI4-u0-M8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="23h-y5-RzZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IUX-qP-fWO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p2u-gQ-d6Q">
+                                <frame key="frameInset" minY="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="既存のアカウントでログイン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-C6-PWg">
+                                <frame key="frameInset" minX="77" minY="173" width="226" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAd-Ys-oDZ">
+                                <frame key="frameInset" minX="57" minY="202" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4H-Gj-bP6">
+                                <frame key="frameInset" minX="57" minY="237" width="260" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06d-7O-GHf">
+                                <frame key="frameInset" minX="57" minY="281" width="260" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29606428950000002" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTappedLoginButton" destination="o5N-DL-oij" eventType="touchUpInside" id="1yx-cv-Su2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rdI-1U-Vak"/>
+                    <connections>
+                        <outlet property="signInButton" destination="06d-7O-GHf" id="GUB-hu-ae0"/>
+                        <outlet property="userMailTextField" destination="hAd-Ys-oDZ" id="Q9I-mM-b8X"/>
+                        <outlet property="userPassTextField" destination="f4H-Gj-bP6" id="CFw-G5-a72"/>
+                        <segue destination="BKD-gi-XIA" kind="modal" identifier="toHSTopTab" id="otr-9M-qwz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FM2-tV-Q6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="981"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="3R1-cO-mJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="BKD-gi-XIA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQW-pq-Fhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="597" y="1466"/>
         </scene>
         <!--HSTopTab-->
         <scene sceneID="EWp-pt-c2N">

@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyPage-->
+        <!--Title-->
         <scene sceneID="ACo-ae-4nN">
             <objects>
                 <viewController id="MMj-se-eer" customClass="HSMyPageViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,14 +53,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO5-w1-w0l">
+                                <frame key="frameInset" minX="16" minY="72" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="onTappedLogoutButton" destination="MMj-se-eer" eventType="touchUpInside" id="rEl-Te-ft2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MyPage" id="hIT-zd-7Vg"/>
+                    <navigationItem key="navigationItem" title="Title" id="1Sa-CF-G0i"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="DPV-Uz-Dak" id="y2r-aH-0oZ"/>
+                        <outlet property="introLabel" destination="Yhf-Bj-AvD" id="R6a-FK-W2z"/>
+                        <outlet property="tagsLabel" destination="5h9-6X-uRe" id="F5L-ye-VFm"/>
+                        <outlet property="userIdLabel" destination="8Gt-ro-I0o" id="f6K-1C-Pke"/>
+                        <outlet property="userNameLabel" destination="WyU-hg-16U" id="b8i-md-Dx0"/>
+                        <segue destination="8D5-5V-sSQ" kind="presentation" identifier="toTop" id="W14-58-CwT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJq-4m-9wA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="1231.9340329835084"/>
+        </scene>
+        <!--Top-->
+        <scene sceneID="3kQ-FG-hNb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Top" id="8D5-5V-sSQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WZ-qZ-HY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="1231"/>
         </scene>
         <!--マイページ-->
         <scene sceneID="att-q1-P1A">

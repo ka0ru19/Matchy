@@ -17,14 +17,13 @@ protocol FirReadUserFinishDelegate: class {
     func readUserFinish(user: UserModel)
 }
 
-
 class UserModel {
-    var uid: String! // login uid
-    var id: String! // ~18
-    var name: String = ""
+    var uid: String! // ユニークID AuthでFirebaseが自動で決定する
+    var id: String! // 半角4~14文字 ユーザが任意で決める
+    var name: String = "" // 半角全角1~18文字 ユーザが任意で決める
     var schoolType: String! // HS OR Univ
-    var schoolName: String!
-    var schoolGrade: String!
+    var schoolName: String! // 学校名
+    var schoolGrade: String! // 学年
     var schoolDepartment: String! // Univ Only
     var schoolInterest: String! // HS Only
     var schoolClub: String!
@@ -39,11 +38,105 @@ class UserModel {
     var questionArray = [QuestionModel]()
     var questionIdCount: Int!
     
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     // 1/2-2/3. delegateの設定
     var firReadUserFinishDelegate: FirReadUserFinishDelegate?
-    
     let userRef = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!)
     
+    func registerNewHS(mail mail: String, pass: String, vc: NewHSRegisterViewController) {
+        
+        FIRAuth.auth()?.createUserWithEmail(mail, password: pass, completion: { (user, error) in
+            
+            //エラーなしなら、認証完了
+            if let error = error {
+                vc.failureNewHSRegister(errorMessage: error.localizedDescription)
+                return
+            }
+            
+            // メールのバリデーションを行う
+            user?.sendEmailVerificationWithCompletion({ (mailError) in
+                if mailError == nil {
+                    // エラーがない場合にはそのままログイン画面に飛び、ログインしてもらう
+                    guard let user = user else { return }
+                    
+                    print(user.uid)
+                    print(user.email)
+                    print("user has been signed in successfully.")
+                    
+                    vc.successNewHSRegister()
+                    
+                } else {
+                    vc.failureNewHSRegister(errorMessage:(mailError?.localizedDescription)!)
+                }
+            })
+            
+            
+        })
+    }
+    
+    func checkVerifyMail(mail mail: String, pass: String, vc: SendEmailVerifyViewController) {
+        
+        //signInWithEmailでログイン
+        //第一引数にEmail、第二引数にパスワードを取ります
+        FIRAuth.auth()?.signInWithEmail(mail, password: pass, completion: { (firUser, error) in
+            //エラーがないことを確認
+            if let error = error {
+                vc.failureVerifyMail(errorMessage: error.localizedDescription)
+                return
+            }
+            guard let loginUser = firUser else {
+                print("checkVerifyMail: firUserの値がnilです")
+                return
+            }
+            
+            // Emailのバリデーションが完了しているか確認する。完了ならそのままログイン
+            if loginUser.emailVerified {
+                print(FIRAuth.auth()?.currentUser)
+                
+                self.ud.setObject(FIRAuth.auth()?.currentUser?.uid, forKey: "uid")
+                self.ud.setObject("false", forKey: "isDoneRegistHS")
+                
+                vc.doneVerifyMail()
+            } else {
+                vc.failureVerifyMail(errorMessage: "Emailのバリデーションが未完了の可能性があります")
+                return
+            }
+            
+        })
+        
+    }
+    
+    func loginHS(mail mail: String, pass: String, vc: LoginViewController) {
+        
+        FIRAuth.auth()?.signInWithEmail(mail, password: pass, completion: { (firUser, error) in
+            
+            //エラーなしなら、認証完了
+            if let error = error {
+                vc.failureLoing(errorMessage: error.localizedDescription)
+                return
+            }
+            
+            guard let loginUser = firUser else {
+                print("loginHS: firUserの値がnilです")
+                return
+            }
+            // Emailのバリデーションが完了しているか確認する。完了ならそのままログイン
+            if loginUser.emailVerified {
+                let uid = loginUser.uid
+                print(uid)
+                
+                self.ud.setObject(uid, forKey: "uid")
+                self.ud.setObject("true", forKey: "isDoneRegistHS")
+                
+                vc.successLogin()
+            } else {
+                vc.failureLoing(errorMessage: "Emailのバリデーションが未完了の可能性があります")
+                return
+            }
+            
+        })
+    }
     
     func registerHS() {
         
@@ -107,7 +200,7 @@ class UserModel {
                 print(error.description)
         })
         
- 
+        
     }
     
     
@@ -136,7 +229,7 @@ class UserModel {
                 print(error.description)
         })
         
-
+        
     }
     
     

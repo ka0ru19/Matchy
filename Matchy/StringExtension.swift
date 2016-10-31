@@ -11,14 +11,18 @@ import UIKit
 
 extension String {
     
+    // 半角、全角スペースを除いた文字列をreturn
     var removeAnySpace : String {
-        var text = self.stringByReplacingOccurrencesOfString(" ", withString: "")
         
+        var text: String!
+        
+        text = self.stringByReplacingOccurrencesOfString(" ", withString: "")
         text = text.stringByReplacingOccurrencesOfString("　", withString: "")
         
         return text
     }
     
+    // SHA-1 Hash化
     var getSha1: String {
         
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
@@ -37,6 +41,7 @@ extension String {
         return String(hash)
     }
     
+    // 文字列を半角スペースで区切って配列にして返す
     var makeArrayBySpace: [String] {
         let array0 = self.componentsSeparatedByString(" ")
         var array1 = [String]()

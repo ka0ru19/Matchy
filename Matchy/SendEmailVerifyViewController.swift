@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class SendEmailVerifyViewController: UIViewController {
     
     var email: String!
     var password: String!
+    
+    var user = UserModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,34 +29,18 @@ class SendEmailVerifyViewController: UIViewController {
     
     @IBAction func onTappedVerifyButton() {
         
-        //signInWithEmailでログイン
-        //第一引数にEmail、第二引数にパスワードを取ります
-        FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (user, error) in
-            //エラーがないことを確認
-            if let error = error {
-                print("error: \(error.localizedDescription)")
-                return
-            }
-            if let loginUser = user {
-                // Emailのバリデーションが完了しているか確認する。完了ならそのままログイン
-                if loginUser.emailVerified {
-                    print(FIRAuth.auth()?.currentUser)
-                    
-                    let ud = NSUserDefaults.standardUserDefaults()
-                    ud.setObject(FIRAuth.auth()?.currentUser?.uid, forKey: "uid")
-                    ud.setObject("false", forKey: "isDoneRegistHS")
-                    
-                    self.performSegueWithIdentifier("toHSRegistration", sender: nil)
-                } else {
-                    // 完了していない場合は、アラートを表示
-                    self.presentValidateAlert()
-                }
-                
-            }
-            
-        })
+        user.checkVerifyMail(mail: email, pass: password, vc: self)
         
     }
+    
+    func doneVerifyMail() {
+        self.performSegueWithIdentifier("toHSRegistration", sender: nil)
+    }
+    func failureVerifyMail(errorMessage errorMessage: String) {
+        print(errorMessage)
+        presentValidateAlert()
+    }
+    
     
     // メールのバリデーションが完了していない場合のアラートを表示
     func presentValidateAlert() {

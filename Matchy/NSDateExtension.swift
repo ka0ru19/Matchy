@@ -11,7 +11,7 @@ import UIKit
 
 extension NSDate {
     
-    // 現在時刻を取得: NSDate().getNowDateString
+    // 現在時刻をformat: 2014/06/24 11:14:17として取得 ex: NSDate().getNowDateString
     var getNowDateString: String {
         let dateFormatter = NSDateFormatter()
         
