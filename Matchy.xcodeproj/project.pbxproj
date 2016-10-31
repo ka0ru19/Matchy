@@ -35,7 +35,6 @@
 		636185411DB8BD610064CCBA /* InputTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636185401DB8BD610064CCBA /* InputTagViewController.swift */; };
 		636185461DB8C5CB0064CCBA /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636185451DB8C5CB0064CCBA /* InputTextViewController.swift */; };
 		636185481DB8C5D30064CCBA /* InputText.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636185471DB8C5D30064CCBA /* InputText.storyboard */; };
-		638290741D9958D1004BD708 /* hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638290731D9958D1004BD708 /* hoge.swift */; };
 		6398EC231DC61293000C5433 /* InputDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398EC221DC61293000C5433 /* InputDateViewController.swift */; };
 		6398EC251DC612A1000C5433 /* InputDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6398EC241DC612A1000C5433 /* InputDate.storyboard */; };
 		6398EC271DC72F08000C5433 /* NewHSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398EC261DC72F08000C5433 /* NewHSRegisterViewController.swift */; };
@@ -106,6 +105,7 @@
 		63C440811DABB7FF00EF5F7E /* HSMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */; };
 		63C440861DB077AB00EF5F7E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */; };
 		63D6E84F1DC74C38006B5E65 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */; };
+		63D6E8551DC79407006B5E65 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8541DC79407006B5E65 /* Login.storyboard */; };
 		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
 		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
@@ -161,7 +161,6 @@
 		636185401DB8BD610064CCBA /* InputTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTagViewController.swift; sourceTree = "<group>"; };
 		636185451DB8C5CB0064CCBA /* InputTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
 		636185471DB8C5D30064CCBA /* InputText.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputText.storyboard; sourceTree = "<group>"; };
-		638290731D9958D1004BD708 /* hoge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hoge.swift; sourceTree = "<group>"; };
 		6398EC221DC61293000C5433 /* InputDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputDateViewController.swift; sourceTree = "<group>"; };
 		6398EC241DC612A1000C5433 /* InputDate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputDate.storyboard; sourceTree = "<group>"; };
 		6398EC261DC72F08000C5433 /* NewHSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewHSRegisterViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +237,7 @@
 		63C440801DABB7FF00EF5F7E /* HSMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMyPageViewController.swift; sourceTree = "<group>"; };
 		63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
+		63D6E8541DC79407006B5E65 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -341,9 +341,9 @@
 			children = (
 				63B818011D957E93001BD1EE /* TopBranchViewController.swift */,
 				63B818031D957E94001BD1EE /* Top.storyboard */,
-				6398EC261DC72F08000C5433 /* NewHSRegisterViewController.swift */,
-				6398EC281DC72F1A000C5433 /* LoginViewController.swift */,
-				63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */,
+				63D6E8501DC792F0006B5E65 /* NewHS */,
+				63D6E8521DC7933C006B5E65 /* Login */,
+				63D6E8531DC7936B006B5E65 /* Agreement */,
 				6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */,
 			);
 			name = TopBranch;
@@ -355,7 +355,6 @@
 				6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */,
 				6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */,
 				6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */,
-				638290731D9958D1004BD708 /* hoge.swift */,
 				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
 				6348D0751DB4C47700F52516 /* SetTagsViewController.swift */,
 				6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */,
@@ -561,6 +560,31 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		63D6E8501DC792F0006B5E65 /* NewHS */ = {
+			isa = PBXGroup;
+			children = (
+				6398EC261DC72F08000C5433 /* NewHSRegisterViewController.swift */,
+			);
+			name = NewHS;
+			sourceTree = "<group>";
+		};
+		63D6E8521DC7933C006B5E65 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6398EC281DC72F1A000C5433 /* LoginViewController.swift */,
+				63D6E8541DC79407006B5E65 /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		63D6E8531DC7936B006B5E65 /* Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */,
+			);
+			name = Agreement;
+			sourceTree = "<group>";
+		};
 		6ACCB9D1273AF052957D0BD0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +747,7 @@
 				63B818571D9589E1001BD1EE /* enquete_blue.png in Resources */,
 				63C4406E1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib in Resources */,
 				63B818691D9589E1001BD1EE /* person_silhouette.png in Resources */,
+				63D6E8551DC79407006B5E65 /* Login.storyboard in Resources */,
 				63B8186A1D9589E1001BD1EE /* pointing.png in Resources */,
 				63B8185A1D9589E1001BD1EE /* gift.png in Resources */,
 				63B818071D957E94001BD1EE /* Assets.xcassets in Resources */,
@@ -914,7 +939,6 @@
 				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
 				63C440781DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift in Sources */,
 				63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */,
-				638290741D9958D1004BD708 /* hoge.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,
 				63C440751DAA547500EF5F7E /* HSQuestionInputTableViewCell.swift in Sources */,
 				636185461DB8C5CB0064CCBA /* InputTextViewController.swift in Sources */,
