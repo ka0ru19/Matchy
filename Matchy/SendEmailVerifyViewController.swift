@@ -1,5 +1,5 @@
 //
-//  SendEmailVerifyViewController.swift
+//  VerifyMailViewController.swift
 //  Matchy
 //
 //  Created by 井上航 on 2016/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SendEmailVerifyViewController: UIViewController {
+class VerifyMailViewController: UIViewController {
     
     var email: String!
     var password: String!

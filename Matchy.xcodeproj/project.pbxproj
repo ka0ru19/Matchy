@@ -42,7 +42,7 @@
 		639B892F1DBD172B00DEC956 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 639B892E1DBD172B00DEC956 /* GoogleService-Info.plist */; };
 		639B89AB1DC27C0700DEC956 /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B89AA1DC27C0700DEC956 /* UserDelegate.swift */; };
 		63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B817FF1D957E93001BD1EE /* AppDelegate.swift */; };
-		63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818011D957E93001BD1EE /* TopBranchViewController.swift */; };
+		63B818021D957E93001BD1EE /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B818011D957E93001BD1EE /* TopViewController.swift */; };
 		63B818051D957E94001BD1EE /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B818031D957E94001BD1EE /* Top.storyboard */; };
 		63B818071D957E94001BD1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B818061D957E94001BD1EE /* Assets.xcassets */; };
 		63B8180A1D957E94001BD1EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B818081D957E94001BD1EE /* LaunchScreen.storyboard */; };
@@ -106,6 +106,9 @@
 		63C440861DB077AB00EF5F7E /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */; };
 		63D6E84F1DC74C38006B5E65 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */; };
 		63D6E8551DC79407006B5E65 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8541DC79407006B5E65 /* Login.storyboard */; };
+		63D6E8571DC8200B006B5E65 /* NewHSRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8561DC8200B006B5E65 /* NewHSRegister.storyboard */; };
+		63D6E85A1DC823F6006B5E65 /* VerifyMail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8591DC823F6006B5E65 /* VerifyMail.storyboard */; };
+		63D6E85C1DC824A6006B5E65 /* Agreement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E85B1DC824A6006B5E65 /* Agreement.storyboard */; };
 		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
 		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
@@ -169,7 +172,7 @@
 		639B89AA1DC27C0700DEC956 /* UserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
 		63B817FC1D957E93001BD1EE /* Matchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B817FF1D957E93001BD1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63B818011D957E93001BD1EE /* TopBranchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBranchViewController.swift; sourceTree = "<group>"; };
+		63B818011D957E93001BD1EE /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		63B818041D957E94001BD1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Top.storyboard; sourceTree = "<group>"; };
 		63B818061D957E94001BD1EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63B818091D957E94001BD1EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -238,6 +241,9 @@
 		63C440851DB077AB00EF5F7E /* UITextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
 		63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		63D6E8541DC79407006B5E65 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		63D6E8561DC8200B006B5E65 /* NewHSRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHSRegister.storyboard; sourceTree = "<group>"; };
+		63D6E8591DC823F6006B5E65 /* VerifyMail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerifyMail.storyboard; sourceTree = "<group>"; };
+		63D6E85B1DC824A6006B5E65 /* Agreement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agreement.storyboard; sourceTree = "<group>"; };
 		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -336,17 +342,13 @@
 			name = HSMyPage;
 			sourceTree = "<group>";
 		};
-		6359DA931D97D65200A4D106 /* TopBranch */ = {
+		6359DA931D97D65200A4D106 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				63B818011D957E93001BD1EE /* TopBranchViewController.swift */,
+				63B818011D957E93001BD1EE /* TopViewController.swift */,
 				63B818031D957E94001BD1EE /* Top.storyboard */,
-				63D6E8501DC792F0006B5E65 /* NewHS */,
-				63D6E8521DC7933C006B5E65 /* Login */,
-				63D6E8531DC7936B006B5E65 /* Agreement */,
-				6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */,
 			);
-			name = TopBranch;
+			name = Top;
 			sourceTree = "<group>";
 		};
 		6359DA981D97E09500A4D106 /* RegistrationHS */ = {
@@ -430,7 +432,7 @@
 				639B89AA1DC27C0700DEC956 /* UserDelegate.swift */,
 				63C440841DB0776D00EF5F7E /* Extensions */,
 				63C4405C1DA9D82600EF5F7E /* Models */,
-				6359DA931D97D65200A4D106 /* TopBranch */,
+				63D6E85D1DC82CA1006B5E65 /* TopViews */,
 				6359DA981D97E09500A4D106 /* RegistrationHS */,
 				6344E7FF1DA5319B002B4A15 /* HS */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
@@ -560,12 +562,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		63D6E8501DC792F0006B5E65 /* NewHS */ = {
+		63D6E8501DC792F0006B5E65 /* NewHSRegister */ = {
 			isa = PBXGroup;
 			children = (
 				6398EC261DC72F08000C5433 /* NewHSRegisterViewController.swift */,
+				63D6E8561DC8200B006B5E65 /* NewHSRegister.storyboard */,
 			);
-			name = NewHS;
+			name = NewHSRegister;
 			sourceTree = "<group>";
 		};
 		63D6E8521DC7933C006B5E65 /* Login */ = {
@@ -581,8 +584,30 @@
 			isa = PBXGroup;
 			children = (
 				63D6E84E1DC74C38006B5E65 /* AgreementViewController.swift */,
+				63D6E85B1DC824A6006B5E65 /* Agreement.storyboard */,
 			);
 			name = Agreement;
+			sourceTree = "<group>";
+		};
+		63D6E8581DC8216F006B5E65 /* VerifyMail */ = {
+			isa = PBXGroup;
+			children = (
+				6348D06C1DB3105500F52516 /* SendEmailVerifyViewController.swift */,
+				63D6E8591DC823F6006B5E65 /* VerifyMail.storyboard */,
+			);
+			name = VerifyMail;
+			sourceTree = "<group>";
+		};
+		63D6E85D1DC82CA1006B5E65 /* TopViews */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA931D97D65200A4D106 /* Top */,
+				63D6E8501DC792F0006B5E65 /* NewHSRegister */,
+				63D6E8521DC7933C006B5E65 /* Login */,
+				63D6E8531DC7936B006B5E65 /* Agreement */,
+				63D6E8581DC8216F006B5E65 /* VerifyMail */,
+			);
+			name = TopViews;
 			sourceTree = "<group>";
 		};
 		6ACCB9D1273AF052957D0BD0 /* Pods */ = {
@@ -735,6 +760,7 @@
 				63B8185D1D9589E1001BD1EE /* mail_1message.png in Resources */,
 				63B818591D9589E1001BD1EE /* enquete_gray.png in Resources */,
 				63B818561D9589E1001BD1EE /* books_gray.png in Resources */,
+				63D6E85A1DC823F6006B5E65 /* VerifyMail.storyboard in Resources */,
 				6344E80B1DA8F5D8002B4A15 /* HSMyPage.storyboard in Resources */,
 				63B818651D9589E1001BD1EE /* person_blue.png in Resources */,
 				6361853F1DB8BD450064CCBA /* InputTag.storyboard in Resources */,
@@ -743,6 +769,7 @@
 				63B818721D9589E1001BD1EE /* star_gray.png in Resources */,
 				63B8180A1D957E94001BD1EE /* LaunchScreen.storyboard in Resources */,
 				63B8185B1D9589E1001BD1EE /* good_white.png in Resources */,
+				63D6E8571DC8200B006B5E65 /* NewHSRegister.storyboard in Resources */,
 				63B818621D9589E1001BD1EE /* new_glay.png in Resources */,
 				63B818571D9589E1001BD1EE /* enquete_blue.png in Resources */,
 				63C4406E1DAA48AB00EF5F7E /* HSUnivUserTableViewCell.xib in Resources */,
@@ -750,6 +777,7 @@
 				63D6E8551DC79407006B5E65 /* Login.storyboard in Resources */,
 				63B8186A1D9589E1001BD1EE /* pointing.png in Resources */,
 				63B8185A1D9589E1001BD1EE /* gift.png in Resources */,
+				63D6E85C1DC824A6006B5E65 /* Agreement.storyboard in Resources */,
 				63B818071D957E94001BD1EE /* Assets.xcassets in Resources */,
 				63B8186D1D9589E1001BD1EE /* school_2.png in Resources */,
 				63B818051D957E94001BD1EE /* Top.storyboard in Resources */,
@@ -936,7 +964,7 @@
 				63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */,
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
 				6398EC271DC72F08000C5433 /* NewHSRegisterViewController.swift in Sources */,
-				63B818021D957E93001BD1EE /* TopBranchViewController.swift in Sources */,
+				63B818021D957E93001BD1EE /* TopViewController.swift in Sources */,
 				63C440781DAA5A6800EF5F7E /* HSQuestionFinishViewController.swift in Sources */,
 				63C440611DAA242B00EF5F7E /* HSQuestionDetailViewController.swift in Sources */,
 				63B818001D957E93001BD1EE /* AppDelegate.swift in Sources */,

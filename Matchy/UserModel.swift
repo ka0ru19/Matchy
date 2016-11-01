@@ -75,7 +75,7 @@ class UserModel {
         })
     }
     
-    func checkVerifyMail(mail mail: String, pass: String, vc: SendEmailVerifyViewController) {
+    func checkVerifyMail(mail mail: String, pass: String, vc: VerifyMailViewController) {
         
         //signInWithEmailでログイン
         //第一引数にEmail、第二引数にパスワードを取ります

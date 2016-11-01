@@ -72,7 +72,7 @@ class NewHSRegisterViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toVerifyMail" {
-            let nextVC = segue.destinationViewController as! SendEmailVerifyViewController
+            let nextVC = segue.destinationViewController as! VerifyMailViewController
             nextVC.email = newMailTextField.text
             nextVC.password = newPassTextField.text
         } else if segue.identifier == "toAgreement" {

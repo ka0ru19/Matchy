@@ -9,7 +9,7 @@
         <!--Matchy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TopBranchViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KtC-Q0-Pd9"/>
                         <viewControllerLayoutGuide type="bottom" id="qzE-Ah-x7M"/>
@@ -96,186 +96,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="Matchy" id="jF7-49-u6k"/>
                     <connections>
-                        <segue destination="cfY-wn-ER5" kind="push" identifier="toNewHSRegister" id="DFW-YO-zUr"/>
                         <segue destination="HCf-g6-MCI" kind="push" id="zeP-jn-MCb"/>
+                        <segue destination="XKs-Jc-4zI" kind="push" identifier="toNewHSRegister" id="JOH-fO-Ixj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="107"/>
         </scene>
-        <!--仮登録完了-->
-        <scene sceneID="jDS-rH-WLZ">
-            <objects>
-                <viewController id="h2a-wG-1JZ" customClass="SendEmailVerifyViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xt6-xE-dOI"/>
-                        <viewControllerLayoutGuide type="bottom" id="Trc-yJ-KkR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="57P-4Y-P9Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail.png" translatesAutoresizingMaskIntoConstraints="NO" id="jyA-jO-r4t">
-                                <frame key="frameInset" minX="100" minY="184" width="120" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登録頂いたアドレスにメールを送信しました。ご確認お願いします！メールのリンクをクリックすると、次のステップに進めます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-rK-iQ1">
-                                <frame key="frameInset" minX="40" minY="292" width="240" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-r4-HOc">
-                                <frame key="frameInset" minX="84" minY="518" width="153" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="メールを確認しました"/>
-                                <connections>
-                                    <action selector="onTappedVerifyButton" destination="h2a-wG-1JZ" eventType="touchUpInside" id="k0X-jV-hfS"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メールが届くまで1分〜3分ほどかかります。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-Wf-Gha">
-                                <frame key="frameInset" minX="35" minY="489" width="251" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="仮登録完了" id="rJC-XJ-GUg"/>
-                    <connections>
-                        <segue destination="XPd-fF-dE4" kind="modal" identifier="toHSRegistration" animates="NO" id="NnC-lk-Q5m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Iz-LM-Wfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1918" y="368"/>
-        </scene>
-        <!--Agreement View Controller-->
-        <scene sceneID="HqZ-qU-Sgl">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cJu-Sr-Zoj" customClass="AgreementViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JVJ-9N-EKH"/>
-                        <viewControllerLayoutGuide type="bottom" id="hl2-Th-cUF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SmN-Jm-o49">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QWL-OX-ben">
-                                <frame key="frameInset" minX="16" minY="72" width="343" height="587"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="013-WP-Z61"/>
-                    <connections>
-                        <outlet property="textView" destination="QWL-OX-ben" id="UJL-aP-6ob"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dZd-Yj-uTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2157" y="-537"/>
-        </scene>
         <!--RegistrationHS-->
-        <scene sceneID="afL-12-aDZ">
+        <scene sceneID="vZ5-02-OUd">
             <objects>
-                <viewControllerPlaceholder storyboardName="RegistrationHS" id="XPd-fF-dE4" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qpe-Xv-0Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="RegistrationHS" id="XKs-Jc-4zI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DFb-K3-MYv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bW3-zI-jlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="367"/>
-        </scene>
-        <!--NewHS Register View Controller-->
-        <scene sceneID="e3E-Fx-oxM">
-            <objects>
-                <viewController id="cfY-wn-ER5" customClass="NewHSRegisterViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Axf-nu-JIC"/>
-                        <viewControllerLayoutGuide type="bottom" id="AJb-es-5A5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zfg-vI-Elr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nD3-9g-jU0">
-                                <frame key="frameInset" minY="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規アカウント登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sax-ub-IRf">
-                                <frame key="frameInset" minX="109" minY="167" width="156" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-RO-f11">
-                                <frame key="frameInset" minX="57" minY="196" width="260" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-Wn-muW">
-                                <frame key="frameInset" minX="57" minY="231" width="260" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000001192092896" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="48k-N4-GKI">
-                                <frame key="frameInset" minX="57" minY="266" width="260" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="登録すると利用規約とプライバシーポリシーに同意したとみなします。" translatesAutoresizingMaskIntoConstraints="NO" id="Vxj-3d-dfc">
-                                <frame key="frameInset" minX="57" minY="310" width="260" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsG-q2-QSe">
-                                <frame key="frameInset" minX="57" minY="362" width="260" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="中高生として新規登録">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTappedSignUpButton" destination="cfY-wn-ER5" eventType="touchUpInside" id="jez-y8-VBk"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Flv-Z9-uZa"/>
-                    <connections>
-                        <outlet property="agreementMessageTextView" destination="Vxj-3d-dfc" id="kMR-di-0Tm"/>
-                        <outlet property="backgroundImageView" destination="nD3-9g-jU0" id="yZh-0A-AIk"/>
-                        <outlet property="newMailTextField" destination="M0L-RO-f11" id="XdG-fi-NDF"/>
-                        <outlet property="newPass2TextField" destination="48k-N4-GKI" id="iVh-X5-45l"/>
-                        <outlet property="newPassTextField" destination="QO9-Wn-muW" id="2K2-3P-1My"/>
-                        <outlet property="signUpButton" destination="MsG-q2-QSe" id="Df8-fb-u3w"/>
-                        <segue destination="h2a-wG-1JZ" kind="push" identifier="toVerifyMail" id="chy-kB-Ag6"/>
-                        <segue destination="cJu-Sr-Zoj" kind="push" identifier="toAgreement" id="cEi-79-txP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O3B-q9-LBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1375" y="107"/>
+            <point key="canvasLocation" x="1031" y="-63"/>
         </scene>
         <!--Login-->
         <scene sceneID="wrZ-zu-orE">
@@ -285,7 +122,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXb-eC-Cp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="689"/>
+            <point key="canvasLocation" x="1061" y="346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="foh-Pm-0dD">
@@ -303,12 +140,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaU-SS-ysn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="368"/>
+            <point key="canvasLocation" x="172" y="107"/>
         </scene>
     </scenes>
     <resources>
-        <image name="mail.png" width="256" height="256"/>
-        <image name="rail.jpg" width="1920" height="1279"/>
         <image name="school_1.png" width="256" height="256"/>
         <image name="school_2.png" width="256" height="256"/>
     </resources>
