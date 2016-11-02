@@ -172,9 +172,10 @@ class UserModel {
     
     func getHSUserFromUid(uid: String) {
         print("Firebase: uidからuser情報取得開始")
-        
+        UserDelegate.isReading = true
         userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             print("Firebase: uidからuser情報取得完了")
+            UserDelegate.isReading = false
             
             print(snapshot.value)
             

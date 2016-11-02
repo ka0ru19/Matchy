@@ -29,7 +29,7 @@ class HSPostQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.user = UserDelegate.user!
+        initUser()
         
         postTableView.delegate = self
         postTableView.dataSource = self
@@ -48,6 +48,17 @@ class HSPostQuestionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func initUser() {
+        if let user = UserDelegate.user {
+            self.user = user
+        } else {
+            if UserDelegate.isReading {
+                print("レスポンス待ち")
+            } else {
+                print("読み込みしていい")
+            }
+        }
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toInputText" {

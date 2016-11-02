@@ -27,8 +27,6 @@ class HSQuestionViewController: UIViewController {
         
         user.firReadUserFinishDelegate = self
         
-        initUser()
-        
         hsQuestionTableView.delegate = self
         hsQuestionTableView.dataSource = self
         hsQuestionTableView.registerNib(UINib(nibName: "HSQuestionTableViewCell", bundle: nil), forCellReuseIdentifier: "HSQuestionCell")
@@ -37,11 +35,7 @@ class HSQuestionViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if isFirstReadView {
-            isFirstReadView = false
-            return
-        }
-        initQuestionArray(user.uid)
+        initUser()
         hsQuestionTableView.reloadData()
     }
     
@@ -60,8 +54,12 @@ class HSQuestionViewController: UIViewController {
             self.user = user
             initQuestionArray(user.uid)
         } else {
-            let uid = ud.objectForKey("uid") as! String
-            user.getHSUserFromUid(uid)
+            if UserDelegate.isReading {
+                print("レスポンス待ち..")
+            } else {
+                let uid = ud.objectForKey("uid") as! String
+                user.getHSUserFromUid(uid)
+            }
         }
     }
     

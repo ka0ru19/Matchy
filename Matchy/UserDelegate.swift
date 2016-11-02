@@ -13,4 +13,6 @@ class UserDelegate {
     
     static var user: UserModel?
     
+    static var isReading: Bool = false // レスポンスまちのときのみtrue
+    
 }
