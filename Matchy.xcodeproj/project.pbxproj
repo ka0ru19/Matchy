@@ -28,7 +28,7 @@
 		6348D0781DB4C5B800F52516 /* VerifyRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */; };
 		6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */; };
 		6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */; };
-		6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */; };
+		6359DA9A1D97E17E00A4D106 /* SetHSInfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA991D97E17E00A4D106 /* SetHSInfomationViewController.swift */; };
 		6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */; };
 		6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */; };
 		6361853F1DB8BD450064CCBA /* InputTag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6361853E1DB8BD450064CCBA /* InputTag.storyboard */; };
@@ -109,6 +109,13 @@
 		63D6E8571DC8200B006B5E65 /* NewHSRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8561DC8200B006B5E65 /* NewHSRegister.storyboard */; };
 		63D6E85A1DC823F6006B5E65 /* VerifyMail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8591DC823F6006B5E65 /* VerifyMail.storyboard */; };
 		63D6E85C1DC824A6006B5E65 /* Agreement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E85B1DC824A6006B5E65 /* Agreement.storyboard */; };
+		63D6E85F1DC96D66006B5E65 /* FinishRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D6E85E1DC96D65006B5E65 /* FinishRegisterViewController.swift */; };
+		63D6E8611DC96D87006B5E65 /* FinishRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8601DC96D87006B5E65 /* FinishRegister.storyboard */; };
+		63D6E8631DC96D9B006B5E65 /* VerifyRegistration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8621DC96D9B006B5E65 /* VerifyRegistration.storyboard */; };
+		63D6E8651DC96DB5006B5E65 /* SetTags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8641DC96DB4006B5E65 /* SetTags.storyboard */; };
+		63D6E8671DC96DC4006B5E65 /* SetMyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8661DC96DC4006B5E65 /* SetMyPage.storyboard */; };
+		63D6E8691DC96E1A006B5E65 /* SelectionTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E8681DC96E1A006B5E65 /* SelectionTable.storyboard */; };
+		63D6E86B1DC96E97006B5E65 /* SetHSInfomation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D6E86A1DC96E97006B5E65 /* SetHSInfomation.storyboard */; };
 		F493388A97FFF2A64BF07C00 /* Pods_MatchyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06ED4BDE55DCF18A4012A808 /* Pods_MatchyTests.framework */; };
 		F8553AEFE6DAD7C34F249775 /* Pods_Matchy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D41AB802752D8DD382D3F8B /* Pods_Matchy.framework */; };
 /* End PBXBuildFile section */
@@ -157,7 +164,7 @@
 		6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyRegistrationViewController.swift; sourceTree = "<group>"; };
 		6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegistrationHS.storyboard; sourceTree = "<group>"; };
 		6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationHSViewController.swift; sourceTree = "<group>"; };
-		6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetInfomationOfHSViewController.swift; sourceTree = "<group>"; };
+		6359DA991D97E17E00A4D106 /* SetHSInfomationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetHSInfomationViewController.swift; sourceTree = "<group>"; };
 		6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
 		6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMyPageViewController.swift; sourceTree = "<group>"; };
 		6361853E1DB8BD450064CCBA /* InputTag.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InputTag.storyboard; sourceTree = "<group>"; };
@@ -244,6 +251,13 @@
 		63D6E8561DC8200B006B5E65 /* NewHSRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewHSRegister.storyboard; sourceTree = "<group>"; };
 		63D6E8591DC823F6006B5E65 /* VerifyMail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerifyMail.storyboard; sourceTree = "<group>"; };
 		63D6E85B1DC824A6006B5E65 /* Agreement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agreement.storyboard; sourceTree = "<group>"; };
+		63D6E85E1DC96D65006B5E65 /* FinishRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishRegisterViewController.swift; sourceTree = "<group>"; };
+		63D6E8601DC96D87006B5E65 /* FinishRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinishRegister.storyboard; sourceTree = "<group>"; };
+		63D6E8621DC96D9B006B5E65 /* VerifyRegistration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VerifyRegistration.storyboard; sourceTree = "<group>"; };
+		63D6E8641DC96DB4006B5E65 /* SetTags.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetTags.storyboard; sourceTree = "<group>"; };
+		63D6E8661DC96DC4006B5E65 /* SetMyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetMyPage.storyboard; sourceTree = "<group>"; };
+		63D6E8681DC96E1A006B5E65 /* SelectionTable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectionTable.storyboard; sourceTree = "<group>"; };
+		63D6E86A1DC96E97006B5E65 /* SetHSInfomation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetHSInfomation.storyboard; sourceTree = "<group>"; };
 		656D138D61CC54DC63270C25 /* Pods-MatchyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyUITests/Pods-MatchyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A70C845C747ED16DC1BC3DA /* Pods-MatchyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchyTests/Pods-MatchyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCE2A5804B64947D13198DB7 /* Pods-Matchy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Matchy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Matchy/Pods-Matchy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -351,18 +365,18 @@
 			name = Top;
 			sourceTree = "<group>";
 		};
-		6359DA981D97E09500A4D106 /* RegistrationHS */ = {
+		6359DA981D97E09500A4D106 /* RegistrationHSViews */ = {
 			isa = PBXGroup;
 			children = (
-				6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */,
-				6359DA991D97E17E00A4D106 /* SetInfomationOfHSViewController.swift */,
-				6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */,
-				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
-				6348D0751DB4C47700F52516 /* SetTagsViewController.swift */,
-				6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */,
-				6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */,
+				63D6E8721DC98940006B5E65 /* RegistrationHS */,
+				63D6E86C1DC96F1E006B5E65 /* SetHSInfomation */,
+				63D6E86D1DC96F3D006B5E65 /* SelectionTable */,
+				63D6E86E1DC96F4B006B5E65 /* SetMyPage */,
+				63D6E86F1DC96F60006B5E65 /* SetTags */,
+				63D6E8701DC96F6D006B5E65 /* VerifyRegistration */,
+				63D6E8711DC96F80006B5E65 /* FinishRegister */,
 			);
-			name = RegistrationHS;
+			name = RegistrationHSViews;
 			sourceTree = "<group>";
 		};
 		636185421DB8BE6B0064CCBA /* ExtraStoryBoard */ = {
@@ -433,7 +447,7 @@
 				63C440841DB0776D00EF5F7E /* Extensions */,
 				63C4405C1DA9D82600EF5F7E /* Models */,
 				63D6E85D1DC82CA1006B5E65 /* TopViews */,
-				6359DA981D97E09500A4D106 /* RegistrationHS */,
+				6359DA981D97E09500A4D106 /* RegistrationHSViews */,
 				6344E7FF1DA5319B002B4A15 /* HS */,
 				63B818061D957E94001BD1EE /* Assets.xcassets */,
 				636185421DB8BE6B0064CCBA /* ExtraStoryBoard */,
@@ -610,6 +624,69 @@
 			name = TopViews;
 			sourceTree = "<group>";
 		};
+		63D6E86C1DC96F1E006B5E65 /* SetHSInfomation */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA991D97E17E00A4D106 /* SetHSInfomationViewController.swift */,
+				63D6E86A1DC96E97006B5E65 /* SetHSInfomation.storyboard */,
+			);
+			name = SetHSInfomation;
+			sourceTree = "<group>";
+		};
+		63D6E86D1DC96F3D006B5E65 /* SelectionTable */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA9B1D97E39F00A4D106 /* SelectionTableViewController.swift */,
+				63D6E8681DC96E1A006B5E65 /* SelectionTable.storyboard */,
+			);
+			name = SelectionTable;
+			sourceTree = "<group>";
+		};
+		63D6E86E1DC96F4B006B5E65 /* SetMyPage */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA9D1D97E40600A4D106 /* SetMyPageViewController.swift */,
+				63D6E8661DC96DC4006B5E65 /* SetMyPage.storyboard */,
+			);
+			name = SetMyPage;
+			sourceTree = "<group>";
+		};
+		63D6E86F1DC96F60006B5E65 /* SetTags */ = {
+			isa = PBXGroup;
+			children = (
+				6348D0751DB4C47700F52516 /* SetTagsViewController.swift */,
+				63D6E8641DC96DB4006B5E65 /* SetTags.storyboard */,
+			);
+			name = SetTags;
+			sourceTree = "<group>";
+		};
+		63D6E8701DC96F6D006B5E65 /* VerifyRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				6348D0771DB4C5B800F52516 /* VerifyRegistrationViewController.swift */,
+				63D6E8621DC96D9B006B5E65 /* VerifyRegistration.storyboard */,
+			);
+			name = VerifyRegistration;
+			sourceTree = "<group>";
+		};
+		63D6E8711DC96F80006B5E65 /* FinishRegister */ = {
+			isa = PBXGroup;
+			children = (
+				63D6E85E1DC96D65006B5E65 /* FinishRegisterViewController.swift */,
+				63D6E8601DC96D87006B5E65 /* FinishRegister.storyboard */,
+			);
+			name = FinishRegister;
+			sourceTree = "<group>";
+		};
+		63D6E8721DC98940006B5E65 /* RegistrationHS */ = {
+			isa = PBXGroup;
+			children = (
+				6359DA961D97D6A500A4D106 /* RegistrationHSViewController.swift */,
+				6359DA941D97D68800A4D106 /* RegistrationHS.storyboard */,
+			);
+			name = RegistrationHS;
+			sourceTree = "<group>";
+		};
 		6ACCB9D1273AF052957D0BD0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +829,7 @@
 				63B8185C1D9589E1001BD1EE /* mail.png in Resources */,
 				63C440691DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.xib in Resources */,
 				63B818731D9589E1001BD1EE /* star_pink.png in Resources */,
+				63D6E8651DC96DB5006B5E65 /* SetTags.storyboard in Resources */,
 				63B818631D9589E1001BD1EE /* new_white.png in Resources */,
 				63B818551D9589E1001BD1EE /* books_blue.png in Resources */,
 				63B8186C1D9589E1001BD1EE /* school_1.png in Resources */,
@@ -762,9 +840,11 @@
 				63B818561D9589E1001BD1EE /* books_gray.png in Resources */,
 				63D6E85A1DC823F6006B5E65 /* VerifyMail.storyboard in Resources */,
 				6344E80B1DA8F5D8002B4A15 /* HSMyPage.storyboard in Resources */,
+				63D6E86B1DC96E97006B5E65 /* SetHSInfomation.storyboard in Resources */,
 				63B818651D9589E1001BD1EE /* person_blue.png in Resources */,
 				6361853F1DB8BD450064CCBA /* InputTag.storyboard in Resources */,
 				63B818611D9589E1001BD1EE /* new_blue.png in Resources */,
+				63D6E8691DC96E1A006B5E65 /* SelectionTable.storyboard in Resources */,
 				63B818701D9589E1001BD1EE /* search_person_gray.png in Resources */,
 				63B818721D9589E1001BD1EE /* star_gray.png in Resources */,
 				63B8180A1D957E94001BD1EE /* LaunchScreen.storyboard in Resources */,
@@ -776,11 +856,13 @@
 				63B818691D9589E1001BD1EE /* person_silhouette.png in Resources */,
 				63D6E8551DC79407006B5E65 /* Login.storyboard in Resources */,
 				63B8186A1D9589E1001BD1EE /* pointing.png in Resources */,
+				63D6E8611DC96D87006B5E65 /* FinishRegister.storyboard in Resources */,
 				63B8185A1D9589E1001BD1EE /* gift.png in Resources */,
 				63D6E85C1DC824A6006B5E65 /* Agreement.storyboard in Resources */,
 				63B818071D957E94001BD1EE /* Assets.xcassets in Resources */,
 				63B8186D1D9589E1001BD1EE /* school_2.png in Resources */,
 				63B818051D957E94001BD1EE /* Top.storyboard in Resources */,
+				63D6E8671DC96DC4006B5E65 /* SetMyPage.storyboard in Resources */,
 				63B818601D9589E1001BD1EE /* new_black.png in Resources */,
 				6344E8071DA8F5B6002B4A15 /* HSPostQuestion.storyboard in Resources */,
 				6359DA951D97D68800A4D106 /* RegistrationHS.storyboard in Resources */,
@@ -800,6 +882,7 @@
 				63B818521D9589E1001BD1EE /* add.png in Resources */,
 				6344E8031DA8F4D5002B4A15 /* HSQuestion.storyboard in Resources */,
 				63B818581D9589E1001BD1EE /* enquete_checked.png in Resources */,
+				63D6E8631DC96D9B006B5E65 /* VerifyRegistration.storyboard in Resources */,
 				63B8185E1D9589E1001BD1EE /* medal.png in Resources */,
 				63B8186B1D9589E1001BD1EE /* rail.jpg in Resources */,
 				6344E8091DA8F5C3002B4A15 /* HSNotification.storyboard in Resources */,
@@ -959,7 +1042,7 @@
 				6348D0761DB4C47700F52516 /* SetTagsViewController.swift in Sources */,
 				6359DA971D97D6A500A4D106 /* RegistrationHSViewController.swift in Sources */,
 				63C440681DAA3F2C00EF5F7E /* HSQestionDetailTopTableViewCell.swift in Sources */,
-				6359DA9A1D97E17E00A4D106 /* SetInfomationOfHSViewController.swift in Sources */,
+				6359DA9A1D97E17E00A4D106 /* SetHSInfomationViewController.swift in Sources */,
 				63C440861DB077AB00EF5F7E /* UITextViewExtension.swift in Sources */,
 				63C4407E1DAB8A8100EF5F7E /* HSNotificationTableViewCell.swift in Sources */,
 				6359DA9C1D97E39F00A4D106 /* SelectionTableViewController.swift in Sources */,
@@ -983,6 +1066,7 @@
 				63C440511DA9D1B800EF5F7E /* UserModel.swift in Sources */,
 				6359DA9E1D97E40600A4D106 /* SetMyPageViewController.swift in Sources */,
 				6348D0681DB20ADF00F52516 /* HSQuestionSelectUnivUserTableViewCell.swift in Sources */,
+				63D6E85F1DC96D66006B5E65 /* FinishRegisterViewController.swift in Sources */,
 				639B89AB1DC27C0700DEC956 /* UserDelegate.swift in Sources */,
 				6344E8181DA948AF002B4A15 /* HSTopTabBarController.swift in Sources */,
 				63D6E84F1DC74C38006B5E65 /* AgreementViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SetInfomationOfHSViewController.swift
+//  SetHSInfomationViewController.swift
 //  Matchy
 //
 //  Created by 井上航 on 2016/09/25.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetInfomationOfHSViewController: UIViewController {
+class SetHSInfomationViewController: UIViewController {
     
     @IBOutlet weak var schoolNameTextField: UITextField!
     @IBOutlet weak var schoolGradeTextField: UITextField!
@@ -165,13 +165,13 @@ class SetInfomationOfHSViewController: UIViewController {
 }
 
 // 2/2-2/2.任意のquestionをtableviewから削除するのに使う
-extension SetInfomationOfHSViewController: InputSelectedSelectionDelegate {
+extension SetHSInfomationViewController: InputSelectedSelectionDelegate {
     func inputSelectedSelection(index index: Int, inputText: String) {
         inputTextArray[index] = inputText
     }
 }
 
-extension SetInfomationOfHSViewController: UITextFieldDelegate {
+extension SetHSInfomationViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if textField.tag == 1 {
             if let text = textField.text {

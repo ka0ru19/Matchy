@@ -1,14 +1,14 @@
 //
-//  RegistrationHSViewController.swift
+//  FinishRegisterViewController.swift
 //  Matchy
 //
-//  Created by 井上航 on 2016/09/25.
+//  Created by 井上航 on 2016/11/02.
 //  Copyright © 2016年 Wataru Inoue. All rights reserved.
 //
 
 import UIKit
 
-class RegistrationHSViewController: UIViewController {
+class FinishRegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class RegistrationHSViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

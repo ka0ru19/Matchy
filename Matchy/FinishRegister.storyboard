@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P7x-9m-0NZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Finish Register View Controller-->
+        <scene sceneID="dtz-wY-uU8">
+            <objects>
+                <viewController id="P7x-9m-0NZ" customClass="FinishRegisterViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDa-Wd-6Hy"/>
+                        <viewControllerLayoutGuide type="bottom" id="hIM-HW-vL1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xma-tR-S8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="F0j-zh-tpx"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fF-Rx-7tD">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Matchyを始める">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BZj-Q5-9UU" kind="modal" animates="NO" id="D1x-YZ-baU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Matchy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-O5-l5Q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h38-nP-pKs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F0j-zh-tpx" firstAttribute="top" secondItem="SDa-Wd-6Hy" secondAttribute="bottom" id="4M0-Qc-bqf"/>
+                            <constraint firstItem="ySQ-O5-l5Q" firstAttribute="leading" secondItem="Xma-tR-S8Z" secondAttribute="leadingMargin" constant="31" id="6C8-SA-EKk"/>
+                            <constraint firstItem="ySQ-O5-l5Q" firstAttribute="centerX" secondItem="Xma-tR-S8Z" secondAttribute="centerX" id="ElD-K5-1Mu"/>
+                            <constraint firstItem="ySQ-O5-l5Q" firstAttribute="centerY" secondItem="Xma-tR-S8Z" secondAttribute="centerY" id="Fnu-aj-HY2"/>
+                            <constraint firstItem="F0j-zh-tpx" firstAttribute="bottom" secondItem="hIM-HW-vL1" secondAttribute="top" id="Hkd-ww-v4F"/>
+                            <constraint firstItem="7fF-Rx-7tD" firstAttribute="top" secondItem="ySQ-O5-l5Q" secondAttribute="bottom" constant="28" id="axA-0C-Wo6"/>
+                            <constraint firstItem="ySQ-O5-l5Q" firstAttribute="centerX" secondItem="F0j-zh-tpx" secondAttribute="centerX" id="tGu-b9-4gf"/>
+                            <constraint firstItem="ySQ-O5-l5Q" firstAttribute="centerX" secondItem="7fF-Rx-7tD" secondAttribute="centerX" id="vg0-dO-cnH"/>
+                            <constraint firstItem="F0j-zh-tpx" firstAttribute="leading" secondItem="Xma-tR-S8Z" secondAttribute="leading" id="wAJ-xB-cF3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A7c-gK-T0g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjC-us-g7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3257.5" y="1067.5"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="zqF-pm-eL8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="BZj-Q5-9UU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UUk-Jo-ZYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3737" y="1169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rail.jpg" width="1920" height="1279"/>
+    </resources>
+</document>
