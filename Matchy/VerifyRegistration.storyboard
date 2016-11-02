@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Verify RegistrationHS View Controller-->
+        <!--Verify Registration View Controller-->
         <scene sceneID="Puo-Fi-iDS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="t2G-U1-krI" customClass="VerifyRegistrationHSViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="t2G-U1-krI" customClass="VerifyRegistrationViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KPr-6d-iu2"/>
                         <viewControllerLayoutGuide type="bottom" id="NDp-Zf-yXZ"/>
@@ -71,7 +71,6 @@
                                         <state key="normal" title="完了"/>
                                         <connections>
                                             <action selector="onTappedFinishButton" destination="t2G-U1-krI" eventType="touchUpInside" id="o8F-67-HxD"/>
-                                            <segue destination="eit-hQ-w2D" kind="modal" id="we8-f9-9Go"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,6 +116,7 @@
                         <outlet property="introTextView" destination="PNS-7x-haH" id="qSz-9K-ChP"/>
                         <outlet property="nameLabel" destination="XKf-RB-Nvg" id="eO3-Vo-8Gr"/>
                         <outlet property="tagsTextView" destination="KZ7-DL-EYV" id="Cxy-lj-W01"/>
+                        <segue destination="eit-hQ-w2D" kind="modal" identifier="toFinishRegister" id="ggY-LL-ucr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc0-Vz-bSx" userLabel="First Responder" sceneMemberID="firstResponder"/>

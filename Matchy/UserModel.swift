@@ -17,6 +17,7 @@ protocol FirReadUserFinishDelegate: class {
     func readUserFinish(user: UserModel)
 }
 
+
 class UserModel {
     var uid: String! // ユニークID AuthでFirebaseが自動で決定する
     var id: String! // 半角4~14文字 ユーザが任意で決める
@@ -108,8 +109,11 @@ class UserModel {
     }
     
     func loginHS(mail mail: String, pass: String, vc: LoginViewController) {
+        print("Firebase: userログイン開始")
         
         FIRAuth.auth()?.signInWithEmail(mail, password: pass, completion: { (firUser, error) in
+            
+            print("Firebase: userログイン完了")
             
             //エラーなしなら、認証完了
             if let error = error {
@@ -124,12 +128,8 @@ class UserModel {
             // Emailのバリデーションが完了しているか確認する。完了ならそのままログイン
             if loginUser.emailVerified {
                 let uid = loginUser.uid
-                print(uid)
                 
-                self.ud.setObject(uid, forKey: "uid")
-                self.ud.setObject("true", forKey: "isDoneRegistHS")
-                
-                vc.successLogin()
+                vc.successLogin(uid)
             } else {
                 vc.failureLoing(errorMessage: "Emailのバリデーションが未完了の可能性があります")
                 return
@@ -138,12 +138,13 @@ class UserModel {
         })
     }
     
-    func registerHS() {
+    func registerHS(vc: VerifyRegistrationViewController) {
+        print("Firebase: HSUser登録開始")
         
         let imageData = UIImageJPEGRepresentation(self.icon, 0.8)
         self.iconUrl = imageData!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
         
-        userRef.setValue([
+        let dict = [
             "uid": self.uid,
             "id": self.id,
             "name": self.name,
@@ -156,13 +157,24 @@ class UserModel {
             "intro": self.intro,
             "tagArray": self.tagArray,
             "taskca": String(0)
-            ])
+        ]
+        userRef.setValue(dict, withCompletionBlock: { error, firDatabaseRefarence in
+            print("Firebase: HSUser登録完了")
+            if let error = error {
+                vc.finishRegister(error: error)
+            }
+            
+            vc.finishRegister(error: nil)
+            
+        })
         
     }
     
     func getHSUserFromUid(uid: String) {
+        print("Firebase: uidからuser情報取得開始")
         
         userRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            print("Firebase: uidからuser情報取得完了")
             
             print(snapshot.value)
             

@@ -72,28 +72,28 @@ class SetHSInfomationViewController: UIViewController {
         }
     }
     
-    @IBAction func onTappedSchoolButton(sender: UIButton) {
+    @IBAction func onTappedSchoolButton() {
         schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 1
         performSegueWithIdentifier("toSelect", sender: nil)
     }
-    @IBAction func onTappedInterestButton(sender: UIButton) {
+    @IBAction func onTappedInterestButton() {
         schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 2
         performSegueWithIdentifier("toSelect", sender: nil)
     }
-    @IBAction func onTappedCourseButton(sender: UIButton) {
+    @IBAction func onTappedCourseButton() {
         schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 3
         performSegueWithIdentifier("toSelect", sender: nil)
     }
-    @IBAction func onTappedClubButton(sender: UIButton) {
+    @IBAction func onTappedClubButton() {
         schoolNameTextField.resignFirstResponder()
         selectedTextFieldTag = 4
         performSegueWithIdentifier("toSelect", sender: nil)
     }
     
-    @IBAction func onTappedNextButton(sender: UIButton) {
+    @IBAction func onTappedNextButton() {
         
         print("未入力項目があると次に進めません")
         guard let inputSchoolName     = schoolNameTextField.text else { return }

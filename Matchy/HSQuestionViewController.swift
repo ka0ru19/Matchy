@@ -56,14 +56,18 @@ class HSQuestionViewController: UIViewController {
         }
     }
     func initUser() {
-        let uid = ud.objectForKey("uid") as! String
-        user.getHSUserFromUid(uid)
+        if let user = UserDelegate.user {
+            self.user = user
+        } else {
+            let uid = ud.objectForKey("uid") as! String
+            user.getHSUserFromUid(uid)
+        }
     }
     
     func initQuestionArray(uid:String){
         questionArray = []
         user.getQuestionsWithUid(uid, vc: self)
-
+        
     }
     
 }

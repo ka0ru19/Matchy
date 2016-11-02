@@ -9,7 +9,7 @@
         <!--Matchy-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TopViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopVC" id="BYZ-38-t0r" customClass="TopViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KtC-Q0-Pd9"/>
                         <viewControllerLayoutGuide type="bottom" id="qzE-Ah-x7M"/>
@@ -65,14 +65,14 @@
                                 <frame key="frameInset" minX="43" minY="274" width="140" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onTappedHSButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYq-vw-bJa"/>
+                                    <action selector="onTappedHSButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="PSp-N2-QFD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBR-J9-kMK">
                                 <frame key="frameInset" minX="191" minY="274" width="140" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onTappedUnivButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mK-JB-B4v"/>
+                                    <action selector="onTappedUnivButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="amh-Tt-tc8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©TASKEYA Inc. All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkz-PE-541">
@@ -88,7 +88,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登録済みの方はこちら"/>
                                 <connections>
-                                    <action selector="onTappedLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqW-dT-W74"/>
+                                    <action selector="onTappedLoginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BT-YC-74n"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,18 +96,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Matchy" id="jF7-49-u6k"/>
                     <connections>
-                        <segue destination="HCf-g6-MCI" kind="push" id="zeP-jn-MCb"/>
+                        <segue destination="HCf-g6-MCI" kind="push" identifier="toLogin" id="zeP-jn-MCb"/>
                         <segue destination="XKs-Jc-4zI" kind="push" identifier="toNewHSRegister" id="JOH-fO-Ixj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="107"/>
+            <point key="canvasLocation" x="598" y="107"/>
         </scene>
-        <!--RegistrationHS-->
+        <!--NewHSRegister-->
         <scene sceneID="vZ5-02-OUd">
             <objects>
-                <viewControllerPlaceholder storyboardName="RegistrationHS" id="XKs-Jc-4zI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewHSRegister" id="XKs-Jc-4zI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DFb-K3-MYv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bW3-zI-jlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,7 +127,7 @@
         <!--Navigation Controller-->
         <scene sceneID="foh-Pm-0dD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eKg-YJ-eFf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NC" automaticallyAdjustsScrollViewInsets="NO" id="eKg-YJ-eFf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ha1-lf-R1I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

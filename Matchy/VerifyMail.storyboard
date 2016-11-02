@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="仮登録完了" id="nbx-t3-cND"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="eJO-lQ-qyQ" kind="modal" identifier="toHSRegistration" animates="NO" id="5e7-je-rRX"/>
+                        <segue destination="eJO-lQ-qyQ" kind="modal" identifier="toHSRegistration" id="5e7-je-rRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dup-Fb-TTW" userLabel="First Responder" sceneMemberID="firstResponder"/>

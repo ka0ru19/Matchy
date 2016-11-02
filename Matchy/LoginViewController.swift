@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     let user = UserModel()
     
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,11 @@ class LoginViewController: UIViewController {
         user.loginHS(mail: signInEmail, pass: signInPass, vc: self)
     }
     
-    func successLogin() {
+    func successLogin(uid: String) {
+        
+        ud.setObject(uid, forKey: "uid")
+        ud.setObject("true", forKey: "isDoneRegistHS")
+        
         performSegueWithIdentifier("toHSTopTab", sender: nil)
     }
     

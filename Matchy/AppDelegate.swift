@@ -45,12 +45,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         } else { // 未登録
-            viewController = UIStoryboard(name: "Top",bundle:nil).instantiateInitialViewController()! as! UINavigationController
+            viewController = UIStoryboard(name: "Top",bundle:nil).instantiateInitialViewController() as! UINavigationController
+//            viewController = UIStoryboard(name: "Top",bundle:nil).instantiateInitialViewController()!
+            
+            
         }
         
         window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
         
         return true
+        
     }
     
     func applicationWillResignActive(application: UIApplication) {

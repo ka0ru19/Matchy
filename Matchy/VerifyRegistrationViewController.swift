@@ -9,7 +9,7 @@
 import UIKit
 
 class VerifyRegistrationViewController: UIViewController {
-
+    
     var user: UserModel!
     
     @IBOutlet weak var iconImageView: UIImageView!
@@ -18,9 +18,11 @@ class VerifyRegistrationViewController: UIViewController {
     @IBOutlet weak var introTextView: UITextView!
     @IBOutlet weak var tagsTextView: UITextView!
     
+    let ud = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         iconImageView.image = user.icon
         idLabel.text = user.id
         nameLabel.text = user.name
@@ -28,29 +30,36 @@ class VerifyRegistrationViewController: UIViewController {
         tagsTextView.text = user.tagArray.joinWithSeparator(" ")
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func onTappedFinishButton() {
-        user.registerHS()
-        
-        let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject("true", forKey: "isDoneRegistHS")
+        user.registerHS(self)
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // 登録Request送信後のレスポンス
+    func finishRegister(error error: NSError?) {
+        if let error = error {
+            print(error)
+            return
+        }
+        
+        ud.setObject(user.uid, forKey: "uid")
+        ud.setObject("true", forKey: "isDoneRegistHS")
+        
+        performSegueWithIdentifier("toFinishRegister", sender: nil)
     }
-    */
-
+    
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
+    
+    
 }

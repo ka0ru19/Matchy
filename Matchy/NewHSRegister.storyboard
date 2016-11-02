@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NewHSRegister-->
+        <!--Agreement-->
         <scene sceneID="apc-8Z-Egn">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewHSRegister" id="rWJ-89-AC7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Agreement" id="rWJ-89-AC7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6kf-pB-hio"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sx2-x2-gRf" userLabel="First Responder" sceneMemberID="firstResponder"/>

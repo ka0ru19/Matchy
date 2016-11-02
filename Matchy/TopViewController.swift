@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TopViewController.swift
 //  Matchy
 //
 //  Created by 井上航 on 2016/09/24.
@@ -32,6 +32,9 @@ class TopViewController: UIViewController {
         performSegueWithIdentifier("toLogin", sender: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
     
     
 }

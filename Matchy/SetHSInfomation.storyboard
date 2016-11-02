@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Set Infomation OfHS View Controller-->
+        <!--SetHS Infomation View Controller-->
         <scene sceneID="jla-8K-keb">
             <objects>
-                <viewController id="oKL-tl-Wg8" customClass="SetInfomationOfHSViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oKL-tl-Wg8" customClass="SetHSInfomationViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NJG-Et-SzK"/>
                         <viewControllerLayoutGuide type="bottom" id="3bO-39-EKG"/>
@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="👉"/>
                                 <connections>
-                                    <action selector="onTappedSchoolButton:" destination="oKL-tl-Wg8" eventType="touchUpInside" id="UiE-jE-mMH"/>
+                                    <action selector="onTappedSchoolButton" destination="oKL-tl-Wg8" eventType="touchUpInside" id="X4Y-P7-8Gu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdh-Zn-es2">
@@ -80,7 +80,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="👉"/>
                                 <connections>
-                                    <action selector="onTappedInterestButton:" destination="oKL-tl-Wg8" eventType="touchUpInside" id="efe-5R-cNU"/>
+                                    <action selector="onTappedInterestButton" destination="oKL-tl-Wg8" eventType="touchUpInside" id="ud5-QV-aDJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-I6-5RQ">
@@ -88,7 +88,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="👉"/>
                                 <connections>
-                                    <action selector="onTappedCourseButton:" destination="oKL-tl-Wg8" eventType="touchUpInside" id="iOS-S4-x8L"/>
+                                    <action selector="onTappedCourseButton" destination="oKL-tl-Wg8" eventType="touchUpInside" id="fqc-Ge-bpP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8E-Sw-HUD">
@@ -96,7 +96,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="👉"/>
                                 <connections>
-                                    <action selector="onTappedClubButton:" destination="oKL-tl-Wg8" eventType="touchUpInside" id="PMz-8G-NrW"/>
+                                    <action selector="onTappedClubButton" destination="oKL-tl-Wg8" eventType="touchUpInside" id="4ek-F4-R9h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJn-0Y-yQ6">
@@ -106,7 +106,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onTappedNextButton:" destination="oKL-tl-Wg8" eventType="touchUpInside" id="KNA-8G-but"/>
+                                    <action selector="onTappedNextButton" destination="oKL-tl-Wg8" eventType="touchUpInside" id="eD5-Et-eBX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,11 +115,11 @@
                     <navigationItem key="navigationItem" id="Hog-zf-DBv"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="clubTextField" destination="eQ0-QU-aJ1" id="zGJ-EM-yro"/>
-                        <outlet property="courseTextField" destination="uSB-Dv-M9i" id="cuz-wO-58n"/>
-                        <outlet property="interestTextField" destination="8df-np-weO" id="K32-UO-5cK"/>
-                        <outlet property="schoolGradeTextField" destination="OSX-q2-ti4" id="DzM-UF-8ce"/>
-                        <outlet property="schoolNameTextField" destination="KRI-f3-Zx9" id="h6y-I9-yGt"/>
+                        <outlet property="clubTextField" destination="eQ0-QU-aJ1" id="JXL-N4-5s8"/>
+                        <outlet property="courseTextField" destination="uSB-Dv-M9i" id="G0i-z1-HZ3"/>
+                        <outlet property="interestTextField" destination="8df-np-weO" id="rPr-HJ-bw9"/>
+                        <outlet property="schoolGradeTextField" destination="OSX-q2-ti4" id="Aa3-We-74Z"/>
+                        <outlet property="schoolNameTextField" destination="KRI-f3-Zx9" id="UuS-ky-lV4"/>
                         <segue destination="ptp-Xx-VBT" kind="push" identifier="toMyPage" id="HLM-gt-w6p"/>
                         <segue destination="Xke-Wf-uaA" kind="push" identifier="toSelect" id="z53-Oh-QIJ"/>
                     </connections>
