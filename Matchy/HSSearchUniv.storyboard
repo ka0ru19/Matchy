@@ -9,7 +9,7 @@
         <!--大学生一覧-->
         <scene sceneID="obi-Wr-QQn">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="XcF-38-wEF" customClass="HSSearchUnivUserViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="XcF-38-wEF" customClass="HSSearchUnivViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A5g-Jz-H28"/>
                         <viewControllerLayoutGuide type="bottom" id="cra-Xs-VHj"/>

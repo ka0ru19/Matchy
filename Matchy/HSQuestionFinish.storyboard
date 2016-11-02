@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="giJ-co-xuj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question Finish View Controller-->
+        <scene sceneID="FUd-7H-Qbm">
+            <objects>
+                <viewController id="giJ-co-xuj" customClass="HSQuestionFinishViewController" customModule="Matchy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q5M-00-QhP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmx-Ru-jDb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eUx-9C-q7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tray.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZL-TL-DdL">
+                                <frame key="frameInset" minX="59" minY="205" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問完了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avb-tB-hOy">
+                                <frame key="frameInset" minX="152" minY="164" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjf-Yo-XGt">
+                                <frame key="frameInset" minX="156" minY="538" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ホームへ"/>
+                                <connections>
+                                    <segue destination="F3G-iZ-d7o" kind="modal" id="57O-ZR-8Qa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2X7-Ih-M9j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGe-VV-yVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1612" y="549"/>
+        </scene>
+        <!--HSTopTab-->
+        <scene sceneID="zFG-a4-dbd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSTopTab" id="F3G-iZ-d7o" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeA-jF-cqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="794"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tray.png" width="256" height="256"/>
+    </resources>
+</document>

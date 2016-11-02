@@ -1,5 +1,5 @@
 //
-//  HSSearchUnivUserViewController.swift
+//  HSSearchUnivViewController.swift
 //  Matchy
 //
 //  Created by 井上航 on 2016/10/09.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HSSearchUnivUserViewController: UIViewController {
+class HSSearchUnivViewController: UIViewController {
     
     @IBOutlet var univUserSearchBar: UISearchBar!
     @IBOutlet var searchResultTableView: UITableView!
@@ -43,7 +43,7 @@ class HSSearchUnivUserViewController: UIViewController {
 
 }
 
-extension HSSearchUnivUserViewController: UITableViewDelegate, UITableViewDataSource {
+extension HSSearchUnivViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
