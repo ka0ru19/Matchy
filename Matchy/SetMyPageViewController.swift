@@ -136,6 +136,7 @@ extension SetMyPageViewController: UINavigationControllerDelegate, UIImagePicker
             let picker = UIImagePickerController()
             picker.sourceType = sourceType
             picker.delegate = self
+            picker.allowsEditing = true
             self.presentViewController(picker, animated: true, completion: nil)
         }
     }
@@ -143,7 +144,7 @@ extension SetMyPageViewController: UINavigationControllerDelegate, UIImagePicker
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.dismissViewControllerAnimated(true, completion: nil)
         // 画像を出力
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        imageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
     }
     
 }
