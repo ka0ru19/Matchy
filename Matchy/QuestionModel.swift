@@ -66,11 +66,13 @@ class QuestionModel {
     
     // 質問単体をread
     func getWithId(questionId: String) {
+        print("getWithId: questionIdからquestionを取得開始")
         
         questionRef.child(questionId).observeEventType(.Value, withBlock: { snapshot in
+            print("getWithId: questionIdからquestionを取得完了")
             
             guard let questionValue = snapshot.value else {
-                print("no snapshot.value")
+                print("no question value")
                 return
             }
             

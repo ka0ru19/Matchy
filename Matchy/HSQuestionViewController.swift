@@ -58,6 +58,7 @@ class HSQuestionViewController: UIViewController {
     func initUser() {
         if let user = UserDelegate.user {
             self.user = user
+            initQuestionArray(user.uid)
         } else {
             let uid = ud.objectForKey("uid") as! String
             user.getHSUserFromUid(uid)

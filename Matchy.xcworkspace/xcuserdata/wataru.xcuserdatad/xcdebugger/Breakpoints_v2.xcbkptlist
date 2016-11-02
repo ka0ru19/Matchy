@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Matchy/UserModel.swift"
-            timestampString = "499798077.423935"
+            timestampString = "499801194.179995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "registerHS(vc:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Matchy/UserModel.swift"
-            timestampString = "499798077.423935"
+            timestampString = "499801194.179995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "registerHS(vc:)"
             landmarkType = "7">
             <Locations>
@@ -42,12 +42,12 @@
                   moduleName = "Matchy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wataru/Desktop/Matchy/Matchy/UserModel.swift"
-                  timestampString = "499798747.081141"
+                  timestampString = "499801501.214438"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "3124">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "3280">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -57,11 +57,11 @@
                   moduleName = "Matchy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/wataru/Desktop/Matchy/Matchy/UserModel.swift"
-                  timestampString = "499798747.084221"
+                  timestampString = "499801501.220605"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>

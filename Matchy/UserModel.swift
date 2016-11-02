@@ -219,12 +219,16 @@ class UserModel {
     func getQuestionsWithUid(uid: String, vc: HSQuestionViewController) {
         // 10件ごとに読み込み したい
         
+        print("getQuestionsWithUid: uidからquestionIdArrayを取得開始")
+        
         userRef.child("questionIdArray").observeSingleEventOfType(.Value, withBlock: { snapshot in
+            
+            print("getQuestionsWithUid: uidからquestionIdArrayを取得完了")
             
             print(snapshot.value)
             
             guard let questionValue = snapshot.value as? [String] else{
-                print("no user value")
+                print("no user question value")
                 return
             }
             

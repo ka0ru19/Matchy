@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userPassTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    let user = UserModel()
+    var user = UserModel()
     
     let ud = NSUserDefaults.standardUserDefaults()
     
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onTappedLoginButton() {
-          login()
+        login()
     }
     
     func login() {
@@ -45,22 +45,38 @@ class LoginViewController: UIViewController {
         ud.setObject(uid, forKey: "uid")
         ud.setObject("true", forKey: "isDoneRegistHS")
         
-        performSegueWithIdentifier("toHSTopTab", sender: nil)
+        user.firReadUserFinishDelegate = self
+        user.getHSUserFromUid(uid)
+        
     }
     
     func failureLoing(errorMessage errorMessage: String) {
         print(errorMessage)
     }
     
-    
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toHSTopTab" {
-            
+            print("LoginViewController : toHSTopTab -> ")
+        } else if segue.identifier == "toUnivTopTab" {
+            print("LoginViewController : toUnivTopTab -> ")
         }
     }
     
+}
+
+extension LoginViewController: FirReadUserFinishDelegate {
+    func readUserFinish(user: UserModel) {
+        UserDelegate.user = user
+        
+        switch user.schoolType {
+        case "HS"   : performSegueWithIdentifier("toHSTopTab", sender: nil)
+        case "Univ" : performSegueWithIdentifier("toUnivTopTab", sender: nil)
+        default : fatalError()
+        }
+        
+    }
 }
 
 extension LoginViewController {
